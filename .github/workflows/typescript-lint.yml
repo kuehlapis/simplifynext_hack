@@ -7,6 +7,9 @@ jobs:
   eslint:
     name: Eslint
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./client
     steps:
       - name: check out environment
         uses: actions/checkout@v4
@@ -18,11 +21,8 @@ jobs:
 
       - name: npm install
         run: npm ci
-        working-directory: ./client
     
       - name: run eslint
-        uses: icrawl/action-eslint@v1
-        with:
-          custom-glob: client
+        run: npx eslint . --ext .js,.jsx,.ts,.tsx
 
 
