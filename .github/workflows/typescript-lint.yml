@@ -23,6 +23,6 @@ jobs:
       - name: eslint
         uses: icrawl/action-eslint@v1
         with:
-          custom-globe: client
+          custom-glob: client
 
 
