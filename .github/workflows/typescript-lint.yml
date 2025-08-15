@@ -20,7 +20,7 @@ jobs:
           node-version: 20
 
       - name: npm install
-        uses: npm ci
+        run: npm ci
     
       - name: eslint
         uses: icrawl/action-eslint@v1
