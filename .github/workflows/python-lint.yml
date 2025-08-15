@@ -7,9 +7,6 @@ jobs:
   lock_file:
     name: Lock Dependencies
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./server
     steps:
       - name: Checkout source repo
         uses: actions/checkout@v4
@@ -19,6 +16,7 @@ jobs:
 
       - name: Lock dependencies
         run: uv lock --locked
+        working-directory: ./server
           
   linting:
     name: Lint Code
@@ -36,6 +34,7 @@ jobs:
         
       - name: Ruff linting
         run: uvx ruff check .
+        working-directory: ./server
 
   formating:
     name: Check Formatting
@@ -53,6 +52,7 @@ jobs:
         
       - name: Ruff linting
         run: uvx ruff format --check .
+        working-directory: ./server
 
   type_consistency:
     name: type checking
@@ -70,3 +70,5 @@ jobs:
         
       - name: Ruff linting
         run: uv run pyright .
+        working-directory: ./server
+
