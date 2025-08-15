@@ -1,0 +1,28 @@
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  eslint:
+    name: Eslint
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./client
+    steps:
+      - name: check out environment
+        uses: actions/checkout@v4
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: npm install
+        uses: npm cli
+    
+      - name: eslint
+        uses: icrawl/action-eslint@v1
+
+

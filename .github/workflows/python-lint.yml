@@ -7,6 +7,9 @@ jobs:
   lock_file:
     name: Lock Dependencies
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./server
     steps:
       - name: Checkout source repo
         uses: actions/checkout@v4
@@ -21,6 +24,9 @@ jobs:
     name: Lint Code
     runs-on: ubuntu-latest
     needs: [lock_file]
+    defaults:
+      run:
+        working-directory: ./server
     steps:
       - name: Checkout source repo
         uses: actions/checkout@v4
@@ -35,6 +41,9 @@ jobs:
     name: Check Formatting
     runs-on: ubuntu-latest
     needs: [lock_file]
+    defaults:
+      run:
+        working-directory: ./server
     steps:
       - name: Checkout source repo
         uses: actions/checkout@v4
@@ -49,6 +58,9 @@ jobs:
     name: type checking
     runs-on: ubuntu-latest
     needs: [lock_file]
+    defaults:
+      run:
+        working-directory: ./server
     steps:
       - name: Checkout source repo
         uses: actions/checkout@v4
