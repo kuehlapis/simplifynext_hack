@@ -16,7 +16,7 @@ jobs:
 
       - name: Lock dependencies
         run: uv lock --locked
-        working-directory: ./server
+        working-directory: server
           
   linting:
     name: Lint Code
@@ -24,7 +24,7 @@ jobs:
     needs: [lock_file]
     defaults:
       run:
-        working-directory: ./server
+        working-directory: server
     steps:
       - name: Checkout source repo
         uses: actions/checkout@v4
@@ -34,7 +34,7 @@ jobs:
         
       - name: Ruff linting
         run: uvx ruff check .
-        working-directory: ./server
+        working-directory: server
 
   formating:
     name: Check Formatting
@@ -42,7 +42,7 @@ jobs:
     needs: [lock_file]
     defaults:
       run:
-        working-directory: ./server
+        working-directory: server
     steps:
       - name: Checkout source repo
         uses: actions/checkout@v4
@@ -52,7 +52,7 @@ jobs:
         
       - name: Ruff linting
         run: uvx ruff format --check .
-        working-directory: ./server
+        working-directory: server
 
   type_consistency:
     name: type checking
@@ -60,7 +60,7 @@ jobs:
     needs: [lock_file]
     defaults:
       run:
-        working-directory: ./server
+        working-directory: server
     steps:
       - name: Checkout source repo
         uses: actions/checkout@v4
@@ -70,5 +70,5 @@ jobs:
         
       - name: Ruff linting
         run: uv run pyright .
-        working-directory: ./server
+        working-directory: server
 
