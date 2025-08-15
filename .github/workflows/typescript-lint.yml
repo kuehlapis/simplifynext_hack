@@ -18,9 +18,8 @@ jobs:
 
       - name: npm install
         run: npm ci
-        working-directory: client
     
-      - name: eslint
+      - name: run eslint
         uses: icrawl/action-eslint@v1
         with:
           custom-glob: client
