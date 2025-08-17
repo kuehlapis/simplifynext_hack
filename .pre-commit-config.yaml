@@ -1,13 +1,22 @@
-files: ^server/
 repos:
   - repo: https://github.com/astral-sh/uv-pre-commit
     rev: 0.8.11
     hooks:
       - id: uv-lock
+        files: server/pyproject.toml
+        args: [--project, server]
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.12.9
     hooks:
       - id: ruff-check
         args: [ --fix ]
+        files: ^server/
       - id: ruff-format
+        files: ^server/
+  
+  - repo: https://github.com/pre-commit/mirrors-eslint
+    rev: v9.33.0
+    hooks:
+      - id: eslint
+        files: ^client/.*\.(ts|tsx|js|jsx)$

@@ -1,0 +1,64 @@
+{
+  "anchor": {
+    "id": "fe3a2f5b584c9b3ca87254971aa7a4b0",
+    "content": {
+      "agreementType": "Room Rental Agreement",
+      "propertyAddress": {
+        "block": "202",
+        "street": "Marsilling Drive",
+        "unit": "#12-126",
+        "postalCode": "Singapore 730202"
+      },
+      "parties": {
+        "landlord": {
+          "name": "Wong Wai Chue"
+        },
+        "tenant": {
+          "name": null
+        }
+      },
+      "terms": {
+        "agreementLength": "6 months",
+        "securityDeposit": {
+          "amount": 500,
+          "currency": "SGD",
+          "refundCondition": "Security deposit of $500 will not be refunded if tenant decide to move out within the timeframe of the length of agreement."
+        },
+        "rent": {
+          "amount": 500.0,
+          "currency": "SGD",
+          "paymentDay": "27th",
+          "payableTo": "Wong Wai Chue",
+          "includesUtilities": true,
+          "utilitiesIncluded": [
+            "Electricity",
+            "Water",
+            "Internet"
+          ]
+        }
+      },
+      "householdRules": {
+        "commonAreas": "Everyone is to clean up after themselves.",
+        "personalRooms": "Should be cleaned at least twice per week. No food or food wrappers/trash is to be kept in rooms at all times.",
+        "toilet": "Should be cleaned out after each use and when needed.",
+        "kitchen": "Only light cooking allowed. Should be cleaned up after cooking. All dishes and cookware should be cleaned after used and left to dry, then to be put up in proper area. Trash to be cleared every night or when the trash bin is full.",
+        "washingMachine": "Can be used not more than twice per week.",
+        "aircon": "10PM TO 6AM OR 11PM TO 7AM. *Can be discussed.",
+        "guests": "NO guest allowed at all times.",
+        "smoking": "NO smoking allowed in all areas of the house.",
+        "drugUse": "Any type of illegal Drug is not to be brought around or used in the house. Any violation of this rule and the Authorities will be contacted and tenant will be evicted.",
+        "musicTv": "Noise should be reduced after 10PM and not be loud enough to bother anyone in the house or for the sound to travel out of the room with the door shut. If it does, when asked to turn down the first time should be done immediately and not raised again."
+      },
+      "conflictResolution": "Each housemate will strive to develop mutual cooperation and good feelings with all other housemates. Should disagreements arise, each shall try to resolve the dispute in good faith using clear communication. If disputes continue thereafter, the housemates will discuss with Landlord and come to a conclusion with the Landlord decision.",
+      "deposits": {
+        "securityDeposit": {
+          "amount": 500,
+          "currency": "SGD",
+          "paidOn": "27/12/22",
+          "usage": "This deposit will be used to pay for the last month of rental if tenant decides to drop the contract after the rental period of a year. Deposit will be return back after moved out. However, the last month of the rental still required to pay."
+        }
+      },
+      "agreementDate": "27/12/22"
+    }
+  }
+}
