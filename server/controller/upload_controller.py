@@ -1,4 +1,3 @@
-# from fastapi and docling
 from fastapi import UploadFile, File, HTTPException, APIRouter
 from fastapi.responses import PlainTextResponse
 
