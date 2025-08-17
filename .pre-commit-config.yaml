@@ -1,3 +1,4 @@
+files: ^server/
 repos:
   - repo: https://github.com/astral-sh/uv-pre-commit
     rev: 0.8.11
@@ -10,6 +11,7 @@ repos:
       - id: ruff-check
         args: [ --fix ]
       - id: ruff-format
+
       
   - repo: https://github.com/RobertCraigie/pyright-python
     rev: v1.1.403
