@@ -1,7 +1,6 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from server.controller.upload_controller import router as ocr_router
-from server.agents.planner_agent import PlannerAgent
 import json
 
 app = FastAPI()
@@ -15,52 +14,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
-app.include_router(ocr_router)
-
-
 @app.get("/")
 async def read_root():
-    return {"message": "gaytards"}
-
-
-@app.post("/generate-planner-data")
-def generate_planner_data(pdf_data: dict):
-    """
-    Generate planner data using the planner agent.
-    :param pdf_data: Parsed PDF data.
-    """
-    try:
-        planner_data = planner_agent.generate_planner_data(pdf_data)
-        return {"message": "Planner data generated successfully", "data": planner_data}
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-
-
-@app.get("/fetch-planner-data")
-def fetch_planner_data():
-    """
-    Fetch the contents of planner-agent.json.
-    """
-    try:
-        with open(planner_agent.output_file, "r") as file:
-            planner_data = json.load(file)
-        return planner_data
-    except FileNotFoundError:
-        raise HTTPException(status_code=404, detail="Planner data not found")
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-
-
-@app.put("/update-planner-data")
-def update_planner_data(updated_data: dict):
-    """
-    Update the planner data in planner-agent.json.
-    :param updated_data: New planner data.
-    """
-    try:
-        with open(planner_agent.output_file, "w") as file:
-            json.dump(updated_data, file, indent=4)
-        return {"message": "Planner data updated successfully"}
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+    return {"message": "Welcome to the Planner Agent API"}
