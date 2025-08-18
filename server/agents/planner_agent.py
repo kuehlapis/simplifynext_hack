@@ -2,24 +2,22 @@ import json
 
 
 class PlannerAgent:
-    def __init__(self):
+    def __init__(self, rules_file="planner_agent_rules.json"):
+        with open(rules_file, "r") as file:
+            self.rules = json.load(file)
         self.output_file = "planner-agent.json"
 
     def generate_planner_data(self, pdf_data):
         """
-        Generate planner data based on inputs from the PDF decoding agent.
+        Generate planner data based on inputs from the PDF decoding agent and rules.
         :param pdf_data: Data extracted from the PDF decoding agent.
         """
-        # Example structure for planner data
         planner_data = {
             "negotiation_email": {
-                "draft": "Please review the attached rider clauses.",
-                "tone_options": ["firm", "courteous", "neutral"],
+                "draft": self.rules["negotiation_email"]["email_template"],
+                "tone_options": self.rules["negotiation_email"]["tone_options"],
             },
-            "rider_clauses": {
-                "clause_1": "Concrete clause edit example 1",
-                "clause_2": "Concrete clause edit example 2",
-            },
+            "rider_clauses": self.rules["rider_clauses"],
         }
 
         # Write planner data to JSON file
