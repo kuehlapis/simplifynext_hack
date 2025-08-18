@@ -4,7 +4,6 @@ from server.controller.upload_controller import router as ocr_router
 import json
 
 app = FastAPI()
-planner_agent = PlannerAgent()
 
 app.add_middleware(
     CORSMiddleware,
