@@ -1,7 +1,8 @@
-from fastapi import FastAPI, HTTPException
+
+
+from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from server.controller.upload_controller import router as ocr_router
-import json
+
 
 app = FastAPI()
 
@@ -13,6 +14,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
 @app.get("/")
 async def read_root():
-    return {"message": "Welcome to the Planner Agent API"}
+    return {"message": "Welcome to the Gaytard API"}
