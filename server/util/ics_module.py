@@ -1,11 +1,14 @@
 from ics import Calendar, Event
 from datetime import timedelta
 
+
 class ICSModule:
     def __init__(self):
         self.calendar = Calendar()
 
-    def create_event(self, name, begin, end, description, recurrence=None, reminder=None):
+    def create_event(
+        self, name, begin, end, description, recurrence=None, reminder=None
+    ):
         """
         Create a calendar event.
         :param name: Event name.
@@ -28,7 +31,9 @@ class ICSModule:
             event.extra.append(recurrence)
 
         if reminder:
-            event.extra.append(f"BEGIN:VALARM\nTRIGGER:-P{reminder.total_seconds()}S\nACTION:DISPLAY\nDESCRIPTION:{name}\nEND:VALARM")
+            event.extra.append(
+                f"BEGIN:VALARM\nTRIGGER:-P{reminder.total_seconds()}S\nACTION:DISPLAY\nDESCRIPTION:{name}\nEND:VALARM"
+            )
 
         self.calendar.events.add(event)
 
@@ -40,11 +45,16 @@ class ICSModule:
         with open(file_name, "w") as file:
             file.writelines(self.calendar)
 
+
 # Example usage
 if __name__ == "__main__":
     ics_module = ICSModule()
     ics_module.create_event(
-        "Meeting", "2025-08-18 10:00:00", "2025-08-18 11:00:00", "Discuss rider clauses.",
-        recurrence="RRULE:FREQ=DAILY;COUNT=5", reminder=timedelta(minutes=30)
+        "Meeting",
+        "2025-08-18 10:00:00",
+        "2025-08-18 11:00:00",
+        "Discuss rider clauses.",
+        recurrence="RRULE:FREQ=DAILY;COUNT=5",
+        reminder=timedelta(minutes=30),
     )
     ics_module.save_calendar("planner-event.ics")

@@ -1,5 +1,6 @@
 import json
 
+
 class PlannerAgent:
     def __init__(self):
         self.output_file = "planner-agent.json"
@@ -13,12 +14,12 @@ class PlannerAgent:
         planner_data = {
             "negotiation_email": {
                 "draft": "Please review the attached rider clauses.",
-                "tone_options": ["firm", "courteous", "neutral"]
+                "tone_options": ["firm", "courteous", "neutral"],
             },
             "rider_clauses": {
                 "clause_1": "Concrete clause edit example 1",
-                "clause_2": "Concrete clause edit example 2"
-            }
+                "clause_2": "Concrete clause edit example 2",
+            },
         }
 
         # Write planner data to JSON file
@@ -26,6 +27,7 @@ class PlannerAgent:
             json.dump(planner_data, file, indent=4)
 
         return planner_data
+
 
 # Example usage
 if __name__ == "__main__":
