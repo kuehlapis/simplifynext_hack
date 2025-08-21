@@ -21,13 +21,30 @@ interface AgentPipelineProps {
 const StatusIcon = ({ status }: { status: AgentStatus }) => {
   switch (status) {
     case 'completed':
-      return <CheckCircle className="w-5 h-5 text-success" />;
+      return (
+        <div className="relative p-2 bg-success/20 rounded-full">
+          <CheckCircle className="w-5 h-5 text-success" />
+          <div className="absolute inset-0 bg-success/20 rounded-full animate-ping"></div>
+        </div>
+      );
     case 'processing':
-      return <Loader2 className="w-5 h-5 text-primary animate-spin" />;
+      return (
+        <div className="p-2 bg-primary/20 rounded-full">
+          <Loader2 className="w-5 h-5 text-primary animate-spin" />
+        </div>
+      );
     case 'error':
-      return <AlertCircle className="w-5 h-5 text-destructive" />;
+      return (
+        <div className="p-2 bg-destructive/20 rounded-full">
+          <AlertCircle className="w-5 h-5 text-destructive" />
+        </div>
+      );
     default:
-      return <Clock className="w-5 h-5 text-muted-foreground" />;
+      return (
+        <div className="p-2 bg-muted/50 rounded-full">
+          <Clock className="w-5 h-5 text-muted-foreground" />
+        </div>
+      );
   }
 };
 
@@ -58,29 +75,42 @@ const StatusBadge = ({ status }: { status: AgentStatus }) => {
 
 export const AgentPipeline = ({ agents }: AgentPipelineProps) => {
   return (
-    <div className="space-y-4">
+    <div className="space-y-6">
       {agents.map((agent, index) => (
-        <Card key={agent.id} className="p-6 shadow-soft hover:shadow-medium transition-shadow">
+        <Card key={agent.id} className="p-6 shadow-medium hover:shadow-large transition-all duration-300 bg-gradient-surface border-0 animate-slide-up" style={{ animationDelay: `${index * 100}ms` }}>
           <div className="flex items-start justify-between mb-4">
-            <div className="flex items-center space-x-3">
+            <div className="flex items-center space-x-4">
               <div className="flex-shrink-0">
                 <StatusIcon status={agent.status} />
               </div>
               <div>
-                <h3 className="font-semibold text-foreground">{agent.name}</h3>
-                <p className="text-sm text-muted-foreground">{agent.description}</p>
+                <h3 className="text-lg font-semibold text-foreground">{agent.name}</h3>
+                <p className="text-muted-foreground leading-relaxed">{agent.description}</p>
               </div>
             </div>
             <StatusBadge status={agent.status} />
           </div>
           
           {agent.status === 'processing' && agent.progress !== undefined && (
-            <Progress value={agent.progress} className="w-full" />
+            <div className="space-y-3">
+              <div className="flex justify-between text-sm">
+                <span className="text-muted-foreground">Processing...</span>
+                <span className="font-medium text-primary">{agent.progress}%</span>
+              </div>
+              <div className="w-full bg-muted rounded-full h-3 overflow-hidden">
+                <div 
+                  className="bg-gradient-primary h-3 rounded-full transition-all duration-500 relative" 
+                  style={{ width: `${agent.progress}%` }}
+                >
+                  <div className="absolute inset-0 bg-white/30 animate-pulse"></div>
+                </div>
+              </div>
+            </div>
           )}
           
           {agent.output && (
-            <div className="mt-4 p-4 bg-secondary rounded-lg">
-              <pre className="text-sm text-secondary-foreground whitespace-pre-wrap">
+            <div className="mt-6 p-4 bg-card/50 border border-border/50 rounded-xl">
+              <pre className="text-sm text-card-foreground whitespace-pre-wrap leading-relaxed">
                 {typeof agent.output === 'string' ? agent.output : JSON.stringify(agent.output, null, 2)}
               </pre>
             </div>
