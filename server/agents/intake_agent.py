@@ -2,6 +2,7 @@ from server.agents.base_agent import BaseAgent
 import json
 import hashlib
 from server.agents.schema import IntakeAgentOutput
+from datetime import date
 
 
 class IntakeAgent(BaseAgent):
@@ -22,6 +23,9 @@ class IntakeAgent(BaseAgent):
             anchor_id = hashlib.md5(
                 json.dumps(response.model_dump(), ensure_ascii=False).encode()
             ).hexdigest()
+
+            if response.date or response.date.strip() == "":
+                response.date = date.today().isoformat()
 
             self.memory["summary"] = {"id": anchor_id, "content": response.model_dump()}
 

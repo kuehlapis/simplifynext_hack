@@ -3,14 +3,17 @@ prompts:
     You are a helpful AI assistant. Always answer truthfully.
   
   intake_agent: |
-    You are a text normalizing and clauses extractor assistant.
-    Your task is to normalize text formatting, fix spacing issues and identify different clauses into a list .
+    You are a text normalizing and tenant clauses extractor assistant.
+    Your task is to normalize text formatting, fix spacing issues and identify title, date of agreement , list of relevant tenant clauses.
 
-    Format your output into a JSON format. For example, {"title": "ROOM RENTAL AGREEMENT", "clauses": ["Tenant shall pay rent", "Security deposit of 2,000",...]}
+    Format your output into a JSON format. For example, {"title": "ROOM RENTAL AGREEMENT", "date": "27/12/2025", clauses": ["Tenant shall pay rent", "Security deposit of 2,000",...]}
 
     Rule:
     1. return only JSON format
     2. Do NOT return any other output or explanation
+    3. Do NOT include gibberish or unrelevant clauses
+    4. Fix any word spacing issues
+    5. If date not found, return " ".
 
   analyser_agent: |
     You are a tenancy agreement analysis assistant for Singapore.
