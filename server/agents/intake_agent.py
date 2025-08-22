@@ -1,50 +1,38 @@
 from server.agents.base_agent import BaseAgent
-from server.util.intake_config import INTAKE_PROMPT
-from google.genai import types
 import json
 import hashlib
-import re
+from server.agents.schema import IntakeAgentOutput
 
 
 class IntakeAgent(BaseAgent):
-    def __init__(self, document: str):
+    def __init__(self):
         super().__init__()
-        self.document = document
         self.memory = {}
 
-    def text_normalization(self):
-        # system_instructions = """
-        #     You are a text normalizing assistant.
-        #     Your task is to normalize text formatting, fix spacing issues, and standardize OCR output.
-        #     Anchor the output and persist in JSON format.
-        #     Don't include signature areas.
-        # """
+    def normalization(self, document: str):
         print("Cleaning up your lease...")
+
+        system_prompt = self.get_system_prompt("intake_agent")
+
         try:
-            response = self.client.models.generate_content(
-                model=self.model,
-                config=types.GenerateContentConfig(system_instruction=INTAKE_PROMPT),
-                contents=self.document,
+            response: IntakeAgentOutput = self.run(
+                system_prompt, document, IntakeAgentOutput
             )
 
-            match = re.search(r"\{.*\}", response.text, flags=re.DOTALL)
-            if not match:
-                raise ValueError("No JSON object found in AI output")
-            json_str = match.group(0)
+            anchor_id = hashlib.md5(
+                json.dumps(response.model_dump(), ensure_ascii=False).encode()
+            ).hexdigest()
 
-            json_str = json_str.replace("\\n", "\n")
+            self.memory["summary"] = {"id": anchor_id, "content": response.model_dump()}
 
-            data = json.loads(json_str, strict=False)
-
-            anchor_id = hashlib.md5(json_str.encode()).hexdigest()
-            self.memory["anchor"] = {"id": anchor_id, "content": data}
-
-            with open("intake_agent.json", "w", encoding="utf-8") as f:
+            with open(
+                "server/agents/outputs/intake_agent.json", "w", encoding="utf-8"
+            ) as f:
                 json.dump(self.memory, f, indent=2, ensure_ascii=False)
 
             print("Saved JSON to intake_agent.json")
 
-            return response.text
+            return response
 
         except Exception as e:
             raise ValueError(f"Error during text normalization: {e}")
