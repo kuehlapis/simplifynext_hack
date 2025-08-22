@@ -3,10 +3,9 @@ from typing import List, Dict, Any
 from server.agents.base_agent import BaseAgent
 import yaml
 import os
+import json
 
-from langchain_core.prompts import ChatPromptTemplate
-from langchain_google_genai import ChatGoogleGenerativeAI
-from langchain_core.output_parsers import JsonOutputParser
+from server.agents.schema import AnalysisResult
 
 RULEBOOK_PATH = os.path.join(os.path.dirname(__file__), "rules", "rulebook.yaml")
 
@@ -14,16 +13,12 @@ RULEBOOK_PATH = os.path.join(os.path.dirname(__file__), "rules", "rulebook.yaml"
 class AnalyserAgent(BaseAgent):
     """
     Analyses tenancy agreement clauses using rulebook and outputs structured risk analysis.
-    Now uses LangChain for LLM-based analysis.
+    Uses LangChain for LLM-based analysis.
     """
 
     def __init__(self):
         super().__init__()
         self.rules = self._load_rules()
-        self.llm = ChatGoogleGenerativeAI(
-            model=self.model, google_api_key=self.client.api_key
-        )
-        self.parser = JsonOutputParser()
 
     def _load_rules(self) -> List[Dict[str, Any]]:
         with open(RULEBOOK_PATH, "r", encoding="utf-8") as f:
@@ -33,30 +28,20 @@ class AnalyserAgent(BaseAgent):
     def analyze(self, intake_json: Dict[str, Any]) -> Dict[str, Any]:
         clauses = self._extract_clauses(intake_json)
         rulebook_text = yaml.dump({"rules": self.rules}, allow_unicode=True)
-        prompt = ChatPromptTemplate.from_messages(
-            [
-                (
-                    "system",
-                    "You are a tenancy agreement analysis assistant for Singapore. "
-                    "Given a list of clauses and a YAML rulebook, output a JSON object with: "
-                    "1. summary (counts of high_risk, medium_risk, ok, total), "
-                    "2. issues (list of dicts with clause, risk, category, rationale, recommendation, reference), "
-                    "3. buckets (unique categories found). "
-                    "Always cite the rulebook and use Singapore context.",
-                ),
-                (
-                    "human",
-                    "Rulebook YAML:\n{rulebook}\n\nClauses:\n{clauses}\n\nOutput JSON as specified.",
-                ),
-            ]
-        )
-        chain = prompt | self.llm | self.parser
-
+        system_prompt = self.get_system_prompt("analyser_agent")
+        input_text = f"Rulebook YAML:\n{rulebook_text}\n\nClauses:\n{clauses}\n\nOutput JSON as specified."
         try:
-            result = chain.invoke({"rulebook": rulebook_text, "clauses": clauses})
+            result: AnalysisResult = self.run(system_prompt, input_text, AnalysisResult)
+
+            # delete later
+            with open(
+                "server/agents/outputs/analysis_result.json", "w", encoding="utf-8"
+            ) as f:
+                json.dump(result.dict(), f, ensure_ascii=False, indent=2)
+
             return result
         except Exception as e:
-            raise RuntimeError(f"LangChain analysis failed: {e}")
+            raise RuntimeError(f"Analysis failed: {e}")
 
     def _extract_clauses(self, intake_json: Dict[str, Any]) -> List[str]:
-        return
+        return intake_json.get("clauses", [])
