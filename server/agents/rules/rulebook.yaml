@@ -1,0 +1,120 @@
+rules:
+  - id: security_deposit_limit
+    category: Unfair Clauses
+    description: Security deposit must not exceed 2 months' rent for standard leases.
+    risk: HIGH
+    rationale: Excessive deposits are not industry standard and may be unfair to tenants.
+    recommendation: Negotiate to reduce deposit to 2 months maximum.
+    reference: CEA Practice Guidelines, industry norm
+
+  - id: stamp_duty_responsibility
+    category: Stamp Duty
+    description: Stamp duty is typically shared or paid by tenant, but should be explicit and fair.
+    risk: MEDIUM
+    rationale: Assigning all stamp duty to tenant is common but can be negotiated.
+    recommendation: Propose shared responsibility for stamp duty and legal costs.
+    reference: IRAS, CEA, industry practice
+
+  - id: minimum_tenancy_period
+    category: Your Rights
+    description: HDB minimum tenancy is 6 months; private is usually 3 months or more.
+    risk: HIGH
+    rationale: Shorter tenancies may violate HDB/private housing rules.
+    recommendation: Ensure tenancy period meets minimum legal requirements.
+    reference: HDB, URA guidelines
+
+  - id: minor_repairs_cap
+    category: Unfair Clauses
+    description: Tenant's liability for minor repairs should be capped (e.g., $150 per item).
+    risk: MEDIUM
+    rationale: Unlimited repair liability is unfair to tenants.
+    recommendation: Negotiate a reasonable cap for minor repairs.
+    reference: CEA template, industry norm
+
+  - id: entry_notice
+    category: Your Rights
+    description: Landlord must give reasonable notice (e.g., 24 hours) before entering premises.
+    risk: HIGH
+    rationale: Tenant privacy is protected by law and industry practice.
+    recommendation: Ensure entry notice clause is present and reasonable.
+    reference: CEA template, industry norm
+
+  - id: subletting
+    category: Unfair Clauses
+    description: Subletting is usually not allowed without landlord consent.
+    risk: OK
+    rationale: Standard practice, but should be clearly stated.
+    recommendation: Confirm subletting terms are clear.
+    reference: CEA template
+
+  - id: guest_policy
+    category: Unfair Clauses
+    description: No-guest policies are restrictive but not illegal; should be reasonable.
+    risk: MEDIUM
+    rationale: Overly strict guest policies may be unfair.
+    recommendation: Negotiate for reasonable guest access if needed.
+    reference: Industry norm
+
+  - id: diplomatic_clause
+    category: Your Rights
+    description: Diplomatic/break clause should be present for leases over 12 months (for expats).
+    risk: MEDIUM
+    rationale: Absence of clause may disadvantage expat tenants.
+    recommendation: Request diplomatic clause if eligible.
+    reference: CEA template, industry norm
+
+  - id: renewal_option
+    category: Your Rights
+    description: Renewal option should be fair and not one-sided.
+    risk: MEDIUM
+    rationale: Renewal terms should not solely favor landlord.
+    recommendation: Negotiate for mutual renewal terms.
+    reference: Industry norm
+
+  - id: illegal_drugs_eviction
+    category: Your Rights
+    description: Immediate eviction for illegal drug use is standard and legal.
+    risk: OK
+    rationale: Protects landlord and complies with law.
+    recommendation: No action needed if clause is present.
+    reference: Singapore law
+
+  - id: cleaning_and_maintenance
+    category: Unfair Clauses
+    description: Cleaning requirements should be reasonable and not excessive.
+    risk: MEDIUM
+    rationale: Excessive cleaning demands may be unfair.
+    recommendation: Negotiate for reasonable cleaning terms.
+    reference: Industry norm
+
+  - id: aircon_usage
+    category: Unfair Clauses
+    description: Aircon usage restrictions should be reasonable (e.g., night hours).
+    risk: OK
+    rationale: Reasonable restrictions are standard.
+    recommendation: Confirm aircon usage terms are clear.
+    reference: Industry norm
+
+  - id: rent_due_date
+    category: Unfair Clauses
+    description: Rent due date should be clearly stated and reasonable.
+    risk: OK
+    rationale: Standard practice.
+    recommendation: Confirm rent due date is clear.
+    reference: Industry norm
+
+  - id: utilities_inclusion
+    category: Unfair Clauses
+    description: Utilities inclusion/exclusion should be explicit.
+    risk: OK
+    rationale: Standard practice.
+    recommendation: Confirm utilities terms are clear.
+    reference: Industry norm
+
+  - id: notice_period_termination
+    category: Your Rights
+    description: Notice period for termination should be reasonable (e.g., 1-2 months).
+    risk: MEDIUM
+    rationale: Excessive notice periods are unfair.
+    recommendation: Negotiate for reasonable notice period.
+    reference: Industry norm
