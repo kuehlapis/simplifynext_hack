@@ -8,18 +8,22 @@ class PlannerAgent:
         """
         import os
         from datetime import datetime
+
         if intake_file is None:
-            intake_file = os.path.join(os.path.dirname(__file__), "outputs", "intake_agent.json")
-        ics_file = os.path.join(os.path.dirname(__file__), "outputs", "planner_event.ics")
+            intake_file = os.path.join(
+                os.path.dirname(__file__), "outputs", "intake_agent.json"
+            )
+        ics_file = os.path.join(
+            os.path.dirname(__file__), "outputs", "planner_event.ics"
+        )
         try:
             with open(intake_file, "r", encoding="utf-8") as f:
                 intake_data = json.load(f)
             date_str = intake_data["summary"]["content"]["date"]
             from datetime import timedelta
+
             date_obj = datetime.strptime(date_str, "%Y-%m-%d")
             signing_date = date_obj + timedelta(weeks=1)
-            event_start = signing_date.strftime("%Y-%m-%d") + " 14:00:00"
-            event_end = signing_date.strftime("%Y-%m-%d") + " 15:00:00"
             event_title = "Agreement Signing Meeting"
             # Write ICS file
             ics_content = (
@@ -40,6 +44,7 @@ class PlannerAgent:
         except Exception as e:
             print(f"Error creating ICS file: {e}")
             return None
+
     def __init__(self):
         import os
 
