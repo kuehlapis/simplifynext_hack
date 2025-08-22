@@ -1,250 +1,250 @@
 {
   "summary": {
-    "high_risk": 12,
-    "medium_risk": 16,
-    "ok": 2,
+    "high_risk": 30,
+    "medium_risk": 0,
+    "ok": 0,
     "total": 30
   },
   "issues": [
     {
       "clause": "The Tenant shall pay rent in the amount of SGD 500.00 per month, but the Landlord reserves the right to increase rent by any amount at any time without prior notice.",
       "risk": "HIGH",
-      "category": "Your Rights",
-      "rationale": "Tenant privacy is protected by law and industry practice. (Singapore context)",
-      "recommendation": "Ensure entry notice clause is present and reasonable.",
-      "reference": "CEA template, industry norm"
+      "category": "Unfair Clauses",
+      "rationale": "Landlord reserves the right to increase rent by any amount at any time without prior notice.",
+      "recommendation": "This is against industry standards in Singapore. Negotiate for a fixed rent for the duration of the tenancy or a reasonable increase clause.",
+      "reference": "CEA Practice Guidelines, industry norm"
     },
     {
       "clause": "A security deposit of SGD 2000.00 shall be paid, which will not be refunded under any circumstances, including but not limited to the Tenant never actually moving in.",
       "risk": "HIGH",
       "category": "Unfair Clauses",
-      "rationale": "Excessive deposits are not industry standard and may be unfair to tenants. (Singapore context)",
-      "recommendation": "Negotiate to reduce deposit to 2 months maximum.",
+      "rationale": "Security deposit shall not be refunded under any circumstances, including but not limited to the Tenant never actually moving in.",
+      "recommendation": "This is against industry standards in Singapore. Negotiate for a clear and fair refund policy for the security deposit.",
       "reference": "CEA Practice Guidelines, industry norm"
     },
     {
       "clause": "Tenant agrees to allow the Landlord unrestricted access to the premises at all hours, including weekends, public holidays, and during the Tenant's sleep.",
-      "risk": "MEDIUM",
-      "category": "Stamp Duty",
-      "rationale": "Assigning all stamp duty to tenant is common but can be negotiated. (Singapore context)",
-      "recommendation": "Propose shared responsibility for stamp duty and legal costs.",
-      "reference": "IRAS, CEA, industry practice"
+      "risk": "HIGH",
+      "category": "Your Rights",
+      "rationale": "Tenant agrees to allow the Landlord unrestricted access to the premises at all hours, including weekends, public holidays, and during the Tenant's sleep.",
+      "recommendation": "This is against industry standards in Singapore. Negotiate for a reasonable notice period before the landlord enters the premises.",
+      "reference": "CEA template, industry norm"
     },
     {
-      "clause": "Utilities shall be borne entirely by the Tenant, including electricity, water, gas, air, and theoretical concepts such as 'hope' and 'dreams'.",
-      "risk": "OK",
+      "clause": "Utilities shall be borne entirely by the Tenant, including electricity, water, gas, air, an theoretical concepts such as 'hope' and 'dreams'.",
+      "risk": "HIGH",
       "category": "Unfair Clauses",
-      "rationale": "Standard practice. (Singapore context)",
-      "recommendation": "Confirm utilities terms are clear.",
+      "rationale": "Utilities shall be borne entirely by the Tenant, including electricity, water, gas, air, an theoretical concepts such as 'hope' and 'dreams'.",
+      "recommendation": "This clause is unreasonable. Negotiate to remove the nonsensical parts.",
       "reference": "Industry norm"
     },
     {
       "clause": "The Tenant is responsible for all repairs, including structural damage, natural disasters, and any cosmic phenomena affecting the unit.",
-      "risk": "MEDIUM",
-      "category": "Stamp Duty",
-      "rationale": "Assigning all stamp duty to tenant is common but can be negotiated. (Singapore context)",
-      "recommendation": "Propose shared responsibility for stamp duty and legal costs.",
-      "reference": "IRAS, CEA, industry practice"
+      "risk": "HIGH",
+      "category": "Unfair Clauses",
+      "rationale": "The Tenant is responsible for all repairs, including structural damage, natural disasters, and any cosmic phenomena affecting the unit.",
+      "recommendation": "This clause is unreasonable. Negotiate for a reasonable cap for minor repairs.",
+      "reference": "CEA template, industry norm"
     },
     {
       "clause": "Subletting is prohibited unless the Landlord personally profits from it. Any sublet profits not reported to the Landlord will be punishable by immediate eviction and forfeiture of all belongings.",
-      "risk": "MEDIUM",
-      "category": "Stamp Duty",
-      "rationale": "Assigning all stamp duty to tenant is common but can be negotiated. (Singapore context)",
-      "recommendation": "Propose shared responsibility for stamp duty and legal costs.",
-      "reference": "IRAS, CEA, industry practice"
+      "risk": "HIGH",
+      "category": "Unfair Clauses",
+      "rationale": "Subletting is prohibited unless the Landlord personally profits from it. Any sublet profits not reported to the Landlord will be punishable by immediate eviction and forfeiture of all belongings.",
+      "recommendation": "This clause is unreasonable. Negotiate for a fair subletting policy.",
+      "reference": "CEA template"
     },
     {
       "clause": "Pets are not allowed, except for those owned by the Landlord. Tenant is required to feed, walk, and groom said pets.",
-      "risk": "MEDIUM",
-      "category": "Stamp Duty",
-      "rationale": "Assigning all stamp duty to tenant is common but can be negotiated. (Singapore context)",
-      "recommendation": "Propose shared responsibility for stamp duty and legal costs.",
-      "reference": "IRAS, CEA, industry practice"
+      "risk": "HIGH",
+      "category": "Unfair Clauses",
+      "rationale": "Pets are not allowed, except for those owned by the Landlord. Tenant is required to feed, walk, and groom said pets.",
+      "recommendation": "This clause is unreasonable. Negotiate to remove the clause.",
+      "reference": "Industry norm"
     },
     {
       "clause": "The Tenant waives all legal rights, including the right to complain, negotiate, or seek fairness. All disputes shall be resolved exclusively by the Landlord's personal opinion.",
-      "risk": "MEDIUM",
-      "category": "Stamp Duty",
-      "rationale": "Assigning all stamp duty to tenant is common but can be negotiated. (Singapore context)",
-      "recommendation": "Propose shared responsibility for stamp duty and legal costs.",
-      "reference": "IRAS, CEA, industry practice"
+      "risk": "HIGH",
+      "category": "Unfair Clauses",
+      "rationale": "The Tenant waives all legal rights, including the right to complain, negotiate, or seek fairness. All disputes shall be resolved exclusively by the Landlord's personal opinion.",
+      "recommendation": "This clause is illegal and unenforceable in Singapore. Reject this clause.",
+      "reference": "Singapore law"
     },
     {
       "clause": "The Agreement shall last for 99 years or until the Tenant's spirit is broken, whichever comes first.",
-      "risk": "MEDIUM",
-      "category": "Stamp Duty",
-      "rationale": "Assigning all stamp duty to tenant is common but can be negotiated. (Singapore context)",
-      "recommendation": "Propose shared responsibility for stamp duty and legal costs.",
-      "reference": "IRAS, CEA, industry practice"
+      "risk": "HIGH",
+      "category": "Your Rights",
+      "rationale": "The Agreement shall last for 99 years or until the Tenant's spirit is broken, whichever comes first.",
+      "recommendation": "This clause is unreasonable. Negotiate for a standard tenancy period.",
+      "reference": "HDB, URA guidelines"
     },
     {
       "clause": "Governing Law: This Agreement shall be governed by the Laws of Singapore, as well as the arbitrary mood swings of the Landlord.",
-      "risk": "MEDIUM",
-      "category": "Stamp Duty",
-      "rationale": "Assigning all stamp duty to tenant is common but can be negotiated. (Singapore context)",
-      "recommendation": "Propose shared responsibility for stamp duty and legal costs.",
-      "reference": "IRAS, CEA, industry practice"
+      "risk": "HIGH",
+      "category": "Unfair Clauses",
+      "rationale": "Governing Law: This Agreement shall be governed by the Laws of Singapore, as well as the arbitrary mood swings of the Landlord.",
+      "recommendation": "This clause is unreasonable. Negotiate to remove the nonsensical parts.",
+      "reference": "Singapore law"
     },
     {
       "clause": "Late payment of rent shall incur a penalty equal to the GDP of a small nation, payable immediately.",
-      "risk": "OK",
-      "category": "Your Rights",
-      "rationale": "Protects landlord and complies with law. (Singapore context)",
-      "recommendation": "No action needed if clause is present.",
-      "reference": "Singapore law"
+      "risk": "HIGH",
+      "category": "Unfair Clauses",
+      "rationale": "Late payment of rent shall incur a penalty equal to the GDP of a small nation, payable immediately.",
+      "recommendation": "This clause is unreasonable. Negotiate for a reasonable late payment penalty.",
+      "reference": "Industry norm"
     },
     {
       "clause": "Tenant must perform weekly entertainment (karaoke, interpretive dance, or comedy routines) for the Landlord without compensation.",
       "risk": "HIGH",
       "category": "Unfair Clauses",
-      "rationale": "Excessive deposits are not industry standard and may be unfair to tenants. (Singapore context)",
-      "recommendation": "Negotiate to reduce deposit to 2 months maximum.",
-      "reference": "CEA Practice Guidelines, industry norm"
+      "rationale": "Tenant must perform weekly entertainment (karaoke, interpretive dance, or comedy routines) for the Landlord without compensation.",
+      "recommendation": "This clause is unreasonable. Negotiate to remove the clause.",
+      "reference": "Industry norm"
     },
     {
       "clause": "Any noise complaints made by the Tenant will be considered a violation of this Agreement and grounds for eviction.",
-      "risk": "MEDIUM",
-      "category": "Stamp Duty",
-      "rationale": "Assigning all stamp duty to tenant is common but can be negotiated. (Singapore context)",
-      "recommendation": "Propose shared responsibility for stamp duty and legal costs.",
-      "reference": "IRAS, CEA, industry practice"
+      "risk": "HIGH",
+      "category": "Unfair Clauses",
+      "rationale": "Any noise complaints made by the Tenant will be considered a violation of this Agreement and grounds for eviction.",
+      "recommendation": "This clause is unreasonable. Negotiate to remove the clause.",
+      "reference": "Industry norm"
     },
     {
       "clause": "The Landlord reserves the right to use Tenant's room for storage of personal items, livestock, or experimental technology.",
-      "risk": "MEDIUM",
+      "risk": "HIGH",
       "category": "Unfair Clauses",
-      "rationale": "Unlimited repair liability is unfair to tenants. (Singapore context)",
-      "recommendation": "Negotiate a reasonable cap for minor repairs.",
-      "reference": "CEA template, industry norm"
+      "rationale": "The Landlord reserves the right to use Tenant's room for storage of personal items, livestock, or experimental technology.",
+      "recommendation": "This clause is unreasonable. Negotiate to remove the clause.",
+      "reference": "Industry norm"
     },
     {
       "clause": "Tenant shall provide free labor for all landlord's projects, including but not limited to gardening, laundry, and emotional support.",
-      "risk": "MEDIUM",
+      "risk": "HIGH",
       "category": "Unfair Clauses",
-      "rationale": "Unlimited repair liability is unfair to tenants. (Singapore context)",
-      "recommendation": "Negotiate a reasonable cap for minor repairs.",
-      "reference": "CEA template, industry norm"
+      "rationale": "Tenant shall provide free labor for all landlord's projects, including but not limited to gardening, laundry, and emotional support.",
+      "recommendation": "This clause is unreasonable. Negotiate to remove the clause.",
+      "reference": "Industry norm"
     },
     {
       "clause": "The Tenant must ask permission before breathing loudly within the unit.",
       "risk": "HIGH",
       "category": "Unfair Clauses",
-      "rationale": "Excessive deposits are not industry standard and may be unfair to tenants. (Singapore context)",
-      "recommendation": "Negotiate to reduce deposit to 2 months maximum.",
-      "reference": "CEA Practice Guidelines, industry norm"
+      "rationale": "The Tenant must ask permission before breathing loudly within the unit.",
+      "recommendation": "This clause is unreasonable. Negotiate to remove the clause.",
+      "reference": "Industry norm"
     },
     {
       "clause": "Any guest visiting the Tenant must pay an entrance fee to the Landlord, amount to be determined daily.",
       "risk": "HIGH",
       "category": "Unfair Clauses",
-      "rationale": "Excessive deposits are not industry standard and may be unfair to tenants. (Singapore context)",
-      "recommendation": "Negotiate to reduce deposit to 2 months maximum.",
-      "reference": "CEA Practice Guidelines, industry norm"
+      "rationale": "Any guest visiting the Tenant must pay an entrance fee to the Landlord, amount to be determined daily.",
+      "recommendation": "This clause is unreasonable. Negotiate to remove the clause.",
+      "reference": "Industry norm"
     },
     {
       "clause": "Tenant must maintain the apartment temperature strictly within Landlord's comfort range, regardless of Tenant's survival needs.",
       "risk": "HIGH",
       "category": "Unfair Clauses",
-      "rationale": "Excessive deposits are not industry standard and may be unfair to tenants. (Singapore context)",
-      "recommendation": "Negotiate to reduce deposit to 2 months maximum.",
-      "reference": "CEA Practice Guidelines, industry norm"
+      "rationale": "Tenant must maintain the apartment temperature strictly within Landlord's comfort range, regardless of Tenant's survival needs.",
+      "recommendation": "This clause is unreasonable. Negotiate to remove the clause.",
+      "reference": "Industry norm"
     },
     {
       "clause": "If the Tenant leaves behind any belongings, they automatically become property of the Landlord, including sentimental items.",
       "risk": "HIGH",
-      "category": "Your Rights",
-      "rationale": "Tenant privacy is protected by law and industry practice. (Singapore context)",
-      "recommendation": "Ensure entry notice clause is present and reasonable.",
-      "reference": "CEA template, industry norm"
+      "category": "Unfair Clauses",
+      "rationale": "If the Tenant leaves behind any belongings, they automatically become property of the Landlord, including sentimental items.",
+      "recommendation": "This clause is unreasonable. Negotiate for a reasonable process for handling abandoned belongings.",
+      "reference": "Industry norm"
     },
     {
       "clause": "Tenant must display unwavering gratitude towards the Landlord at all times. Failure to smile in Landlord's presence constitutes breach.",
       "risk": "HIGH",
       "category": "Unfair Clauses",
-      "rationale": "Excessive deposits are not industry standard and may be unfair to tenants. (Singapore context)",
-      "recommendation": "Negotiate to reduce deposit to 2 months maximum.",
-      "reference": "CEA Practice Guidelines, industry norm"
+      "rationale": "Tenant must display unwavering gratitude towards the Landlord at all times. Failure to smile in Landlord's presence constitutes breach.",
+      "recommendation": "This clause is unreasonable. Negotiate to remove the clause.",
+      "reference": "Industry norm"
     },
     {
       "clause": "Renovations or improvements carried out by Tenant become permanent gifts to the Landlord, who takes full credit for them.",
-      "risk": "MEDIUM",
+      "risk": "HIGH",
       "category": "Unfair Clauses",
-      "rationale": "Unlimited repair liability is unfair to tenants. (Singapore context)",
-      "recommendation": "Negotiate a reasonable cap for minor repairs.",
-      "reference": "CEA template, industry norm"
+      "rationale": "Renovations or improvements carried out by Tenant become permanent gifts to the Landlord, who takes full credit for them.",
+      "recommendation": "This clause is unreasonable. Negotiate to remove the clause.",
+      "reference": "Industry norm"
     },
     {
       "clause": "The Tenant may not question the fairness of any clause in this Agreement, verbally or in writing.",
-      "risk": "MEDIUM",
-      "category": "Stamp Duty",
-      "rationale": "Assigning all stamp duty to tenant is common but can be negotiated. (Singapore context)",
-      "recommendation": "Propose shared responsibility for stamp duty and legal costs.",
-      "reference": "IRAS, CEA, industry practice"
+      "risk": "HIGH",
+      "category": "Unfair Clauses",
+      "rationale": "The Tenant may not question the fairness of any clause in this Agreement, verbally or in writing.",
+      "recommendation": "This clause is illegal and unenforceable in Singapore. Reject this clause.",
+      "reference": "Singapore law"
     },
     {
       "clause": "Tenant shall not look directly at the Landlord's personal possessions without prior written consent.",
       "risk": "HIGH",
-      "category": "Your Rights",
-      "rationale": "Tenant privacy is protected by law and industry practice. (Singapore context)",
-      "recommendation": "Ensure entry notice clause is present and reasonable.",
-      "reference": "CEA template, industry norm"
+      "category": "Unfair Clauses",
+      "rationale": "Tenant shall not look directly at the Landlord's personal possessions without prior written consent.",
+      "recommendation": "This clause is unreasonable. Negotiate to remove the clause.",
+      "reference": "Industry norm"
     },
     {
       "clause": "The Tenant agrees to pay additional 'Goodwill Rent' whenever the Landlord feels underappreciated.",
       "risk": "HIGH",
-      "category": "Your Rights",
-      "rationale": "Tenant privacy is protected by law and industry practice. (Singapore context)",
-      "recommendation": "Ensure entry notice clause is present and reasonable.",
-      "reference": "CEA template, industry norm"
+      "category": "Unfair Clauses",
+      "rationale": "The Tenant agrees to pay additional 'Goodwill Rent' whenever the Landlord feels underappreciated.",
+      "recommendation": "This clause is unreasonable. Negotiate to remove the clause.",
+      "reference": "Industry norm"
     },
     {
       "clause": "The Landlord is entitled to 50% of all Tenant's lottery winnings, inheritances, or found coins on the street.",
-      "risk": "MEDIUM",
-      "category": "Stamp Duty",
-      "rationale": "Assigning all stamp duty to tenant is common but can be negotiated. (Singapore context)",
-      "recommendation": "Propose shared responsibility for stamp duty and legal costs.",
-      "reference": "IRAS, CEA, industry practice"
+      "risk": "HIGH",
+      "category": "Unfair Clauses",
+      "rationale": "The Landlord is entitled to 50% of all Tenant's lottery winnings, inheritances, or found coins on the street.",
+      "recommendation": "This clause is unreasonable. Negotiate to remove the clause.",
+      "reference": "Industry norm"
     },
     {
       "clause": "Tenant must surrender all control of kitchen appliances, including but not limited to the microwave and fridge.",
       "risk": "HIGH",
       "category": "Unfair Clauses",
-      "rationale": "Excessive deposits are not industry standard and may be unfair to tenants. (Singapore context)",
-      "recommendation": "Negotiate to reduce deposit to 2 months maximum.",
-      "reference": "CEA Practice Guidelines, industry norm"
+      "rationale": "Tenant must surrender all control of kitchen appliances, including but not limited to the microwave and fridge.",
+      "recommendation": "This clause is unreasonable. Negotiate to remove the clause.",
+      "reference": "Industry norm"
     },
     {
       "clause": "Any attempt by the Tenant to move out requires a six-year written notice.",
-      "risk": "MEDIUM",
+      "risk": "HIGH",
       "category": "Your Rights",
-      "rationale": "Excessive notice periods are unfair. (Singapore context)",
-      "recommendation": "Negotiate for reasonable notice period.",
+      "rationale": "Any attempt by the Tenant to move out requires a six-year written notice.",
+      "recommendation": "This clause is unreasonable. Negotiate for a standard notice period.",
       "reference": "Industry norm"
     },
     {
       "clause": "The Tenant must water the Landlord's plants and apologize if they wilt, regardless of fault.",
       "risk": "HIGH",
       "category": "Unfair Clauses",
-      "rationale": "Excessive deposits are not industry standard and may be unfair to tenants. (Singapore context)",
-      "recommendation": "Negotiate to reduce deposit to 2 months maximum.",
-      "reference": "CEA Practice Guidelines, industry norm"
+      "rationale": "The Tenant must water the Landlord's plants and apologize if they wilt, regardless of fault.",
+      "recommendation": "This clause is unreasonable. Negotiate to remove the clause.",
+      "reference": "Industry norm"
     },
     {
       "clause": "Tenant is responsible for all noise created by neighbors, nearby construction, or passing airplanes.",
-      "risk": "MEDIUM",
-      "category": "Stamp Duty",
-      "rationale": "Assigning all stamp duty to tenant is common but can be negotiated. (Singapore context)",
-      "recommendation": "Propose shared responsibility for stamp duty and legal costs.",
-      "reference": "IRAS, CEA, industry practice"
+      "risk": "HIGH",
+      "category": "Unfair Clauses",
+      "rationale": "Tenant is responsible for all noise created by neighbors, nearby construction, or passing airplanes.",
+      "recommendation": "This clause is unreasonable. Negotiate to remove the clause.",
+      "reference": "Industry norm"
     },
     {
       "clause": "Final Clause: The Landlord reserves the right to add, remove, or modify any clause in this Agreement at any time without Tenant's knowledge or consent.",
-      "risk": "MEDIUM",
-      "category": "Stamp Duty",
-      "rationale": "Assigning all stamp duty to tenant is common but can be negotiated. (Singapore context)",
-      "recommendation": "Propose shared responsibility for stamp duty and legal costs.",
-      "reference": "IRAS, CEA, industry practice"
+      "risk": "HIGH",
+      "category": "Unfair Clauses",
+      "rationale": "The Landlord reserves the right to add, remove, or modify any clause in this Agreement at any time without Tenant's knowledge or consent.",
+      "recommendation": "This clause is illegal and unenforceable in Singapore. Reject this clause.",
+      "reference": "Singapore law"
     }
   ],
   "buckets": [
