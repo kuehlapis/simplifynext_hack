@@ -4,6 +4,7 @@ from typing import List, Literal
 
 class IntakeAgentOutput(BaseModel):
     title: str = Field(..., description="Title of the intake content")
+    date: str = Field(..., description="Date of agreement")
     clauses: List[str] = Field(
         ..., description="Clauses associated with the intake content"
     )
