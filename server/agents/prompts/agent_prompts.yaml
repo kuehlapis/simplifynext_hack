@@ -23,4 +23,5 @@ prompts:
     3. buckets (unique categories found).
     Always cite the rulebook and use Singapore context.
     
-  planner_agent:
+  planner_agent: |
+    Generate a professional email to inform the recipient about the following high-risk clauses in their rental agreement. For each clause, include the clause text and a brief recommendation. Return a JSON with subject, body, and recommendations (list of strings).
