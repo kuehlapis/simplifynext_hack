@@ -102,49 +102,6 @@ class PlannerAgent(BaseAgent):
         os.makedirs(outputs_dir, exist_ok=True)
         self.output_file = os.path.join(outputs_dir, "planner-agent.json")
 
-    def generate_summary_email_from_analysis(self, analysis_file=None):
-        """
-        Reads analysis_result.json and generates a summary email with risks and recommendations.
-        """
-
-        if analysis_file is None:
-            analysis_file = os.path.join(
-                os.path.dirname(__file__), "outputs", "analysis_result.json"
-            )
-        try:
-            with open(analysis_file, "r", encoding="utf-8") as f:
-                analysis = json.load(f)
-        except Exception as e:
-            print(f"Error reading analysis file: {e}")
-            return None
-
-        summary = analysis.get("summary", {})
-        issues = analysis.get("issues", [])
-
-        email_lines = [
-            "Subject: Rental Agreement Risk Summary",
-            "",
-            f"High Risk Clauses: {summary.get('high_risk', 0)}",
-            f"Medium Risk Clauses: {summary.get('medium_risk', 0)}",
-            f"OK Clauses: {summary.get('ok', 0)}",
-            f"Total Clauses Analyzed: {summary.get('total', 0)}",
-            "",
-            "Top Issues and Recommendations:",
-        ]
-        for idx, issue in enumerate(issues[:5]):  # Include top 5 issues
-            email_lines.append(f"{idx + 1}. Clause: {issue['clause']}")
-            email_lines.append(f"   Risk: {issue['risk']}")
-            email_lines.append(f"   Rationale: {issue['rationale']}")
-            email_lines.append(f"   Recommendation: {issue['recommendation']}")
-            email_lines.append("")
-
-        email_content = "\n".join(email_lines)
-        # Save to output file
-        with open(self.output_file, "w", encoding="utf-8") as f:
-            f.write(email_content)
-        print(f"Summary email saved to {self.output_file}")
-        return email_content
-
 
 if __name__ == "__main__":
     agent = PlannerAgent()
