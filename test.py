@@ -29,7 +29,7 @@ intake_agent.normalization(markdown)
 # with open("analysis_result.json", "w", encoding="utf-8") as outfile:
 #     json.dump(analysis_result, outfile, indent=2, ensure_ascii=False)
 
-# Test PlannerAgent Gemini email and ICS generation
-# planner_agent = PlannerAgent()
-# planner_agent.generate_email_with_gemini()
-# planner_agent.create_signing_ics_from_intake()
+#if __name__ == "__main__":
+#    agent = PlannerAgent()
+#    agent.generate_email_with_gemini()
+#    agent.create_signing_ics_from_intake()

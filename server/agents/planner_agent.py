@@ -4,13 +4,8 @@ import os
 
 sys.path.append(os.path.dirname(__file__))
 from base_agent import BaseAgent
-from pydantic import BaseModel
-
-
-class EmailSchema(BaseModel):
-    subject: str
-    body: str
-    recommendations: list[str]
+from datetime import datetime
+from schema import EmailSchema
 
 
 class PlannerAgent(BaseAgent):
@@ -18,8 +13,6 @@ class PlannerAgent(BaseAgent):
         """
         Uses Gemini AI (via BaseAgent) to generate a structured email (subject, body, recommendations) from high-risk clauses in analysis_result.json.
         """
-        import os
-
         if analysis_file is None:
             analysis_file = os.path.join(
                 os.path.dirname(__file__), "outputs", "analysis_result.json"
@@ -67,9 +60,6 @@ class PlannerAgent(BaseAgent):
         """
         Reads intake_agent.json and creates an ICS file for signing date using the 'date' field.
         """
-        import os
-        from datetime import datetime
-
         if intake_file is None:
             intake_file = os.path.join(
                 os.path.dirname(__file__), "outputs", "intake_agent.json"
@@ -108,8 +98,6 @@ class PlannerAgent(BaseAgent):
 
     def __init__(self):
         super().__init__()
-        import os
-
         outputs_dir = os.path.join(os.path.dirname(__file__), "outputs")
         os.makedirs(outputs_dir, exist_ok=True)
         self.output_file = os.path.join(outputs_dir, "planner-agent.json")
@@ -118,7 +106,6 @@ class PlannerAgent(BaseAgent):
         """
         Reads analysis_result.json and generates a summary email with risks and recommendations.
         """
-        import os
 
         if analysis_file is None:
             analysis_file = os.path.join(
@@ -157,3 +144,9 @@ class PlannerAgent(BaseAgent):
             f.write(email_content)
         print(f"Summary email saved to {self.output_file}")
         return email_content
+
+
+if __name__ == "__main__":
+    agent = PlannerAgent()
+    agent.generate_email_with_gemini()
+    agent.create_signing_ics_from_intake()

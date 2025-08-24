@@ -30,3 +30,9 @@ class AnalysisResult(BaseModel):
     summary: Summary
     issues: List[Issue]
     buckets: List[str]
+
+
+class EmailSchema(BaseModel):
+    subject: str
+    body: str
+    recommendations: List[str]
