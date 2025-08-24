@@ -1,32 +1,10 @@
-Subject: Rental Agreement Risk Summary
-
-High Risk Clauses: 3
-Medium Risk Clauses: 21
-OK Clauses: 1
-Total Clauses Analyzed: 25
-
-Top Issues and Recommendations:
-1. Clause: A security deposit of SGD 2000.00 shall be paid
-   Risk: HIGH
-   Rationale: Excessive deposits are not industry standard and may be unfair to tenants.
-   Recommendation: Negotiate to reduce deposit to 2 months maximum.
-
-2. Clause: Tenant agrees to allow the Landlord unrestricted access to the premises at all hours
-   Risk: HIGH
-   Rationale: Tenant privacy is protected by law and industry practice.
-   Recommendation: Ensure entry notice clause is present and reasonable.
-
-3. Clause: The Tenant is responsible for all repairs
-   Risk: MEDIUM
-   Rationale: Unlimited repair liability is unfair to tenants.
-   Recommendation: Negotiate a reasonable cap for minor repairs.
-
-4. Clause: Subletting is prohibited unless the Landlord personally profits from it
-   Risk: OK
-   Rationale: Standard practice, but should be clearly stated.
-   Recommendation: Confirm subletting terms are clear.
-
-5. Clause: The Agreement shall last for 99 years
-   Risk: HIGH
-   Rationale: Shorter tenancies may violate HDB/private housing rules.
-   Recommendation: Ensure tenancy period meets minimum legal requirements.
+{
+  "subject": "High-Risk Clauses in Your Rental Agreement",
+  "body": "Dear Recipient,\n\nI am writing to you today to discuss some high-risk clauses in your rental agreement. I have identified the following clauses that may be unfavorable to you:\n\n1. Clause: A security deposit of SGD 2000.00 shall be paid\n2. Clause: Tenant agrees to allow the Landlord unrestricted access to the premises at all hours\n3. Clause: The Agreement shall last for 99 years\n4. Clause: The Landlord reserves the right to use Tenant's room for storage of personal items\n\nPlease see below for my recommendations on how to address these clauses.\n\nI hope this information is helpful. Please do not hesitate to contact me if you have any questions.\n\nSincerely,\n[Your Name]",
+  "recommendations": [
+    "Negotiate to reduce deposit to 2 months maximum.",
+    "Ensure entry notice clause is present and reasonable.",
+    "Ensure tenancy period meets minimum legal requirements.",
+    "Ensure entry notice clause is present and reasonable."
+  ]
+}
