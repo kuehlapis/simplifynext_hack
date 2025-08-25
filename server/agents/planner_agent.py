@@ -1,6 +1,7 @@
 import json
 import sys
 import os
+import yaml
 
 sys.path.append(os.path.dirname(__file__))
 from base_agent import BaseAgent
@@ -9,6 +10,12 @@ from schema import EmailSchema
 
 
 class PlannerAgent(BaseAgent):
+    def __init__(self):
+        super().__init__()
+        outputs_dir = os.path.join(os.path.dirname(__file__), "outputs")
+        os.makedirs(outputs_dir, exist_ok=True)
+        self.output_file = os.path.join(outputs_dir, "planner-agent.json")
+
     def generate_email_with_gemini(self, analysis_file=None):
         """
         Uses Gemini AI (via BaseAgent) to generate a structured email (subject, body, recommendations) from high-risk clauses in analysis_result.json.
@@ -32,7 +39,6 @@ class PlannerAgent(BaseAgent):
             print("No high risk clauses found.")
             return None
         # Load prompt template from agent_prompts.yaml
-        import yaml
 
         prompt_path = os.path.join(
             os.path.dirname(__file__), "prompts", "agent_prompts.yaml"
@@ -46,7 +52,7 @@ class PlannerAgent(BaseAgent):
         system_prompt = (
             self.get_system_prompt("planner_agent") or "You are a legal assistant."
         )
-        response = self.run(system_prompt, input_text, EmailSchema)
+        response: EmailSchema = self.run(system_prompt, input_text, EmailSchema)
         if not response:
             print("No response from Gemini agent.")
             return None
@@ -95,9 +101,3 @@ class PlannerAgent(BaseAgent):
         except Exception as e:
             print(f"Error creating ICS file: {e}")
             return None
-
-    def __init__(self):
-        super().__init__()
-        outputs_dir = os.path.join(os.path.dirname(__file__), "outputs")
-        os.makedirs(outputs_dir, exist_ok=True)
-        self.output_file = os.path.join(outputs_dir, "planner-agent.json")

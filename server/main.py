@@ -2,9 +2,13 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from server.controller.upload_controller import router as ocr_router
 from server.agents.planner_agent import PlannerAgent
+from server.agents.intake_agent import IntakeAgent
+from server.agents.analyser_agent import AnalyserAgent
 import json
 
 app = FastAPI()
+intake_agent = IntakeAgent()
+analyser_agent = AnalyserAgent()
 planner_agent = PlannerAgent()
 
 app.add_middleware(
@@ -22,6 +26,17 @@ app.include_router(ocr_router)
 @app.get("/")
 async def read_root():
     return {"message": "gaytards"}
+
+
+@app.get("/analyze")
+async def start_analyse(document: str):
+    intake_output = intake_agent.normalization(document)
+
+    analysis_result = analyser_agent.analyze(intake_output)
+
+    planner_output = planner_agent.generate_email_with_gemini(analysis_result)
+
+    return planner_output
 
 
 @app.post("/generate-planner-data")

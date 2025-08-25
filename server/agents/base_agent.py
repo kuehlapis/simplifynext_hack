@@ -4,7 +4,7 @@ import sys
 import os
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "util")))
-from config import getConfig
+from server.util.config import getConfig
 from typing import Type, TypeVar
 import yaml
 from pydantic import BaseModel
