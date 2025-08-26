@@ -36,7 +36,7 @@ async def start_analyse(document: str):
 
     planner_output = planner_agent.generate_email_with_gemini(analysis_result)
 
-    return planner_output
+    return planner_output, analysis_result
 
 
 @app.post("/generate-planner-data")
