@@ -95,6 +95,14 @@ rules:
     recommendation: Confirm aircon usage terms are clear.
     reference: Industry norm
 
+  - id: washing_machine_usage
+    category: Unfair Clauses
+    description: Washing machine use should be reasonable and not overly restrictive.
+    risk: MEDIUM
+    rationale: Limiting usage to very few times per week may be unfair.
+    recommendation: Negotiate for fair frequency (e.g., daily/alternate days).
+    reference: Industry norm
+
   - id: rent_due_date
     category: Unfair Clauses
     description: Rent due date should be clearly stated and reasonable.
@@ -117,4 +125,20 @@ rules:
     risk: MEDIUM
     rationale: Excessive notice periods are unfair.
     recommendation: Negotiate for reasonable notice period.
+    reference: Industry norm
+
+  - id: noise_policy
+    category: Unfair Clauses
+    description: Noise restrictions should be reasonable and measurable.
+    risk: MEDIUM
+    rationale: Clauses that are subjective may be unfair; should specify quiet hours or decibel limits.
+    recommendation: Clarify quiet hours and ensure enforceable standard.
+    reference: Industry norm
+
+  - id: conflict_resolution
+    category: Your Rights
+    description: Dispute resolution among housemates should be fair and involve landlord if needed.
+    risk: LOW
+    rationale: Standard practice; encourages good faith resolution.
+    recommendation: No action needed unless landlord involvement is biased.
     reference: Industry norm

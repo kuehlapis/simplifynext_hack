@@ -2,6 +2,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
 import sys
 import os
+from server.agents.guardrail_agent import GuardrailAgent
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "util")))
 from server.util.config import getConfig
@@ -25,6 +26,7 @@ class BaseAgent:
         self.prompt = ChatPromptTemplate.from_messages(
             [("system", "{system_prompt}"), ("human", "{input}")]
         )
+        self.guardrail = GuardrailAgent()
 
     def get_system_prompt(self, agent_type: str) -> str:
         try:
@@ -38,11 +40,15 @@ class BaseAgent:
     def run(self, system_prompt: str, input: str, schema: Type[T]) -> T:
         """Run the agent with human input."""
         try:
+            safe_input = self.guardrail.process(input)
+
             structured_client = self.client.with_structured_output(schema)
 
             chain = self.prompt | structured_client
 
-            response: T = chain.invoke({"system_prompt": system_prompt, "input": input})
+            response: T = chain.invoke(
+                {"system_prompt": system_prompt, "input": safe_input}
+            )
 
             return response
         except Exception as e:

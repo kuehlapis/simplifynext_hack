@@ -1,0 +1,29 @@
+rules:
+  - name: no_pii_email
+    type: regex
+    pattern: '\S+@\S+'
+    response: "[REDACTED_EMAIL]"
+
+  - name: no_pii_phone
+    type: regex
+    pattern: '(?:\+?\d{1,3}[\s-]?)?(?:\(?\d{2,4}\)?[\s-]?)?\d{3,4}[\s-]?\d{4}'
+    response: "[REDACTED_PHONE]"
+  
+  - name: no_bank_details
+    type: regex
+    pattern: '\b\d{9,18}\b'
+    response: "[REDACTED_ACCOUNT]"
+
+  - name: add_disclaimer
+    type: append
+    response: "Disclaimer: This is for informational purposes only."
+
+  - name: protect_system_prompt
+    type: protect
+    pattern:
+      - "system prompt"
+      - "internal instructions"
+      - "hidden rules"
+      - "change prompt"
+      - "update prompt"
+    response: "I'm sorry, I cannot share internal instructions."

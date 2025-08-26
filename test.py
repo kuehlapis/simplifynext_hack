@@ -13,15 +13,10 @@ with open( file_name, "rb") as f:
 markdown = OCRService.pdf_to_markdown(pdf_bytes, file_name)
 
 intake_agent = IntakeAgent()
-intake_agent.normalization(markdown)
+intake_output = intake_agent.normalization(markdown)
 
-# with open("server/agents/outputs/intake_agent.json", "r", encoding="utf-8") as f:
-#     intake_data = json.load(f)
-
-# clauses_json = intake_data["summary"]["content"]
-
-# analyser_agent = AnalyserAgent()
-# analysis_result = analyser_agent.analyze(clauses_json)
+analyser_agent = AnalyserAgent()
+analysis_result = analyser_agent.analyze(intake_output)
 
 # print(analysis_result)
 # print(json.dumps(analysis_result, indent=2, ensure_ascii=False))
