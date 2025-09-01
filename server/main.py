@@ -5,6 +5,7 @@ from server.agents.planner_agent import PlannerAgent
 from server.agents.intake_agent import IntakeAgent
 from server.agents.analyser_agent import AnalyserAgent
 from server.agents.packager import PackagerAgent
+from server.agents.packager_v2 import PackagerV2Agent
 import json
 from typing import List, Dict, Any, Optional
 from pathlib import Path
@@ -16,6 +17,7 @@ intake_agent = IntakeAgent()
 analyser_agent = AnalyserAgent()
 planner_agent = PlannerAgent()
 packager_agent = PackagerAgent()
+packager_v2_agent = PackagerV2Agent()
 
 app.add_middleware(
     CORSMiddleware,
@@ -36,13 +38,20 @@ async def read_root():
 
 @app.get("/analyze")
 async def start_analyse(document: str):
-    intake_output = intake_agent.normalization(document)
+    """
+    Analyze a document and return formatted data for the frontend dashboard.
+    """
+    try:
+        intake_output = intake_agent.normalization(document)
+        analysis_result = analyser_agent.analyze(intake_output)
+        planner_output = planner_agent.generate_email_with_gemini()
+        ics_output = planner_agent.create_signing_ics_from_intake()
+        dashboard_data = packager_v2_agent.package_results(analysis_result)
 
-    analysis_result = analyser_agent.analyze(intake_output)
-
-    planner_output = planner_agent.generate_email_with_gemini(analysis_result)
-
-    return planner_output, analysis_result
+        print(f"{ics_output=}")
+        return dashboard_data, planner_output, ics_output
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Analysis failed: {str(e)}")
 
 
 @app.post("/generate-planner-data")
@@ -107,12 +116,17 @@ DASHBOARD_PATH = OUTPUT_DIR / "dashboard.json"
 
 def _read_dashboard() -> Dict[str, Any]:
     if not DASHBOARD_PATH.exists():
-        raise HTTPException(status_code=404, detail="dashboard.json not found. Run /package-dashboard first.")
+        raise HTTPException(
+            status_code=404,
+            detail="dashboard.json not found. Run /package-dashboard first.",
+        )
     try:
         with open(DASHBOARD_PATH, "r", encoding="utf-8") as f:
             return json.load(f)
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Failed to read dashboard.json: {e}")
+        raise HTTPException(
+            status_code=500, detail=f"Failed to read dashboard.json: {e}"
+        )
 
 
 def _infer_media_type(path: Path) -> str:
@@ -142,7 +156,9 @@ def download_artifact(artifact_id: str):
     """
     data = _read_dashboard()
     artifacts: List[Dict[str, Any]] = data.get("artifacts", [])
-    artifact: Optional[Dict[str, Any]] = next((a for a in artifacts if a.get("id") == artifact_id), None)
+    artifact: Optional[Dict[str, Any]] = next(
+        (a for a in artifacts if a.get("id") == artifact_id), None
+    )
     if not artifact:
         raise HTTPException(status_code=404, detail="Artifact not found")
 
@@ -178,20 +194,18 @@ def download_file_by_name(filename: str):
         # Path to the download directory
         download_dir = Path("agents/outputs/download")
         file_path = download_dir / filename
-        
+
         if not file_path.exists():
             raise HTTPException(status_code=404, detail=f"File {filename} not found")
-        
+
         # Determine media type
         media_type = _infer_media_type(file_path)
-        
+
         # Return the file as a response
         return FileResponse(
-            path=str(file_path), 
-            media_type=media_type, 
-            filename=filename
+            path=str(file_path), media_type=media_type, filename=filename
         )
-        
+
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to download file: {e}")
 
@@ -205,19 +219,25 @@ def list_download_files():
         download_dir = Path("agents/outputs/download")
         if not download_dir.exists():
             return {"files": [], "message": "Download directory not found"}
-        
+
         files = []
         for file_path in download_dir.glob("*"):
             if file_path.is_file():
-                files.append({
-                    "filename": file_path.name,
-                    "size_bytes": file_path.stat().st_size,
-                    "modified": file_path.stat().st_mtime,
-                    "type": file_path.suffix.lstrip(".") if file_path.suffix else "unknown"
-                })
-        
+                files.append(
+                    {
+                        "filename": file_path.name,
+                        "size_bytes": file_path.stat().st_size,
+                        "modified": file_path.stat().st_mtime,
+                        "type": (
+                            file_path.suffix.lstrip(".")
+                            if file_path.suffix
+                            else "unknown"
+                        ),
+                    }
+                )
+
         return {"files": files, "total": len(files)}
-        
+
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to list files: {e}")
 
@@ -231,15 +251,20 @@ def get_frontend_package():
     try:
         frontend_package_path = Path("agents/outputs/download/frontend_package.json")
         if not frontend_package_path.exists():
-            raise HTTPException(status_code=404, detail="Frontend package not found. Run the packager first.")
-        
+            raise HTTPException(
+                status_code=404,
+                detail="Frontend package not found. Run the packager first.",
+            )
+
         with open(frontend_package_path, "r", encoding="utf-8") as f:
             data = json.load(f)
-        
+
         return data
-        
+
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Failed to read frontend package: {e}")
+        raise HTTPException(
+            status_code=500, detail=f"Failed to read frontend package: {e}"
+        )
 
 
 @app.get("/dashboard")
@@ -250,12 +275,14 @@ def get_dashboard():
     try:
         dashboard_path = Path("agents/outputs/download/dashboard.json")
         if not dashboard_path.exists():
-            raise HTTPException(status_code=404, detail="Dashboard not found. Run the packager first.")
-        
+            raise HTTPException(
+                status_code=404, detail="Dashboard not found. Run the packager first."
+            )
+
         with open(dashboard_path, "r", encoding="utf-8") as f:
             data = json.load(f)
-        
+
         return data
-        
+
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to read dashboard: {e}")
