@@ -39,7 +39,8 @@ class AnalyserAgent(BaseAgent):
             ) as f:
                 json.dump(result.dict(), f, ensure_ascii=False, indent=2)
 
-            return result
+            print("Saved JSON to analysis_result.json")
+            return result.model_dump()
         except Exception as e:
             raise RuntimeError(f"Analysis failed: {e}")
 

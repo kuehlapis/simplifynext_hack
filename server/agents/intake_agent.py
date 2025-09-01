@@ -1,6 +1,6 @@
-from server.agents.base_agent import BaseAgent
-import json
 import hashlib
+import json
+from server.agents.base_agent import BaseAgent
 from server.agents.schema import IntakeAgentOutput
 from datetime import date
 
@@ -36,7 +36,7 @@ class IntakeAgent(BaseAgent):
 
             print("Saved JSON to intake_agent.json")
 
-            return response
+            return response.model_dump()
 
         except Exception as e:
             raise ValueError(f"Error during text normalization: {e}")
