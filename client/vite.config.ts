@@ -9,23 +9,27 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
     proxy: {
       '/download': {
-        target: 'http://localhost:8080',
+        target: 'http://localhost:8000',
         changeOrigin: true,
       },
       '/download-file': {
-        target: 'http://localhost:8080',
+        target: 'http://localhost:8000',
         changeOrigin: true,
       },
       '/artifacts': {
-        target: 'http://localhost:8080',
+        target: 'http://localhost:8000',
         changeOrigin: true,
       },
-      '/frontend-package': {
-        target: 'http://localhost:8080',
+      '/analyze': {
+        target: 'http://localhost:8000',
         changeOrigin: true,
       },
       '/dashboard': {
-        target: 'http://localhost:8080',
+        target: 'http://localhost:8000',
+        changeOrigin: true,
+      },
+      '/convert':{
+        target: 'http://localhost:8000',
         changeOrigin: true,
       },
     },

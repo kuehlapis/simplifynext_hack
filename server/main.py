@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from server.controller.upload_controller import router as ocr_router
 from server.agents.planner_agent import PlannerAgent
@@ -36,12 +36,14 @@ async def read_root():
     return {"message": "gaytards"}
 
 
-@app.get("/analyze")
-async def start_analyse(document: str):
+@app.post("/analyze")
+async def start_analyse(request: Request):
     """
     Analyze a document and return formatted data for the frontend dashboard.
     """
+
     try:
+        document = (await request.body()).decode("utf-8")
         intake_output = intake_agent.normalization(document)
         analysis_result = analyser_agent.analyze(intake_output)
         planner_output = planner_agent.generate_email_with_gemini()

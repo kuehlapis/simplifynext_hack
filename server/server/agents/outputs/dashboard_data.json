@@ -1,7 +1,7 @@
 {
   "riskCounts": {
-    "high": 14,
-    "medium": 6,
+    "high": 16,
+    "medium": 7,
     "ok": 0
   },
   "flaggedClauses": [
@@ -26,7 +26,7 @@
       "category": "Your Rights",
       "risk": "HIGH",
       "title": "Tenant agrees to allow the Landlord unrestricted a",
-      "description": "Landlord unrestricted access to the premises at all hours.",
+      "description": "Tenant agrees to allow the Landlord unrestricted access to the premises at all hours.",
       "anchor": "clause-3"
     },
     {
@@ -42,7 +42,7 @@
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "The Tenant is responsible for all repairs, includi",
-      "description": "Tenant is responsible for all repairs, including structural damage, natural disasters, and any cosmic phenomena affecting the unit.",
+      "description": "The Tenant is responsible for all repairs, including structural damage, natural disasters, and any cosmic phenomena affecting the unit.",
       "anchor": "clause-5"
     },
     {
@@ -66,7 +66,7 @@
       "category": "Your Rights",
       "risk": "HIGH",
       "title": "The Tenant waives all legal rights, including the ",
-      "description": "The Tenant waives all legal rights, including the right to complain, negotiate, or seek fairness.",
+      "description": "The Tenant waives all legal rights, including the right to complain, negotiate, or seek fairness. All disputes shall be resolved exclusively by the Landlord's personal opinion.",
       "anchor": "clause-8"
     },
     {
@@ -106,7 +106,7 @@
       "category": "Unfair Clauses",
       "risk": "MEDIUM",
       "title": "Any noise complaints made by the Tenant will be co",
-      "description": "Any noise complaints made by the Tenant will be considered a violation of this Agreement and grounds for eviction.",
+      "description": "Clauses that are subjective may be unfair; should specify quiet hours or decibel limits.",
       "anchor": "clause-13"
     },
     {
@@ -114,7 +114,7 @@
       "category": "Your Rights",
       "risk": "HIGH",
       "title": "The Landlord reserves the right to use Tenant's ro",
-      "description": "The Landlord reserves the right to use Tenant's room for storage of personal items, livestock, or experimental technology.",
+      "description": "Landlord must give reasonable notice (e.g., 24 hours) before entering premises.",
       "anchor": "clause-14"
     },
     {
@@ -122,7 +122,7 @@
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "Tenant shall provide free labor for all landlord's",
-      "description": "Tenant shall provide free labor for all landlord's projects, including but not limited to gardening, laundry, and emotional support.",
+      "description": "Cleaning requirements should be reasonable and not excessive.",
       "anchor": "clause-15"
     },
     {
@@ -130,15 +130,15 @@
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "The Tenant must ask permission before breathing lo",
-      "description": "The Tenant must ask permission before breathing loudly within the unit.",
+      "description": "Noise restrictions should be reasonable and measurable.",
       "anchor": "clause-16"
     },
     {
       "id": "17",
       "category": "Unfair Clauses",
-      "risk": "HIGH",
+      "risk": "MEDIUM",
       "title": "Any guest visiting the Tenant must pay an entrance",
-      "description": "Any guest visiting the Tenant must pay an entrance fee to the Landlord, amount to be determined daily.",
+      "description": "No-guest policies are restrictive but not illegal; should be reasonable.",
       "anchor": "clause-17"
     },
     {
@@ -146,7 +146,7 @@
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "Tenant must maintain the apartment temperature str",
-      "description": "Tenant must maintain the apartment temperature strictly within Landlord's comfort range, regardless of Tenant's survival needs.",
+      "description": "Aircon usage restrictions should be reasonable (e.g., night hours).",
       "anchor": "clause-18"
     },
     {
@@ -154,7 +154,7 @@
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "If the Tenant leaves behind any belongings, they a",
-      "description": "If the Tenant leaves behind any belongings, they automatically become property of the Landlord, including sentimental items.",
+      "description": "Cleaning requirements should be reasonable and not excessive.",
       "anchor": "clause-19"
     },
     {
@@ -162,7 +162,7 @@
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "Tenant must display unwavering gratitude towards t",
-      "description": "Tenant must display unwavering gratitude towards the Landlord at all times. Failure to smile in Landlord's presence constitutes breach.",
+      "description": "Noise restrictions should be reasonable and measurable.",
       "anchor": "clause-20"
     },
     {
@@ -170,7 +170,7 @@
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "Renovations or improvements carried out by Tenant ",
-      "description": "Renovations or improvements carried out by Tenant become permanent gifts to the Landlord, who takes full credit for them.",
+      "description": "Cleaning requirements should be reasonable and not excessive.",
       "anchor": "clause-21"
     },
     {
@@ -178,15 +178,15 @@
       "category": "Your Rights",
       "risk": "HIGH",
       "title": "The Tenant may not question the fairness of any cl",
-      "description": "The Tenant may not question the fairness of any clause in this Agreement, verbally or in writing.",
+      "description": "Dispute resolution among housemates should be fair and involve landlord if needed.",
       "anchor": "clause-22"
     },
     {
       "id": "23",
-      "category": "Unfair Clauses",
+      "category": "Your Rights",
       "risk": "HIGH",
       "title": "Tenant shall not look directly at the Landlord's p",
-      "description": "Tenant shall not look directly at the Landlord's personal possessions without prior written consent.",
+      "description": "Landlord must give reasonable notice (e.g., 24 hours) before entering premises.",
       "anchor": "clause-23"
     },
     {
@@ -194,7 +194,7 @@
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "The Tenant agrees to pay additional 'Goodwill Rent",
-      "description": "The Tenant agrees to pay additional 'Goodwill Rent' whenever the Landlord feels underappreciated.",
+      "description": "Rent due date should be clearly stated and reasonable.",
       "anchor": "clause-24"
     },
     {
@@ -202,7 +202,7 @@
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "The Landlord is entitled to 50% of all Tenant's lo",
-      "description": "The Landlord is entitled to 50% of all Tenant's lottery winnings, inheritances, or found coins on the street.",
+      "description": "Cleaning requirements should be reasonable and not excessive.",
       "anchor": "clause-25"
     },
     {
@@ -210,15 +210,15 @@
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "Tenant must surrender all control of kitchen appli",
-      "description": "Tenant must surrender all control of kitchen appliances, including but not limited to the microwave and fridge.",
+      "description": "Washing machine use should be reasonable and not overly restrictive.",
       "anchor": "clause-26"
     },
     {
       "id": "27",
       "category": "Your Rights",
-      "risk": "HIGH",
+      "risk": "MEDIUM",
       "title": "Any attempt by the Tenant to move out requires a s",
-      "description": "Any attempt by the Tenant to move out requires a six-year written notice.",
+      "description": "Notice period for termination should be reasonable (e.g., 1-2 months).",
       "anchor": "clause-27"
     },
     {
@@ -226,7 +226,7 @@
       "category": "Unfair Clauses",
       "risk": "MEDIUM",
       "title": "The Tenant must water the Landlord's plants and ap",
-      "description": "The Tenant must water the Landlord's plants and apologize if they wilt, regardless of fault.",
+      "description": "Cleaning requirements should be reasonable and not excessive.",
       "anchor": "clause-28"
     },
     {
@@ -234,7 +234,7 @@
       "category": "Unfair Clauses",
       "risk": "MEDIUM",
       "title": "Tenant is responsible for all noise created by nei",
-      "description": "Tenant is responsible for all noise created by neighbors, nearby construction, or passing airplanes.",
+      "description": "Noise restrictions should be reasonable and measurable.",
       "anchor": "clause-29"
     },
     {
@@ -242,7 +242,7 @@
       "category": "Your Rights",
       "risk": "HIGH",
       "title": "Final Clause: The Landlord reserves the right to a",
-      "description": "The Landlord reserves the right to add, remove, or modify any clause in this Agreement at any time without Tenant's knowledge or consent.",
+      "description": "Renewal option should be fair and not one-sided.",
       "anchor": "clause-30"
     }
   ],
