@@ -1,0 +1,11 @@
+{
+  "subject": "High-Risk Clauses in Your Rental Agreement - Action Required",
+  "body": "Dear Tenant,\n\nI am writing to inform you about several high-risk clauses identified in your rental agreement that require immediate attention.\n\n1. Clause: The Tenant shall pay rent in the amount of SGD 500.00 per month, but the Landlord reserves the right...\n   Risk Level: HIGH\n   Recommendation: Negotiate for a reasonable rent increase clause with prior notice.\n\n2. Clause: A security deposit of SGD 2000.00 shall be paid, which will not be refunded under any circumstances,...\n   Risk Level: HIGH\n   Recommendation: Negotiate to reduce deposit to 2 months maximum and ensure refund conditions are fair.\n\n3. Clause: Tenant agrees to allow the Landlord unrestricted access to the premises at all hours, including week...\n   Risk Level: HIGH\n   Recommendation: Ensure entry notice clause is present and reasonable (e.g., 24 hours notice).\n\n4. Clause: The Tenant is responsible for all repairs, including structural damage, natural disasters, and any c...\n   Risk Level: HIGH\n   Recommendation: Negotiate a reasonable cap for minor repairs and exclude structural damage and natural disasters.\n\n5. Clause: Subletting is prohibited unless the Landlord personally profits from it. Any sublet profits not repo...\n   Risk Level: HIGH\n   Recommendation: Confirm subletting terms are clear and fair.\n\nIt is strongly recommended that you:\n1. Review these clauses carefully\n2. Consider negotiating with your landlord\n3. Seek legal advice if necessary\n\nBest regards,\nRental Agreement Analysis System",
+  "recommendations": [
+    "Negotiate for a reasonable rent increase clause with prior notice.",
+    "Negotiate to reduce deposit to 2 months maximum and ensure refund conditions are fair.",
+    "Ensure entry notice clause is present and reasonable (e.g., 24 hours notice).",
+    "Negotiate a reasonable cap for minor repairs and exclude structural damage and natural disasters.",
+    "Confirm subletting terms are clear and fair."
+  ]
+}

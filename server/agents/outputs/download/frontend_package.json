@@ -1,0 +1,632 @@
+{
+  "metadata": {
+    "title": "ROOM RENTAL AGREEMENT (Totally Legal™ Extended Edition)",
+    "date": "2025-08-26",
+    "generated_at": "2025-08-28T11:03:22.802543",
+    "document_id": "2fab8beba68f",
+    "version": "1.0",
+    "package_type": "frontend_ready"
+  },
+  "risk_summary": {
+    "high": 25,
+    "medium": 1,
+    "ok": 0,
+    "total": 26
+  },
+  "flagged_clauses": [
+    {
+      "id": "clause_0_bce70188",
+      "category": "Unfair Clauses",
+      "risk": "HIGH",
+      "title": "Clause 1: Unfair Clauses",
+      "description": "The Tenant shall pay rent in the amount of SGD 500.00 per month, but the Landlord reserves the right to increase rent by any amount at any time without prior notice.\n\nRationale: Landlord reserves the right to increase rent by any amount at any time without prior notice is unfair.\n\nRecommendation: Negotiate for a reasonable rent increase clause with prior notice.",
+      "anchor": "clause_0"
+    },
+    {
+      "id": "clause_1_66cb959a",
+      "category": "Unfair Clauses",
+      "risk": "HIGH",
+      "title": "Clause 2: Unfair Clauses",
+      "description": "A security deposit of SGD 2000.00 shall be paid, which will not be refunded under any circumstances, including but not limited to the Tenant never actually moving in.\n\nRationale: A security deposit of SGD 2000.00 shall be paid, which will not be refunded under any circumstances is unfair and exceeds the industry norm of 2 months' rent.\n\nRecommendation: Negotiate to reduce deposit to 2 months maximum and ensure refund conditions are fair.",
+      "anchor": "clause_1"
+    },
+    {
+      "id": "clause_2_f849b72a",
+      "category": "Your Rights",
+      "risk": "HIGH",
+      "title": "Clause 3: Your Rights",
+      "description": "Tenant agrees to allow the Landlord unrestricted access to the premises at all hours, including weekends, public holidays, and during the Tenant's sleep.\n\nRationale: Tenant agrees to allow the Landlord unrestricted access to the premises at all hours is a violation of privacy.\n\nRecommendation: Ensure entry notice clause is present and reasonable (e.g., 24 hours notice).",
+      "anchor": "clause_2"
+    },
+    {
+      "id": "clause_3_8102fa83",
+      "category": "Unfair Clauses",
+      "risk": "MEDIUM",
+      "title": "Clause 4: Unfair Clauses",
+      "description": "Utilities shall be borne entirely by the Tenant, including electricity, water, gas, air, an theoretical concepts such as 'hope' and 'dreams'.\n\nRationale: Utilities shall be borne entirely by the Tenant, including electricity, water, gas, air, an theoretical concepts such as 'hope' and 'dreams' is unreasonable.\n\nRecommendation: Confirm utilities terms are clear and reasonable.",
+      "anchor": "clause_3"
+    },
+    {
+      "id": "clause_4_17dd93d4",
+      "category": "Unfair Clauses",
+      "risk": "HIGH",
+      "title": "Clause 5: Unfair Clauses",
+      "description": "The Tenant is responsible for all repairs, including structural damage, natural disasters, and any cosmic phenomena affecting the unit.\n\nRationale: The Tenant is responsible for all repairs, including structural damage, natural disasters, and any cosmic phenomena affecting the unit is unfair.\n\nRecommendation: Negotiate a reasonable cap for minor repairs and exclude structural damage and natural disasters.",
+      "anchor": "clause_4"
+    },
+    {
+      "id": "clause_5_7ca13787",
+      "category": "Unfair Clauses",
+      "risk": "HIGH",
+      "title": "Clause 6: Unfair Clauses",
+      "description": "Subletting is prohibited unless the Landlord personally profits from it. Any sublet profits not reported to the Landlord will be punishable by immediate eviction and forfeiture of all belongings.\n\nRationale: Subletting is prohibited unless the Landlord personally profits from it is unfair.\n\nRecommendation: Confirm subletting terms are clear and fair.",
+      "anchor": "clause_5"
+    },
+    {
+      "id": "clause_6_a7be1ca1",
+      "category": "Unfair Clauses",
+      "risk": "HIGH",
+      "title": "Clause 7: Unfair Clauses",
+      "description": "Pets are not allowed, except for those owned by the Landlord. Tenant is required to feed, walk, and groom said pets.\n\nRationale: Pets are not allowed, except for those owned by the Landlord. Tenant is required to feed, walk, and groom said pets is unreasonable.\n\nRecommendation: Remove the clause.",
+      "anchor": "clause_6"
+    },
+    {
+      "id": "clause_7_9cb591c6",
+      "category": "Your Rights",
+      "risk": "HIGH",
+      "title": "Clause 8: Your Rights",
+      "description": "The Tenant waives all legal rights, including the right to complain, negotiate, or seek fairness. All disputes shall be resolved exclusively by the Landlord's personal opinion.\n\nRationale: The Tenant waives all legal rights, including the right to complain, negotiate, or seek fairness is illegal and unenforceable.\n\nRecommendation: Remove the clause.",
+      "anchor": "clause_7"
+    },
+    {
+      "id": "clause_8_2d1ad36d",
+      "category": "Your Rights",
+      "risk": "HIGH",
+      "title": "Clause 9: Your Rights",
+      "description": "The Agreement shall last for 99 years or until the Tenant's spirit is broken, whichever comes first.\n\nRationale: The Agreement shall last for 99 years or until the Tenant's spirit is broken is unreasonable and exploitative.\n\nRecommendation: Negotiate for a standard tenancy period (e.g., 1-2 years).",
+      "anchor": "clause_8"
+    },
+    {
+      "id": "clause_9_14e76f9b",
+      "category": "Your Rights",
+      "risk": "HIGH",
+      "title": "Clause 10: Your Rights",
+      "description": "Governing Law: This Agreement shall be governed by the Laws of Singapore, as well as the arbitrary mood swings of the Landlord.\n\nRationale: Governing Law: This Agreement shall be governed by the Laws of Singapore, as well as the arbitrary mood swings of the Landlord is illegal.\n\nRecommendation: Remove the part about the arbitrary mood swings of the Landlord.",
+      "anchor": "clause_9"
+    },
+    {
+      "id": "clause_10_0aa7146f",
+      "category": "Unfair Clauses",
+      "risk": "HIGH",
+      "title": "Clause 11: Unfair Clauses",
+      "description": "Late payment of rent shall incur a penalty equal to the GDP of a small nation, payable immediately.\n\nRationale: Late payment of rent shall incur a penalty equal to the GDP of a small nation is unreasonable.\n\nRecommendation: Negotiate for a reasonable late payment penalty.",
+      "anchor": "clause_10"
+    },
+    {
+      "id": "clause_11_6a43b252",
+      "category": "Unfair Clauses",
+      "risk": "HIGH",
+      "title": "Clause 12: Unfair Clauses",
+      "description": "Tenant must perform weekly entertainment (karaoke, interpretive dance, or comedy routines) for the Landlord without compensation.\n\nRationale: Tenant must perform weekly entertainment for the Landlord without compensation is unreasonable.\n\nRecommendation: Remove the clause.",
+      "anchor": "clause_11"
+    },
+    {
+      "id": "clause_12_7aa8af7a",
+      "category": "Unfair Clauses",
+      "risk": "HIGH",
+      "title": "Clause 13: Unfair Clauses",
+      "description": "Any noise complaints made by the Tenant will be considered a violation of this Agreement and grounds for eviction.\n\nRationale: Any noise complaints made by the Tenant will be considered a violation of this Agreement is unreasonable.\n\nRecommendation: Remove the clause.",
+      "anchor": "clause_12"
+    },
+    {
+      "id": "clause_13_21e59a4b",
+      "category": "Unfair Clauses",
+      "risk": "HIGH",
+      "title": "Clause 14: Unfair Clauses",
+      "description": "The Landlord reserves the right to use Tenant's room for storage of personal items, livestock, or experimental technology.\n\nRationale: The Landlord reserves the right to use Tenant's room for storage of personal items, livestock, or experimental technology is a violation of privacy.\n\nRecommendation: Remove the clause.",
+      "anchor": "clause_13"
+    },
+    {
+      "id": "clause_14_5469d74c",
+      "category": "Unfair Clauses",
+      "risk": "HIGH",
+      "title": "Clause 15: Unfair Clauses",
+      "description": "Tenant shall provide free labor for all landlord's projects, including but not limited to gardening, laundry, and emotional support.\n\nRationale: Tenant shall provide free labor for all landlord's projects is unreasonable.\n\nRecommendation: Remove the clause.",
+      "anchor": "clause_14"
+    },
+    {
+      "id": "clause_15_6fdc07ef",
+      "category": "Unfair Clauses",
+      "risk": "HIGH",
+      "title": "Clause 16: Unfair Clauses",
+      "description": "The Tenant must ask permission before breathing loudly within the unit.\n\nRationale: The Tenant must ask permission before breathing loudly within the unit is unreasonable.\n\nRecommendation: Remove the clause.",
+      "anchor": "clause_15"
+    },
+    {
+      "id": "clause_16_268f9867",
+      "category": "Unfair Clauses",
+      "risk": "HIGH",
+      "title": "Clause 17: Unfair Clauses",
+      "description": "Any guest visiting the Tenant must pay an entrance fee to the Landlord, amount to be determined daily.\n\nRationale: Any guest visiting the Tenant must pay an entrance fee to the Landlord is unreasonable.\n\nRecommendation: Remove the clause.",
+      "anchor": "clause_16"
+    },
+    {
+      "id": "clause_17_f22beb55",
+      "category": "Unfair Clauses",
+      "risk": "HIGH",
+      "title": "Clause 18: Unfair Clauses",
+      "description": "Tenant must maintain the apartment temperature strictly within Landlord's comfort range, regardless of Tenant's survival needs.\n\nRationale: Tenant must maintain the apartment temperature strictly within Landlord's comfort range, regardless of Tenant's survival needs is unreasonable.\n\nRecommendation: Remove the clause.",
+      "anchor": "clause_17"
+    },
+    {
+      "id": "clause_18_ae4090bc",
+      "category": "Unfair Clauses",
+      "risk": "HIGH",
+      "title": "Clause 19: Unfair Clauses",
+      "description": "If the Tenant leaves behind any belongings, they automatically become property of the Landlord, including sentimental items.\n\nRationale: If the Tenant leaves behind any belongings, they automatically become property of the Landlord is unreasonable.\n\nRecommendation: Negotiate for a reasonable process for handling abandoned belongings.",
+      "anchor": "clause_18"
+    },
+    {
+      "id": "clause_19_e7c63c4d",
+      "category": "Unfair Clauses",
+      "risk": "HIGH",
+      "title": "Clause 20: Unfair Clauses",
+      "description": "Tenant must display unwavering gratitude towards the Landlord at all times. Failure to smile in Landlord's presence constitutes breach.\n\nRationale: Tenant must display unwavering gratitude towards the Landlord at all times is unreasonable.\n\nRecommendation: Remove the clause.",
+      "anchor": "clause_19"
+    },
+    {
+      "id": "clause_20_2e3f42b7",
+      "category": "Unfair Clauses",
+      "risk": "HIGH",
+      "title": "Clause 21: Unfair Clauses",
+      "description": "Renovations or improvements carried out by Tenant become permanent gifts to the Landlord, who takes full credit for them.\n\nRationale: Renovations or improvements carried out by Tenant become permanent gifts to the Landlord is unfair.\n\nRecommendation: Negotiate that any improvements made by tenant are recognized.",
+      "anchor": "clause_20"
+    },
+    {
+      "id": "clause_21_bebc5c26",
+      "category": "Your Rights",
+      "risk": "HIGH",
+      "title": "Clause 22: Your Rights",
+      "description": "The Tenant may not question the fairness of any clause in this Agreement, verbally or in writing.\n\nRationale: The Tenant may not question the fairness of any clause in this Agreement is illegal.\n\nRecommendation: Remove the clause.",
+      "anchor": "clause_21"
+    },
+    {
+      "id": "clause_22_98c0ae06",
+      "category": "Unfair Clauses",
+      "risk": "HIGH",
+      "title": "Clause 23: Unfair Clauses",
+      "description": "Tenant shall not look directly at the Landlord's personal possessions without prior written consent.\n\nRationale: Tenant shall not look directly at the Landlord's personal possessions without prior written consent is unreasonable.\n\nRecommendation: Remove the clause.",
+      "anchor": "clause_22"
+    },
+    {
+      "id": "clause_23_9aa1931f",
+      "category": "Unfair Clauses",
+      "risk": "HIGH",
+      "title": "Clause 24: Unfair Clauses",
+      "description": "The Tenant agrees to pay additional 'Goodwill Rent' whenever the Landlord feels underappreciated.\n\nRationale: The Tenant agrees to pay additional 'Goodwill Rent' whenever the Landlord feels underappreciated is unreasonable.\n\nRecommendation: Remove the clause.",
+      "anchor": "clause_23"
+    },
+    {
+      "id": "clause_24_657800d4",
+      "category": "Unfair Clauses",
+      "risk": "HIGH",
+      "title": "Clause 25: Unfair Clauses",
+      "description": "The Landlord is entitled to 50% of all Tenant's lottery winnings, inheritances, or found coins on the street.\n\nRationale: The Landlord is entitled to 50% of all Tenant's lottery winnings, inheritances, or found coins on the street is unreasonable.\n\nRecommendation: Remove the clause.",
+      "anchor": "clause_24"
+    },
+    {
+      "id": "clause_25_89d8b0a4",
+      "category": "Unfair Clauses",
+      "risk": "HIGH",
+      "title": "Clause 26: Unfair Clauses",
+      "description": "Tenant must surrender all control of kitchen appliances, including but not limited to the microwave and fridge.\n\nRationale: Tenant must surrender all control of kitchen appliances is unreasonable.\n\nRecommendation: Remove the clause.",
+      "anchor": "clause_25"
+    },
+    {
+      "id": "clause_26_0d8cb635",
+      "category": "Unfair Clauses",
+      "risk": "HIGH",
+      "title": "Clause 27: Unfair Clauses",
+      "description": "Any attempt by the Tenant to move out requires a six-year written notice.\n\nRationale: Any attempt by the Tenant to move out requires a six-year written notice is unreasonable.\n\nRecommendation: Negotiate for a reasonable notice period (e.g., 1-2 months).",
+      "anchor": "clause_26"
+    },
+    {
+      "id": "clause_27_6d92b20e",
+      "category": "Unfair Clauses",
+      "risk": "HIGH",
+      "title": "Clause 28: Unfair Clauses",
+      "description": "The Tenant must water the Landlord's plants and apologize if they wilt, regardless of fault.\n\nRationale: The Tenant must water the Landlord's plants and apologize if they wilt, regardless of fault is unreasonable.\n\nRecommendation: Remove the clause.",
+      "anchor": "clause_27"
+    },
+    {
+      "id": "clause_28_eb3238ff",
+      "category": "Unfair Clauses",
+      "risk": "HIGH",
+      "title": "Clause 29: Unfair Clauses",
+      "description": "Tenant is responsible for all noise created by neighbors, nearby construction, or passing airplanes.\n\nRationale: Tenant is responsible for all noise created by neighbors, nearby construction, or passing airplanes is unreasonable.\n\nRecommendation: Remove the clause.",
+      "anchor": "clause_28"
+    },
+    {
+      "id": "clause_29_479b42da",
+      "category": "Unfair Clauses",
+      "risk": "HIGH",
+      "title": "Clause 30: Unfair Clauses",
+      "description": "Final Clause: The Landlord reserves the right to add, remove, or modify any clause in this Agreement at any time without Tenant's knowledge or consent.\n\nRationale: The Landlord reserves the right to add, remove, or modify any clause in this Agreement at any time without Tenant's knowledge or consent is illegal.\n\nRecommendation: Remove the clause.",
+      "anchor": "clause_29"
+    }
+  ],
+  "categories": [
+    "Unfair Clauses",
+    "Your Rights",
+    "Stamp Duty"
+  ],
+  "artifacts": {
+    "negotiation_rider": {
+      "title": "Negotiation Rider - Proposed Changes",
+      "purpose": "This document outlines proposed changes to address unfair clauses in the rental agreement",
+      "proposed_changes": [
+        {
+          "original_clause": "The Tenant shall pay rent in the amount of SGD 500.00 per month, but the Landlord reserves the right to increase rent by any amount at any time without prior notice.",
+          "proposed_change": "Negotiate for a reasonable rent increase clause with prior notice.",
+          "rationale": "Landlord reserves the right to increase rent by any amount at any time without prior notice is unfair.",
+          "category": "Unfair Clauses"
+        },
+        {
+          "original_clause": "A security deposit of SGD 2000.00 shall be paid, which will not be refunded under any circumstances, including but not limited to the Tenant never actually moving in.",
+          "proposed_change": "Negotiate to reduce deposit to 2 months maximum and ensure refund conditions are fair.",
+          "rationale": "A security deposit of SGD 2000.00 shall be paid, which will not be refunded under any circumstances is unfair and exceeds the industry norm of 2 months' rent.",
+          "category": "Unfair Clauses"
+        },
+        {
+          "original_clause": "Tenant agrees to allow the Landlord unrestricted access to the premises at all hours, including weekends, public holidays, and during the Tenant's sleep.",
+          "proposed_change": "Ensure entry notice clause is present and reasonable (e.g., 24 hours notice).",
+          "rationale": "Tenant agrees to allow the Landlord unrestricted access to the premises at all hours is a violation of privacy.",
+          "category": "Your Rights"
+        },
+        {
+          "original_clause": "The Tenant is responsible for all repairs, including structural damage, natural disasters, and any cosmic phenomena affecting the unit.",
+          "proposed_change": "Negotiate a reasonable cap for minor repairs and exclude structural damage and natural disasters.",
+          "rationale": "The Tenant is responsible for all repairs, including structural damage, natural disasters, and any cosmic phenomena affecting the unit is unfair.",
+          "category": "Unfair Clauses"
+        },
+        {
+          "original_clause": "Subletting is prohibited unless the Landlord personally profits from it. Any sublet profits not reported to the Landlord will be punishable by immediate eviction and forfeiture of all belongings.",
+          "proposed_change": "Confirm subletting terms are clear and fair.",
+          "rationale": "Subletting is prohibited unless the Landlord personally profits from it is unfair.",
+          "category": "Unfair Clauses"
+        },
+        {
+          "original_clause": "Pets are not allowed, except for those owned by the Landlord. Tenant is required to feed, walk, and groom said pets.",
+          "proposed_change": "Remove the clause.",
+          "rationale": "Pets are not allowed, except for those owned by the Landlord. Tenant is required to feed, walk, and groom said pets is unreasonable.",
+          "category": "Unfair Clauses"
+        },
+        {
+          "original_clause": "The Tenant waives all legal rights, including the right to complain, negotiate, or seek fairness. All disputes shall be resolved exclusively by the Landlord's personal opinion.",
+          "proposed_change": "Remove the clause.",
+          "rationale": "The Tenant waives all legal rights, including the right to complain, negotiate, or seek fairness is illegal and unenforceable.",
+          "category": "Your Rights"
+        },
+        {
+          "original_clause": "The Agreement shall last for 99 years or until the Tenant's spirit is broken, whichever comes first.",
+          "proposed_change": "Negotiate for a standard tenancy period (e.g., 1-2 years).",
+          "rationale": "The Agreement shall last for 99 years or until the Tenant's spirit is broken is unreasonable and exploitative.",
+          "category": "Your Rights"
+        },
+        {
+          "original_clause": "Governing Law: This Agreement shall be governed by the Laws of Singapore, as well as the arbitrary mood swings of the Landlord.",
+          "proposed_change": "Remove the part about the arbitrary mood swings of the Landlord.",
+          "rationale": "Governing Law: This Agreement shall be governed by the Laws of Singapore, as well as the arbitrary mood swings of the Landlord is illegal.",
+          "category": "Your Rights"
+        },
+        {
+          "original_clause": "Late payment of rent shall incur a penalty equal to the GDP of a small nation, payable immediately.",
+          "proposed_change": "Negotiate for a reasonable late payment penalty.",
+          "rationale": "Late payment of rent shall incur a penalty equal to the GDP of a small nation is unreasonable.",
+          "category": "Unfair Clauses"
+        },
+        {
+          "original_clause": "Tenant must perform weekly entertainment (karaoke, interpretive dance, or comedy routines) for the Landlord without compensation.",
+          "proposed_change": "Remove the clause.",
+          "rationale": "Tenant must perform weekly entertainment for the Landlord without compensation is unreasonable.",
+          "category": "Unfair Clauses"
+        },
+        {
+          "original_clause": "Any noise complaints made by the Tenant will be considered a violation of this Agreement and grounds for eviction.",
+          "proposed_change": "Remove the clause.",
+          "rationale": "Any noise complaints made by the Tenant will be considered a violation of this Agreement is unreasonable.",
+          "category": "Unfair Clauses"
+        },
+        {
+          "original_clause": "The Landlord reserves the right to use Tenant's room for storage of personal items, livestock, or experimental technology.",
+          "proposed_change": "Remove the clause.",
+          "rationale": "The Landlord reserves the right to use Tenant's room for storage of personal items, livestock, or experimental technology is a violation of privacy.",
+          "category": "Unfair Clauses"
+        },
+        {
+          "original_clause": "Tenant shall provide free labor for all landlord's projects, including but not limited to gardening, laundry, and emotional support.",
+          "proposed_change": "Remove the clause.",
+          "rationale": "Tenant shall provide free labor for all landlord's projects is unreasonable.",
+          "category": "Unfair Clauses"
+        },
+        {
+          "original_clause": "The Tenant must ask permission before breathing loudly within the unit.",
+          "proposed_change": "Remove the clause.",
+          "rationale": "The Tenant must ask permission before breathing loudly within the unit is unreasonable.",
+          "category": "Unfair Clauses"
+        }
+      ],
+      "legal_basis": "Based on Singapore rental law and industry standards",
+      "generated_at": "2025-08-28T11:03:22.802588"
+    },
+    "tenant_email": {
+      "subject": "High-Risk Clauses in Your Rental Agreement - Action Required",
+      "body": "Dear Tenant,\n\nI am writing to inform you about several high-risk clauses identified in your rental agreement that require immediate attention.\n\n1. Clause: The Tenant shall pay rent in the amount of SGD 500.00 per month, but the Landlord reserves the right...\n   Risk Level: HIGH\n   Recommendation: Negotiate for a reasonable rent increase clause with prior notice.\n\n2. Clause: A security deposit of SGD 2000.00 shall be paid, which will not be refunded under any circumstances,...\n   Risk Level: HIGH\n   Recommendation: Negotiate to reduce deposit to 2 months maximum and ensure refund conditions are fair.\n\n3. Clause: Tenant agrees to allow the Landlord unrestricted access to the premises at all hours, including week...\n   Risk Level: HIGH\n   Recommendation: Ensure entry notice clause is present and reasonable (e.g., 24 hours notice).\n\n4. Clause: The Tenant is responsible for all repairs, including structural damage, natural disasters, and any c...\n   Risk Level: HIGH\n   Recommendation: Negotiate a reasonable cap for minor repairs and exclude structural damage and natural disasters.\n\n5. Clause: Subletting is prohibited unless the Landlord personally profits from it. Any sublet profits not repo...\n   Risk Level: HIGH\n   Recommendation: Confirm subletting terms are clear and fair.\n\nIt is strongly recommended that you:\n1. Review these clauses carefully\n2. Consider negotiating with your landlord\n3. Seek legal advice if necessary\n\nBest regards,\nRental Agreement Analysis System",
+      "recommendations": [
+        "Negotiate for a reasonable rent increase clause with prior notice.",
+        "Negotiate to reduce deposit to 2 months maximum and ensure refund conditions are fair.",
+        "Ensure entry notice clause is present and reasonable (e.g., 24 hours notice).",
+        "Negotiate a reasonable cap for minor repairs and exclude structural damage and natural disasters.",
+        "Confirm subletting terms are clear and fair."
+      ],
+      "generated_at": "2025-08-28T11:03:22.802648"
+    },
+    "planner_summary": {
+      "subject": "High-Risk Clauses in Your Rental Agreement",
+      "body": "Dear Tenant,\n\nI am writing to you today to discuss some high-risk clauses in your rental agreement. Please review the following clauses carefully and consider my recommendations.\n\n1. Clause: A security deposit of SGD 2000.00 shall be paid\nRecommendation: Negotiate to reduce deposit to 2 months maximum.\n\n2. Clause: Tenant agrees to allow the Landlord unrestricted access to the premises at all hours\nRecommendation: Ensure entry notice clause is present and reasonable.\n\n3. Clause: The Agreement shall last for 99 years\nRecommendation: Ensure tenancy period meets minimum legal requirements.\n\n4. Clause: The Landlord reserves the right to use Tenant's room for storage of personal items\nRecommendation: Ensure entry notice clause is present and reasonable.\n\nIt is important to understand your rights and responsibilities before signing a rental agreement. If you have any questions or concerns, please do not hesitate to seek legal advice.\n\nSincerely,\n[Your Name]",
+      "recommendations": [
+        "Negotiate to reduce deposit to 2 months maximum.",
+        "Ensure entry notice clause is present and reasonable.",
+        "Ensure tenancy period meets minimum legal requirements.",
+        "Ensure entry notice clause is present and reasonable."
+      ],
+      "generated_at": "2025-08-28T11:03:22.804845"
+    },
+    "calendar_event": {
+      "title": "Agreement Review Meeting",
+      "description": "Meeting to review rental agreement clauses and discuss negotiation points",
+      "ics_content": "BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:planner_agent\nBEGIN:VEVENT\nDTSTART:20250901T140000Z\nDTEND:20250901T150000Z\nSUMMARY:Agreement Signing Meeting\nEND:VEVENT\nEND:VCALENDAR\n",
+      "generated_at": "2025-08-28T11:03:22.805340"
+    },
+    "agreement_summary": {
+      "title": "ROOM RENTAL AGREEMENT (Totally Legal™ Extended Edition)",
+      "agreement_date": "2025-08-26",
+      "risk_overview": {
+        "high_risk_count": 25,
+        "medium_risk_count": 1,
+        "safe_count": 0,
+        "total_clauses": 26
+      },
+      "key_issues": [
+        {
+          "clause": "The Tenant shall pay rent in the amount of SGD 500.00 per month, but the Landlord reserves the right to increase rent by any amount at any time withou...",
+          "risk": "HIGH",
+          "category": "Unfair Clauses",
+          "recommendation": "Negotiate for a reasonable rent increase clause with prior notice."
+        },
+        {
+          "clause": "A security deposit of SGD 2000.00 shall be paid, which will not be refunded under any circumstances, including but not limited to the Tenant never act...",
+          "risk": "HIGH",
+          "category": "Unfair Clauses",
+          "recommendation": "Negotiate to reduce deposit to 2 months maximum and ensure refund conditions are fair."
+        },
+        {
+          "clause": "Tenant agrees to allow the Landlord unrestricted access to the premises at all hours, including weekends, public holidays, and during the Tenant's sle...",
+          "risk": "HIGH",
+          "category": "Your Rights",
+          "recommendation": "Ensure entry notice clause is present and reasonable (e.g., 24 hours notice)."
+        },
+        {
+          "clause": "Utilities shall be borne entirely by the Tenant, including electricity, water, gas, air, an theoretical concepts such as 'hope' and 'dreams'.",
+          "risk": "MEDIUM",
+          "category": "Unfair Clauses",
+          "recommendation": "Confirm utilities terms are clear and reasonable."
+        },
+        {
+          "clause": "The Tenant is responsible for all repairs, including structural damage, natural disasters, and any cosmic phenomena affecting the unit.",
+          "risk": "HIGH",
+          "category": "Unfair Clauses",
+          "recommendation": "Negotiate a reasonable cap for minor repairs and exclude structural damage and natural disasters."
+        },
+        {
+          "clause": "Subletting is prohibited unless the Landlord personally profits from it. Any sublet profits not reported to the Landlord will be punishable by immedia...",
+          "risk": "HIGH",
+          "category": "Unfair Clauses",
+          "recommendation": "Confirm subletting terms are clear and fair."
+        },
+        {
+          "clause": "Pets are not allowed, except for those owned by the Landlord. Tenant is required to feed, walk, and groom said pets.",
+          "risk": "HIGH",
+          "category": "Unfair Clauses",
+          "recommendation": "Remove the clause."
+        },
+        {
+          "clause": "The Tenant waives all legal rights, including the right to complain, negotiate, or seek fairness. All disputes shall be resolved exclusively by the La...",
+          "risk": "HIGH",
+          "category": "Your Rights",
+          "recommendation": "Remove the clause."
+        },
+        {
+          "clause": "The Agreement shall last for 99 years or until the Tenant's spirit is broken, whichever comes first.",
+          "risk": "HIGH",
+          "category": "Your Rights",
+          "recommendation": "Negotiate for a standard tenancy period (e.g., 1-2 years)."
+        },
+        {
+          "clause": "Governing Law: This Agreement shall be governed by the Laws of Singapore, as well as the arbitrary mood swings of the Landlord.",
+          "risk": "HIGH",
+          "category": "Your Rights",
+          "recommendation": "Remove the part about the arbitrary mood swings of the Landlord."
+        },
+        {
+          "clause": "Late payment of rent shall incur a penalty equal to the GDP of a small nation, payable immediately.",
+          "risk": "HIGH",
+          "category": "Unfair Clauses",
+          "recommendation": "Negotiate for a reasonable late payment penalty."
+        },
+        {
+          "clause": "Tenant must perform weekly entertainment (karaoke, interpretive dance, or comedy routines) for the Landlord without compensation.",
+          "risk": "HIGH",
+          "category": "Unfair Clauses",
+          "recommendation": "Remove the clause."
+        },
+        {
+          "clause": "Any noise complaints made by the Tenant will be considered a violation of this Agreement and grounds for eviction.",
+          "risk": "HIGH",
+          "category": "Unfair Clauses",
+          "recommendation": "Remove the clause."
+        },
+        {
+          "clause": "The Landlord reserves the right to use Tenant's room for storage of personal items, livestock, or experimental technology.",
+          "risk": "HIGH",
+          "category": "Unfair Clauses",
+          "recommendation": "Remove the clause."
+        },
+        {
+          "clause": "Tenant shall provide free labor for all landlord's projects, including but not limited to gardening, laundry, and emotional support.",
+          "risk": "HIGH",
+          "category": "Unfair Clauses",
+          "recommendation": "Remove the clause."
+        },
+        {
+          "clause": "The Tenant must ask permission before breathing loudly within the unit.",
+          "risk": "HIGH",
+          "category": "Unfair Clauses",
+          "recommendation": "Remove the clause."
+        },
+        {
+          "clause": "Any guest visiting the Tenant must pay an entrance fee to the Landlord, amount to be determined daily.",
+          "risk": "HIGH",
+          "category": "Unfair Clauses",
+          "recommendation": "Remove the clause."
+        },
+        {
+          "clause": "Tenant must maintain the apartment temperature strictly within Landlord's comfort range, regardless of Tenant's survival needs.",
+          "risk": "HIGH",
+          "category": "Unfair Clauses",
+          "recommendation": "Remove the clause."
+        },
+        {
+          "clause": "If the Tenant leaves behind any belongings, they automatically become property of the Landlord, including sentimental items.",
+          "risk": "HIGH",
+          "category": "Unfair Clauses",
+          "recommendation": "Negotiate for a reasonable process for handling abandoned belongings."
+        },
+        {
+          "clause": "Tenant must display unwavering gratitude towards the Landlord at all times. Failure to smile in Landlord's presence constitutes breach.",
+          "risk": "HIGH",
+          "category": "Unfair Clauses",
+          "recommendation": "Remove the clause."
+        }
+      ],
+      "generated_at": "2025-08-28T11:03:22.805400"
+    }
+  },
+  "recommendations": {
+    "top_actions": [
+      "Negotiate for a reasonable rent increase clause with prior notice.",
+      "Negotiate to reduce deposit to 2 months maximum and ensure refund conditions are fair.",
+      "Ensure entry notice clause is present and reasonable (e.g., 24 hours notice).",
+      "Confirm utilities terms are clear and reasonable.",
+      "Negotiate a reasonable cap for minor repairs and exclude structural damage and natural disasters.",
+      "Confirm subletting terms are clear and fair.",
+      "Remove the clause.",
+      "Negotiate for a standard tenancy period (e.g., 1-2 years).",
+      "Remove the part about the arbitrary mood swings of the Landlord."
+    ],
+    "priority_issues": [
+      {
+        "clause": "The Tenant shall pay rent in the amount of SGD 500.00 per month, but the Landlord reserves the right...",
+        "risk": "HIGH",
+        "category": "Unfair Clauses",
+        "recommendation": "Negotiate for a reasonable rent increase clause with prior notice.",
+        "rationale": "Landlord reserves the right to increase rent by any amount at any time without prior notice is unfair."
+      },
+      {
+        "clause": "A security deposit of SGD 2000.00 shall be paid, which will not be refunded under any circumstances,...",
+        "risk": "HIGH",
+        "category": "Unfair Clauses",
+        "recommendation": "Negotiate to reduce deposit to 2 months maximum and ensure refund conditions are fair.",
+        "rationale": "A security deposit of SGD 2000.00 shall be paid, which will not be refunded under any circumstances is unfair and exceeds the industry norm of 2 months' rent."
+      },
+      {
+        "clause": "Tenant agrees to allow the Landlord unrestricted access to the premises at all hours, including week...",
+        "risk": "HIGH",
+        "category": "Your Rights",
+        "recommendation": "Ensure entry notice clause is present and reasonable (e.g., 24 hours notice).",
+        "rationale": "Tenant agrees to allow the Landlord unrestricted access to the premises at all hours is a violation of privacy."
+      },
+      {
+        "clause": "Utilities shall be borne entirely by the Tenant, including electricity, water, gas, air, an theoreti...",
+        "risk": "MEDIUM",
+        "category": "Unfair Clauses",
+        "recommendation": "Confirm utilities terms are clear and reasonable.",
+        "rationale": "Utilities shall be borne entirely by the Tenant, including electricity, water, gas, air, an theoretical concepts such as 'hope' and 'dreams' is unreasonable."
+      },
+      {
+        "clause": "The Tenant is responsible for all repairs, including structural damage, natural disasters, and any c...",
+        "risk": "HIGH",
+        "category": "Unfair Clauses",
+        "recommendation": "Negotiate a reasonable cap for minor repairs and exclude structural damage and natural disasters.",
+        "rationale": "The Tenant is responsible for all repairs, including structural damage, natural disasters, and any cosmic phenomena affecting the unit is unfair."
+      },
+      {
+        "clause": "Subletting is prohibited unless the Landlord personally profits from it. Any sublet profits not repo...",
+        "risk": "HIGH",
+        "category": "Unfair Clauses",
+        "recommendation": "Confirm subletting terms are clear and fair.",
+        "rationale": "Subletting is prohibited unless the Landlord personally profits from it is unfair."
+      },
+      {
+        "clause": "Pets are not allowed, except for those owned by the Landlord. Tenant is required to feed, walk, and ...",
+        "risk": "HIGH",
+        "category": "Unfair Clauses",
+        "recommendation": "Remove the clause.",
+        "rationale": "Pets are not allowed, except for those owned by the Landlord. Tenant is required to feed, walk, and groom said pets is unreasonable."
+      },
+      {
+        "clause": "The Tenant waives all legal rights, including the right to complain, negotiate, or seek fairness. Al...",
+        "risk": "HIGH",
+        "category": "Your Rights",
+        "recommendation": "Remove the clause.",
+        "rationale": "The Tenant waives all legal rights, including the right to complain, negotiate, or seek fairness is illegal and unenforceable."
+      },
+      {
+        "clause": "The Agreement shall last for 99 years or until the Tenant's spirit is broken, whichever comes first.",
+        "risk": "HIGH",
+        "category": "Your Rights",
+        "recommendation": "Negotiate for a standard tenancy period (e.g., 1-2 years).",
+        "rationale": "The Agreement shall last for 99 years or until the Tenant's spirit is broken is unreasonable and exploitative."
+      },
+      {
+        "clause": "Governing Law: This Agreement shall be governed by the Laws of Singapore, as well as the arbitrary m...",
+        "risk": "HIGH",
+        "category": "Your Rights",
+        "recommendation": "Remove the part about the arbitrary mood swings of the Landlord.",
+        "rationale": "Governing Law: This Agreement shall be governed by the Laws of Singapore, as well as the arbitrary mood swings of the Landlord is illegal."
+      }
+    ]
+  },
+  "document_analysis": {
+    "total_clauses": 30,
+    "risk_distribution": {
+      "high_risk_percentage": 96.2,
+      "medium_risk_percentage": 3.8,
+      "safe_percentage": 0.0
+    },
+    "category_breakdown": {
+      "Unfair Clauses": {
+        "total": 25,
+        "high": 0,
+        "medium": 0,
+        "ok": 0
+      },
+      "Your Rights": {
+        "total": 5,
+        "high": 0,
+        "medium": 0,
+        "ok": 0
+      }
+    }
+  }
+}
