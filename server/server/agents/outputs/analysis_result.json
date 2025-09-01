@@ -1,8 +1,8 @@
 {
   "summary": {
-    "high_risk": 12,
-    "medium_risk": 8,
-    "ok": 9,
+    "high_risk": 14,
+    "medium_risk": 6,
+    "ok": 0,
     "total": 29
   },
   "issues": [
@@ -10,32 +10,32 @@
       "clause": "The Tenant shall pay rent in the amount of SGD 500.00 per month, but the Landlord reserves the right to increase rent by any amount at any time without prior notice.",
       "risk": "HIGH",
       "category": "Unfair Clauses",
-      "rationale": "Landlord can increase rent by any amount at any time without prior notice.",
-      "recommendation": "Negotiate for a fixed rental amount or a reasonable increase clause.",
-      "reference": "CEA Practice Guidelines, industry norm"
+      "rationale": "Landlord reserves the right to increase rent by any amount at any time without prior notice.",
+      "recommendation": "Negotiate for a reasonable and fixed rental increase clause.",
+      "reference": "Industry norm"
     },
     {
       "clause": "A security deposit of SGD 2000.00 shall be paid, which will not be refunded under any circumstances, including but not limited to the Tenant never actually moving in.",
       "risk": "HIGH",
       "category": "Unfair Clauses",
       "rationale": "Security deposit will not be refunded under any circumstances.",
-      "recommendation": "Negotiate for a refund policy that complies with industry standards and Singapore law.",
+      "recommendation": "Negotiate for a reasonable security deposit refund policy.",
       "reference": "CEA Practice Guidelines, industry norm"
     },
     {
       "clause": "Tenant agrees to allow the Landlord unrestricted access to the premises at all hours, including weekends, public holidays, and during the Tenant's sleep.",
       "risk": "HIGH",
       "category": "Your Rights",
-      "rationale": "Landlord has unrestricted access to the premises at all hours.",
-      "recommendation": "Negotiate for a reasonable notice period before the Landlord enters the premises.",
+      "rationale": "Landlord unrestricted access to the premises at all hours.",
+      "recommendation": "Negotiate for reasonable notice before entry.",
       "reference": "CEA template, industry norm"
     },
     {
       "clause": "Utilities shall be borne entirely by the Tenant, including electricity, water, gas, air, an theoretical concepts such as 'hope' and 'dreams'.",
       "risk": "MEDIUM",
       "category": "Unfair Clauses",
-      "rationale": "Utilities inclusion/exclusion should be explicit.",
-      "recommendation": "Confirm utilities terms are clear.",
+      "rationale": "Utilities shall be borne entirely by the Tenant, including electricity, water, gas, air, an theoretical concepts such as 'hope' and 'dreams'.",
+      "recommendation": "Negotiate for a fair utilities clause.",
       "reference": "Industry norm"
     },
     {
@@ -56,19 +56,19 @@
     },
     {
       "clause": "Pets are not allowed, except for those owned by the Landlord. Tenant is required to feed, walk, and groom said pets.",
-      "risk": "MEDIUM",
+      "risk": "HIGH",
       "category": "Unfair Clauses",
-      "rationale": "Tenant is required to feed, walk, and groom Landlord's pets.",
-      "recommendation": "Negotiate for reasonable pet terms.",
+      "rationale": "Pets are not allowed, except for those owned by the Landlord. Tenant is required to feed, walk, and groom said pets.",
+      "recommendation": "Negotiate a reasonable pet clause.",
       "reference": "Industry norm"
     },
     {
       "clause": "The Tenant waives all legal rights, including the right to complain, negotiate, or seek fairness. All disputes shall be resolved exclusively by the Landlord's personal opinion.",
       "risk": "HIGH",
       "category": "Your Rights",
-      "rationale": "Tenant waives all legal rights.",
-      "recommendation": "Ensure your rights are protected by Singapore law.",
-      "reference": "Singapore law"
+      "rationale": "The Tenant waives all legal rights, including the right to complain, negotiate, or seek fairness.",
+      "recommendation": "Ensure dispute resolution is fair.",
+      "reference": "Industry norm"
     },
     {
       "clause": "The Agreement shall last for 99 years or until the Tenant's spirit is broken, whichever comes first.",
@@ -83,7 +83,7 @@
       "risk": "HIGH",
       "category": "Your Rights",
       "rationale": "Governing Law: This Agreement shall be governed by the Laws of Singapore, as well as the arbitrary mood swings of the Landlord.",
-      "recommendation": "Ensure the agreement is governed by the Laws of Singapore.",
+      "recommendation": "Ensure governing law is fair.",
       "reference": "Singapore law"
     },
     {
@@ -91,22 +91,22 @@
       "risk": "HIGH",
       "category": "Unfair Clauses",
       "rationale": "Late payment of rent shall incur a penalty equal to the GDP of a small nation, payable immediately.",
-      "recommendation": "Negotiate for a reasonable penalty for late payment of rent.",
+      "recommendation": "Negotiate for a reasonable late payment penalty.",
       "reference": "Industry norm"
     },
     {
       "clause": "Tenant must perform weekly entertainment (karaoke, interpretive dance, or comedy routines) for the Landlord without compensation.",
       "risk": "HIGH",
       "category": "Unfair Clauses",
-      "rationale": "Tenant must perform weekly entertainment for the Landlord without compensation.",
-      "recommendation": "Negotiate for reasonable terms.",
+      "rationale": "Tenant must perform weekly entertainment (karaoke, interpretive dance, or comedy routines) for the Landlord without compensation.",
+      "recommendation": "Remove entertainment clause.",
       "reference": "Industry norm"
     },
     {
       "clause": "Any noise complaints made by the Tenant will be considered a violation of this Agreement and grounds for eviction.",
       "risk": "MEDIUM",
       "category": "Unfair Clauses",
-      "rationale": "Noise restrictions should be reasonable and measurable.",
+      "rationale": "Any noise complaints made by the Tenant will be considered a violation of this Agreement and grounds for eviction.",
       "recommendation": "Clarify quiet hours and ensure enforceable standard.",
       "reference": "Industry norm"
     },
@@ -115,15 +115,15 @@
       "risk": "HIGH",
       "category": "Your Rights",
       "rationale": "The Landlord reserves the right to use Tenant's room for storage of personal items, livestock, or experimental technology.",
-      "recommendation": "Negotiate for reasonable terms.",
+      "recommendation": "Remove storage clause.",
       "reference": "Industry norm"
     },
     {
       "clause": "Tenant shall provide free labor for all landlord's projects, including but not limited to gardening, laundry, and emotional support.",
       "risk": "HIGH",
       "category": "Unfair Clauses",
-      "rationale": "Tenant shall provide free labor for all landlord's projects.",
-      "recommendation": "Negotiate for reasonable terms.",
+      "rationale": "Tenant shall provide free labor for all landlord's projects, including but not limited to gardening, laundry, and emotional support.",
+      "recommendation": "Remove labor clause.",
       "reference": "Industry norm"
     },
     {
@@ -131,14 +131,14 @@
       "risk": "HIGH",
       "category": "Unfair Clauses",
       "rationale": "The Tenant must ask permission before breathing loudly within the unit.",
-      "recommendation": "Negotiate for reasonable terms.",
+      "recommendation": "Remove breathing restriction clause.",
       "reference": "Industry norm"
     },
     {
       "clause": "Any guest visiting the Tenant must pay an entrance fee to the Landlord, amount to be determined daily.",
-      "risk": "MEDIUM",
+      "risk": "HIGH",
       "category": "Unfair Clauses",
-      "rationale": "Overly strict guest policies may be unfair.",
+      "rationale": "Any guest visiting the Tenant must pay an entrance fee to the Landlord, amount to be determined daily.",
       "recommendation": "Negotiate for reasonable guest access if needed.",
       "reference": "Industry norm"
     },
@@ -147,7 +147,7 @@
       "risk": "HIGH",
       "category": "Unfair Clauses",
       "rationale": "Tenant must maintain the apartment temperature strictly within Landlord's comfort range, regardless of Tenant's survival needs.",
-      "recommendation": "Confirm aircon usage terms are clear.",
+      "recommendation": "Negotiate a reasonable temperature clause.",
       "reference": "Industry norm"
     },
     {
@@ -155,23 +155,23 @@
       "risk": "HIGH",
       "category": "Unfair Clauses",
       "rationale": "If the Tenant leaves behind any belongings, they automatically become property of the Landlord, including sentimental items.",
-      "recommendation": "Negotiate for reasonable terms.",
+      "recommendation": "Negotiate a reasonable belongings clause.",
       "reference": "Industry norm"
     },
     {
       "clause": "Tenant must display unwavering gratitude towards the Landlord at all times. Failure to smile in Landlord's presence constitutes breach.",
       "risk": "HIGH",
       "category": "Unfair Clauses",
-      "rationale": "Tenant must display unwavering gratitude towards the Landlord at all times.",
-      "recommendation": "Negotiate for reasonable terms.",
+      "rationale": "Tenant must display unwavering gratitude towards the Landlord at all times. Failure to smile in Landlord's presence constitutes breach.",
+      "recommendation": "Remove gratitude clause.",
       "reference": "Industry norm"
     },
     {
       "clause": "Renovations or improvements carried out by Tenant become permanent gifts to the Landlord, who takes full credit for them.",
       "risk": "HIGH",
       "category": "Unfair Clauses",
-      "rationale": "Renovations or improvements carried out by Tenant become permanent gifts to the Landlord.",
-      "recommendation": "Negotiate for reasonable terms.",
+      "rationale": "Renovations or improvements carried out by Tenant become permanent gifts to the Landlord, who takes full credit for them.",
+      "recommendation": "Negotiate a fair renovations clause.",
       "reference": "Industry norm"
     },
     {
@@ -179,23 +179,23 @@
       "risk": "HIGH",
       "category": "Your Rights",
       "rationale": "The Tenant may not question the fairness of any clause in this Agreement, verbally or in writing.",
-      "recommendation": "Ensure your rights are protected by Singapore law.",
-      "reference": "Singapore law"
+      "recommendation": "Ensure fairness of all clauses.",
+      "reference": "Industry norm"
     },
     {
       "clause": "Tenant shall not look directly at the Landlord's personal possessions without prior written consent.",
-      "risk": "MEDIUM",
+      "risk": "HIGH",
       "category": "Unfair Clauses",
       "rationale": "Tenant shall not look directly at the Landlord's personal possessions without prior written consent.",
-      "recommendation": "Negotiate for reasonable terms.",
+      "recommendation": "Remove looking restriction clause.",
       "reference": "Industry norm"
     },
     {
       "clause": "The Tenant agrees to pay additional 'Goodwill Rent' whenever the Landlord feels underappreciated.",
-      "risk": "MEDIUM",
+      "risk": "HIGH",
       "category": "Unfair Clauses",
       "rationale": "The Tenant agrees to pay additional 'Goodwill Rent' whenever the Landlord feels underappreciated.",
-      "recommendation": "Negotiate for reasonable terms.",
+      "recommendation": "Remove goodwill rent clause.",
       "reference": "Industry norm"
     },
     {
@@ -203,15 +203,15 @@
       "risk": "HIGH",
       "category": "Unfair Clauses",
       "rationale": "The Landlord is entitled to 50% of all Tenant's lottery winnings, inheritances, or found coins on the street.",
-      "recommendation": "Negotiate for reasonable terms.",
+      "recommendation": "Remove lottery winnings clause.",
       "reference": "Industry norm"
     },
     {
       "clause": "Tenant must surrender all control of kitchen appliances, including but not limited to the microwave and fridge.",
-      "risk": "MEDIUM",
+      "risk": "HIGH",
       "category": "Unfair Clauses",
       "rationale": "Tenant must surrender all control of kitchen appliances, including but not limited to the microwave and fridge.",
-      "recommendation": "Negotiate for reasonable terms.",
+      "recommendation": "Negotiate a fair kitchen appliance clause.",
       "reference": "Industry norm"
     },
     {
@@ -227,15 +227,15 @@
       "risk": "MEDIUM",
       "category": "Unfair Clauses",
       "rationale": "The Tenant must water the Landlord's plants and apologize if they wilt, regardless of fault.",
-      "recommendation": "Negotiate for reasonable terms.",
+      "recommendation": "Remove plant watering clause.",
       "reference": "Industry norm"
     },
     {
       "clause": "Tenant is responsible for all noise created by neighbors, nearby construction, or passing airplanes.",
       "risk": "MEDIUM",
       "category": "Unfair Clauses",
-      "rationale": "Noise restrictions should be reasonable and measurable.",
-      "recommendation": "Clarify quiet hours and ensure enforceable standard.",
+      "rationale": "Tenant is responsible for all noise created by neighbors, nearby construction, or passing airplanes.",
+      "recommendation": "Clarify noise policy.",
       "reference": "Industry norm"
     },
     {
@@ -243,8 +243,8 @@
       "risk": "HIGH",
       "category": "Your Rights",
       "rationale": "The Landlord reserves the right to add, remove, or modify any clause in this Agreement at any time without Tenant's knowledge or consent.",
-      "recommendation": "Ensure your rights are protected by Singapore law.",
-      "reference": "Singapore law"
+      "recommendation": "Ensure fairness of all clauses.",
+      "reference": "Industry norm"
     }
   ],
   "buckets": [

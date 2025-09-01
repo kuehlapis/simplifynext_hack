@@ -46,10 +46,15 @@ async def start_analyse(document: str):
         analysis_result = analyser_agent.analyze(intake_output)
         planner_output = planner_agent.generate_email_with_gemini()
         ics_output = planner_agent.create_signing_ics_from_intake()
-        dashboard_data = packager_v2_agent.package_results(analysis_result)
 
-        print(f"{ics_output=}")
-        return dashboard_data, planner_output, ics_output
+        # Pass planner outputs directly to the packager
+        dashboard_data = packager_v2_agent.package_results(
+            analysis_result=analysis_result,
+            planner_email_output=planner_output,
+            ics_file_path=ics_output,
+        )
+
+        return dashboard_data
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Analysis failed: {str(e)}")
 

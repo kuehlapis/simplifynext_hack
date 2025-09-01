@@ -1,8 +1,8 @@
 {
   "riskCounts": {
-    "high": 12,
-    "medium": 8,
-    "ok": 9
+    "high": 14,
+    "medium": 6,
+    "ok": 0
   },
   "flaggedClauses": [
     {
@@ -10,7 +10,7 @@
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "The Tenant shall pay rent in the amount of SGD 500",
-      "description": "Landlord can increase rent by any amount at any time without prior notice.",
+      "description": "Landlord reserves the right to increase rent by any amount at any time without prior notice.",
       "anchor": "clause-1"
     },
     {
@@ -26,7 +26,7 @@
       "category": "Your Rights",
       "risk": "HIGH",
       "title": "Tenant agrees to allow the Landlord unrestricted a",
-      "description": "Landlord has unrestricted access to the premises at all hours.",
+      "description": "Landlord unrestricted access to the premises at all hours.",
       "anchor": "clause-3"
     },
     {
@@ -34,7 +34,7 @@
       "category": "Unfair Clauses",
       "risk": "MEDIUM",
       "title": "Utilities shall be borne entirely by the Tenant, i",
-      "description": "Utilities inclusion/exclusion should be explicit.",
+      "description": "Utilities shall be borne entirely by the Tenant, including electricity, water, gas, air, an theoretical concepts such as 'hope' and 'dreams'.",
       "anchor": "clause-4"
     },
     {
@@ -56,9 +56,9 @@
     {
       "id": "7",
       "category": "Unfair Clauses",
-      "risk": "MEDIUM",
+      "risk": "HIGH",
       "title": "Pets are not allowed, except for those owned by th",
-      "description": "Tenant is required to feed, walk, and groom Landlord's pets.",
+      "description": "Pets are not allowed, except for those owned by the Landlord. Tenant is required to feed, walk, and groom said pets.",
       "anchor": "clause-7"
     },
     {
@@ -66,7 +66,7 @@
       "category": "Your Rights",
       "risk": "HIGH",
       "title": "The Tenant waives all legal rights, including the ",
-      "description": "Tenant waives all legal rights.",
+      "description": "The Tenant waives all legal rights, including the right to complain, negotiate, or seek fairness.",
       "anchor": "clause-8"
     },
     {
@@ -98,7 +98,7 @@
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "Tenant must perform weekly entertainment (karaoke,",
-      "description": "Tenant must perform weekly entertainment for the Landlord without compensation.",
+      "description": "Tenant must perform weekly entertainment (karaoke, interpretive dance, or comedy routines) for the Landlord without compensation.",
       "anchor": "clause-12"
     },
     {
@@ -106,7 +106,7 @@
       "category": "Unfair Clauses",
       "risk": "MEDIUM",
       "title": "Any noise complaints made by the Tenant will be co",
-      "description": "Noise restrictions should be reasonable and measurable.",
+      "description": "Any noise complaints made by the Tenant will be considered a violation of this Agreement and grounds for eviction.",
       "anchor": "clause-13"
     },
     {
@@ -122,7 +122,7 @@
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "Tenant shall provide free labor for all landlord's",
-      "description": "Tenant shall provide free labor for all landlord's projects.",
+      "description": "Tenant shall provide free labor for all landlord's projects, including but not limited to gardening, laundry, and emotional support.",
       "anchor": "clause-15"
     },
     {
@@ -136,9 +136,9 @@
     {
       "id": "17",
       "category": "Unfair Clauses",
-      "risk": "MEDIUM",
+      "risk": "HIGH",
       "title": "Any guest visiting the Tenant must pay an entrance",
-      "description": "Overly strict guest policies may be unfair.",
+      "description": "Any guest visiting the Tenant must pay an entrance fee to the Landlord, amount to be determined daily.",
       "anchor": "clause-17"
     },
     {
@@ -162,7 +162,7 @@
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "Tenant must display unwavering gratitude towards t",
-      "description": "Tenant must display unwavering gratitude towards the Landlord at all times.",
+      "description": "Tenant must display unwavering gratitude towards the Landlord at all times. Failure to smile in Landlord's presence constitutes breach.",
       "anchor": "clause-20"
     },
     {
@@ -170,7 +170,7 @@
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "Renovations or improvements carried out by Tenant ",
-      "description": "Renovations or improvements carried out by Tenant become permanent gifts to the Landlord.",
+      "description": "Renovations or improvements carried out by Tenant become permanent gifts to the Landlord, who takes full credit for them.",
       "anchor": "clause-21"
     },
     {
@@ -184,7 +184,7 @@
     {
       "id": "23",
       "category": "Unfair Clauses",
-      "risk": "MEDIUM",
+      "risk": "HIGH",
       "title": "Tenant shall not look directly at the Landlord's p",
       "description": "Tenant shall not look directly at the Landlord's personal possessions without prior written consent.",
       "anchor": "clause-23"
@@ -192,7 +192,7 @@
     {
       "id": "24",
       "category": "Unfair Clauses",
-      "risk": "MEDIUM",
+      "risk": "HIGH",
       "title": "The Tenant agrees to pay additional 'Goodwill Rent",
       "description": "The Tenant agrees to pay additional 'Goodwill Rent' whenever the Landlord feels underappreciated.",
       "anchor": "clause-24"
@@ -208,7 +208,7 @@
     {
       "id": "26",
       "category": "Unfair Clauses",
-      "risk": "MEDIUM",
+      "risk": "HIGH",
       "title": "Tenant must surrender all control of kitchen appli",
       "description": "Tenant must surrender all control of kitchen appliances, including but not limited to the microwave and fridge.",
       "anchor": "clause-26"
@@ -234,7 +234,7 @@
       "category": "Unfair Clauses",
       "risk": "MEDIUM",
       "title": "Tenant is responsible for all noise created by nei",
-      "description": "Noise restrictions should be reasonable and measurable.",
+      "description": "Tenant is responsible for all noise created by neighbors, nearby construction, or passing airplanes.",
       "anchor": "clause-29"
     },
     {
@@ -248,25 +248,19 @@
   ],
   "artifacts": [
     {
-      "id": "1",
-      "name": "Task Schedule",
+      "id": "calendar",
+      "name": "Meeting Schedule",
       "type": "ics",
-      "url": "/download/task-schedule"
+      "url": "/download/planner_event.ics"
     },
     {
-      "id": "2",
-      "name": "Summary Email Draft",
+      "id": "email",
+      "name": "Legal Recommendations Email",
       "type": "email",
-      "url": "/download/email-draft"
+      "url": "/download/planner-agent.json"
     },
     {
-      "id": "3",
-      "name": "Amendment Rider",
-      "type": "rider",
-      "url": "/download/amendment-rider"
-    },
-    {
-      "id": "4",
+      "id": "pdf",
       "name": "Annotated Agreement",
       "type": "pdf",
       "url": "/download/annotated-agreement"
