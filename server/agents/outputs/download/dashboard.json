@@ -2,8 +2,8 @@
   "metadata": {
     "title": "ROOM RENTAL AGREEMENT (Totally Legal™ Extended Edition)",
     "date": "2025-08-26",
-    "generated_at": "2025-08-28T11:03:22.800470",
-    "document_id": "fd44895696fe"
+    "generated_at": "2025-08-28T10:59:32.633313",
+    "document_id": "33cd87fc042b"
   },
   "risk_summary": {
     "high": 25,
@@ -13,7 +13,7 @@
   },
   "flagged_clauses": [
     {
-      "id": "clause_0_4cb23086",
+      "id": "clause_0_7030f269",
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "Clause 1: Unfair Clauses",
@@ -21,7 +21,7 @@
       "anchor": "clause_0"
     },
     {
-      "id": "clause_1_1616ee88",
+      "id": "clause_1_ac4d96ee",
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "Clause 2: Unfair Clauses",
@@ -29,7 +29,7 @@
       "anchor": "clause_1"
     },
     {
-      "id": "clause_2_72c68a65",
+      "id": "clause_2_f08cf2b0",
       "category": "Your Rights",
       "risk": "HIGH",
       "title": "Clause 3: Your Rights",
@@ -37,7 +37,7 @@
       "anchor": "clause_2"
     },
     {
-      "id": "clause_3_78957174",
+      "id": "clause_3_ee3dbcf1",
       "category": "Unfair Clauses",
       "risk": "MEDIUM",
       "title": "Clause 4: Unfair Clauses",
@@ -45,7 +45,7 @@
       "anchor": "clause_3"
     },
     {
-      "id": "clause_4_5956a29b",
+      "id": "clause_4_19c6fde7",
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "Clause 5: Unfair Clauses",
@@ -53,7 +53,7 @@
       "anchor": "clause_4"
     },
     {
-      "id": "clause_5_f28a0c78",
+      "id": "clause_5_09de8d86",
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "Clause 6: Unfair Clauses",
@@ -61,7 +61,7 @@
       "anchor": "clause_5"
     },
     {
-      "id": "clause_6_a629f615",
+      "id": "clause_6_ed7f3dcc",
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "Clause 7: Unfair Clauses",
@@ -69,7 +69,7 @@
       "anchor": "clause_6"
     },
     {
-      "id": "clause_7_6ea836d7",
+      "id": "clause_7_a271e7b4",
       "category": "Your Rights",
       "risk": "HIGH",
       "title": "Clause 8: Your Rights",
@@ -77,7 +77,7 @@
       "anchor": "clause_7"
     },
     {
-      "id": "clause_8_f6ac5dc5",
+      "id": "clause_8_01f9000c",
       "category": "Your Rights",
       "risk": "HIGH",
       "title": "Clause 9: Your Rights",
@@ -85,7 +85,7 @@
       "anchor": "clause_8"
     },
     {
-      "id": "clause_9_e7f27652",
+      "id": "clause_9_26ee7364",
       "category": "Your Rights",
       "risk": "HIGH",
       "title": "Clause 10: Your Rights",
@@ -93,7 +93,7 @@
       "anchor": "clause_9"
     },
     {
-      "id": "clause_10_bc93cb3f",
+      "id": "clause_10_6e8e11d4",
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "Clause 11: Unfair Clauses",
@@ -101,7 +101,7 @@
       "anchor": "clause_10"
     },
     {
-      "id": "clause_11_c3f99351",
+      "id": "clause_11_46ccd69c",
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "Clause 12: Unfair Clauses",
@@ -109,7 +109,7 @@
       "anchor": "clause_11"
     },
     {
-      "id": "clause_12_6674b340",
+      "id": "clause_12_1070c4ec",
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "Clause 13: Unfair Clauses",
@@ -117,7 +117,7 @@
       "anchor": "clause_12"
     },
     {
-      "id": "clause_13_f478a413",
+      "id": "clause_13_32ab5bcc",
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "Clause 14: Unfair Clauses",
@@ -125,7 +125,7 @@
       "anchor": "clause_13"
     },
     {
-      "id": "clause_14_7b16c7e0",
+      "id": "clause_14_c9f0086f",
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "Clause 15: Unfair Clauses",
@@ -133,7 +133,7 @@
       "anchor": "clause_14"
     },
     {
-      "id": "clause_15_97a34844",
+      "id": "clause_15_a8a891a4",
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "Clause 16: Unfair Clauses",
@@ -141,7 +141,7 @@
       "anchor": "clause_15"
     },
     {
-      "id": "clause_16_7643726f",
+      "id": "clause_16_a248db5c",
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "Clause 17: Unfair Clauses",
@@ -149,7 +149,7 @@
       "anchor": "clause_16"
     },
     {
-      "id": "clause_17_35793933",
+      "id": "clause_17_04461ab0",
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "Clause 18: Unfair Clauses",
@@ -157,7 +157,7 @@
       "anchor": "clause_17"
     },
     {
-      "id": "clause_18_b4aefdbe",
+      "id": "clause_18_ec17a245",
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "Clause 19: Unfair Clauses",
@@ -165,7 +165,7 @@
       "anchor": "clause_18"
     },
     {
-      "id": "clause_19_6cbd4e49",
+      "id": "clause_19_50372c72",
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "Clause 20: Unfair Clauses",
@@ -173,7 +173,7 @@
       "anchor": "clause_19"
     },
     {
-      "id": "clause_20_591da2a9",
+      "id": "clause_20_50610120",
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "Clause 21: Unfair Clauses",
@@ -181,7 +181,7 @@
       "anchor": "clause_20"
     },
     {
-      "id": "clause_21_72b7cf9e",
+      "id": "clause_21_fe665fd0",
       "category": "Your Rights",
       "risk": "HIGH",
       "title": "Clause 22: Your Rights",
@@ -189,7 +189,7 @@
       "anchor": "clause_21"
     },
     {
-      "id": "clause_22_fe0fbe44",
+      "id": "clause_22_ccafc0f7",
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "Clause 23: Unfair Clauses",
@@ -197,7 +197,7 @@
       "anchor": "clause_22"
     },
     {
-      "id": "clause_23_78b49171",
+      "id": "clause_23_74b68a40",
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "Clause 24: Unfair Clauses",
@@ -205,7 +205,7 @@
       "anchor": "clause_23"
     },
     {
-      "id": "clause_24_93f35dd8",
+      "id": "clause_24_7252424d",
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "Clause 25: Unfair Clauses",
@@ -213,7 +213,7 @@
       "anchor": "clause_24"
     },
     {
-      "id": "clause_25_38d8dffb",
+      "id": "clause_25_5488ad1f",
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "Clause 26: Unfair Clauses",
@@ -221,7 +221,7 @@
       "anchor": "clause_25"
     },
     {
-      "id": "clause_26_2d418d2a",
+      "id": "clause_26_b0f4edc2",
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "Clause 27: Unfair Clauses",
@@ -229,7 +229,7 @@
       "anchor": "clause_26"
     },
     {
-      "id": "clause_27_cbccb4e5",
+      "id": "clause_27_3cd1c865",
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "Clause 28: Unfair Clauses",
@@ -237,7 +237,7 @@
       "anchor": "clause_27"
     },
     {
-      "id": "clause_28_70b7d22b",
+      "id": "clause_28_9e03d875",
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "Clause 29: Unfair Clauses",
@@ -245,7 +245,7 @@
       "anchor": "clause_28"
     },
     {
-      "id": "clause_29_71ea3107",
+      "id": "clause_29_0cdffae1",
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "Clause 30: Unfair Clauses",
@@ -255,21 +255,21 @@
   ],
   "artifacts": [
     {
-      "id": "calendar_eb302b8f",
+      "id": "calendar_dd48faf9",
       "name": "Agreement Review Meeting",
       "type": "ics",
       "url": "agents\\outputs\\planner_event.ics",
       "description": "Calendar event from planner agent"
     },
     {
-      "id": "email_f1942864",
+      "id": "email_04aac61c",
       "name": "Tenant Notification Email",
       "type": "email",
       "url": "agents\\outputs\\artifacts\\tenant_email_20250828.json",
       "description": "Email template for tenant notification"
     },
     {
-      "id": "rider_715c2094",
+      "id": "rider_3dde405a",
       "name": "Negotiation Rider",
       "type": "rider",
       "url": "agents\\outputs\\artifacts\\negotiation_rider_20250828.json",

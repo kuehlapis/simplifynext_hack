@@ -24,6 +24,7 @@ export interface Artifact {
   name: string;
   type: 'ics' | 'email' | 'rider' | 'pdf';
   url: string;
+  description?: string;
 }
 
 interface RiskDashboardProps {
@@ -142,14 +143,38 @@ export const RiskDashboard = ({ riskCounts, flaggedClauses, artifacts }: RiskDas
                   <div className="p-3 rounded-xl bg-gradient-primary/10">
                     <Download className="w-5 h-5 text-primary" />
                   </div>
-                  <div>
-                    <span className="font-semibold text-foreground text-lg">{artifact.name}</span>
-                    <Badge variant="outline" className="ml-3 bg-muted/50 border-border/50 text-xs font-medium">
-                      {artifact.type.toUpperCase()}
-                    </Badge>
-                  </div>
+                                      <div>
+                      <span className="font-semibold text-foreground text-lg">{artifact.name}</span>
+                      <Badge variant="outline" className="ml-3 bg-muted/50 border-border/50 text-xs font-medium">
+                        {artifact.type.toUpperCase()}
+                      </Badge>
+                      {artifact.description && (
+                        <p className="text-sm text-muted-foreground mt-1 max-w-md">{artifact.description}</p>
+                      )}
+                    </div>
                 </div>
-                <Button variant="outline" size="sm" className="px-6 py-2 font-medium bg-gradient-primary text-primary-foreground border-0 hover:opacity-90 shadow-soft hover:shadow-medium transition-all duration-300">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="px-6 py-2 font-medium bg-gradient-primary text-primary-foreground border-0 hover:opacity-90 shadow-soft hover:shadow-medium transition-all duration-300"
+                  onClick={() => {
+                    // Create a proper download link for the artifact
+                    const link = document.createElement('a');
+                    link.href = artifact.url;
+                    
+                    // Add appropriate file extensions based on type
+                    let filename = artifact.name;
+                    if (!filename.includes('.')) {
+                      const extension = artifact.type === 'ics' ? '.ics' : 
+                                     artifact.type === 'email' ? '.json' : 
+                                     artifact.type === 'rider' ? '.json' : '.pdf';
+                      filename = filename.toLowerCase().replace(/\s+/g, '_') + extension;
+                    }
+                    
+                    link.download = filename;
+                    link.click();
+                  }}
+                >
                   Download
                 </Button>
               </div>

@@ -50,96 +50,161 @@ const Index = () => {
 
   const { toast } = useToast();
 
-  const simulateProcessing = async () => {
+  const processFile = async () => {
+    if (!selectedFile) return;
+    
     setIsProcessing(true);
     
-    // Simulate agent processing with delays
-    for (let i = 0; i < agents.length; i++) {
+    try {
+      // Update agent statuses
       setAgents(prev => prev.map((agent, index) => 
-        index === i ? { ...agent, status: 'processing', progress: 0 } : agent
+        index === 0 ? { ...agent, status: 'processing', progress: 0 } : agent
       ));
 
-      // Simulate processing progress
+      // Step 1: Upload and process file with intake agent
+      const formData = new FormData();
+      formData.append('file', selectedFile);
+      
+      // Simulate intake processing
       for (let progress = 0; progress <= 100; progress += 20) {
         await new Promise(resolve => setTimeout(resolve, 200));
         setAgents(prev => prev.map((agent, index) => 
-          index === i ? { ...agent, progress } : agent
+          index === 0 ? { ...agent, progress } : agent
         ));
       }
-
       setAgents(prev => prev.map((agent, index) => 
-        index === i ? { ...agent, status: 'completed', progress: 100 } : agent
+        index === 0 ? { ...agent, status: 'completed', progress: 100 } : agent
       ));
+
+      // Step 2: Analysis agent
+      setAgents(prev => prev.map((agent, index) => 
+        index === 1 ? { ...agent, status: 'processing', progress: 0 } : agent
+      ));
+      
+      for (let progress = 0; progress <= 100; progress += 20) {
+        await new Promise(resolve => setTimeout(resolve, 200));
+        setAgents(prev => prev.map((agent, index) => 
+          index === 1 ? { ...agent, progress } : agent
+        ));
+      }
+      setAgents(prev => prev.map((agent, index) => 
+        index === 1 ? { ...agent, status: 'completed', progress: 100 } : agent
+      ));
+
+      // Step 3: Planner agent
+      setAgents(prev => prev.map((agent, index) => 
+        index === 2 ? { ...agent, status: 'processing', progress: 0 } : agent
+      ));
+      
+      for (let progress = 0; progress <= 100; progress += 20) {
+        await new Promise(resolve => setTimeout(resolve, 200));
+        setAgents(prev => prev.map((agent, index) => 
+          index === 2 ? { ...agent, progress } : agent
+        ));
+      }
+      setAgents(prev => prev.map((agent, index) => 
+        index === 2 ? { ...agent, status: 'completed', progress: 100 } : agent
+      ));
+
+      // Step 4: QA agent
+      setAgents(prev => prev.map((agent, index) => 
+        index === 3 ? { ...agent, status: 'processing', progress: 0 } : agent
+      ));
+      
+      for (let progress = 0; progress <= 100; progress += 20) {
+        await new Promise(resolve => setTimeout(resolve, 200));
+        setAgents(prev => prev.map((agent, index) => 
+          index === 3 ? { ...agent, progress } : agent
+        ));
+      }
+      setAgents(prev => prev.map((agent, index) => 
+        index === 3 ? { ...agent, status: 'completed', progress: 100 } : agent
+      ));
+
+      // Step 5: Packager agent
+      setAgents(prev => prev.map((agent, index) => 
+        index === 4 ? { ...agent, status: 'processing', progress: 0 } : agent
+      ));
+      
+      for (let progress = 0; progress <= 100; progress += 20) {
+        await new Promise(resolve => setTimeout(resolve, 200));
+        setAgents(prev => prev.map((agent, index) => 
+          index === 3 ? { ...agent, progress } : agent
+        ));
+      }
+      setAgents(prev => prev.map((agent, index) => 
+        index === 4 ? { ...agent, status: 'completed', progress: 100 } : agent
+      ));
+
+      // Now fetch the real data from the server
+      const response = await fetch('/frontend-package');
+      if (!response.ok) {
+        throw new Error('Failed to fetch analysis results');
+      }
+      
+      const realData = await response.json();
+      
+      // Transform the data to match frontend expectations
+      const transformedData = {
+        riskCounts: realData.risk_summary,
+        flaggedClauses: realData.flagged_clauses,
+        artifacts: [
+          {
+            id: 'negotiation_rider',
+            name: 'Negotiation Rider - Proposed Changes',
+            type: 'rider' as const,
+            url: '/download-file/negotiation_rider_20250828.json',
+            description: realData.artifacts?.negotiation_rider?.purpose || 'Proposed changes to address unfair clauses'
+          },
+          {
+            id: 'tenant_email',
+            name: 'Tenant Email Template',
+            type: 'email' as const,
+            url: '/download-file/tenant_email_20250828.json',
+            description: 'Email template for tenant notification about high-risk clauses'
+          },
+          {
+            id: 'planner_summary',
+            name: 'Planner Summary & Recommendations',
+            type: 'email' as const,
+            url: '/download-file/planner-agent.json',
+            description: 'Task list and recommendations for addressing issues'
+          },
+          {
+            id: 'calendar_event',
+            name: 'Agreement Review Calendar Event',
+            type: 'ics' as const,
+            url: '/download-file/planner_event.ics',
+            description: 'Calendar event for agreement review meeting'
+          },
+          {
+            id: 'agreement_summary',
+            name: 'Agreement Analysis Summary',
+            type: 'pdf' as const,
+            url: '/download-file/dashboard.json',
+            description: 'Complete analysis summary with risk breakdown'
+          }
+        ]
+      };
+
+      setDashboardData(transformedData);
+      setIsProcessing(false);
+      
+      toast({
+        title: "Processing Complete",
+        description: "Your tenant agreement has been analyzed successfully.",
+      });
+      
+    } catch (error) {
+      console.error('Processing failed:', error);
+      setIsProcessing(false);
+      
+      toast({
+        title: "Processing Failed",
+        description: "Failed to process the document. Please try again.",
+        variant: "destructive"
+      });
     }
-
-    // Generate mock dashboard data
-    const mockData = {
-      riskCounts: {
-        high: 3,
-        medium: 5,
-        ok: 12
-      },
-      flaggedClauses: [
-        {
-          id: '1',
-          category: 'Unfair Clauses' as const,
-          risk: 'HIGH' as const,
-          title: 'Excessive Security Deposit',
-          description: 'Security deposit exceeds 2 months rent, which may be unenforceable',
-          anchor: 'clause-7.2'
-        },
-        {
-          id: '2',
-          category: 'Your Rights' as const,
-          risk: 'HIGH' as const,
-          title: 'Waived Maintenance Rights',
-          description: 'Tenant waives right to request timely repairs and maintenance',
-          anchor: 'clause-12.1'
-        },
-        {
-          id: '3',
-          category: 'Stamp Duty' as const,
-          risk: 'MEDIUM' as const,
-          title: 'Unclear Stamp Duty Allocation',
-          description: 'Agreement does not clearly specify who bears stamp duty costs',
-          anchor: 'clause-15.3'
-        }
-      ],
-      artifacts: [
-        {
-          id: '1',
-          name: 'Task Schedule',
-          type: 'ics' as const,
-          url: '#'
-        },
-        {
-          id: '2',
-          name: 'Summary Email Draft',
-          type: 'email' as const,
-          url: '#'
-        },
-        {
-          id: '3',
-          name: 'Amendment Rider',
-          type: 'rider' as const,
-          url: '#'
-        },
-        {
-          id: '4',
-          name: 'Annotated Agreement',
-          type: 'pdf' as const,
-          url: '#'
-        }
-      ]
-    };
-
-    setDashboardData(mockData);
-    setIsProcessing(false);
-    
-    toast({
-      title: "Processing Complete",
-      description: "Your tenant agreement has been analyzed successfully.",
-    });
   };
 
   const resetProcess = () => {
@@ -201,8 +266,8 @@ const Index = () => {
                 </div>
                 <div className="space-x-3">
                   {!isProcessing && !dashboardData && (
-                    <Button onClick={simulateProcessing} className="px-8 py-3 text-lg font-semibold bg-gradient-primary hover:opacity-90 shadow-medium hover:shadow-large transition-all duration-300">
-                      Start Analysis
+                    <Button onClick={processFile} className="px-8 py-3 text-lg font-semibold bg-gradient-primary hover:opacity-90 shadow-medium hover:shadow-large transition-all duration-300">
+                      Process Document
                     </Button>
                   )}
                   <Button variant="outline" onClick={resetProcess} className="px-6 py-3 font-medium">
@@ -223,11 +288,39 @@ const Index = () => {
               <div className="animate-slide-up" style={{ animationDelay: '200ms' }}>
                 <h2 className="text-2xl font-bold text-foreground mb-6 bg-gradient-primary bg-clip-text text-transparent">Analysis Results</h2>
                 {dashboardData ? (
-                  <RiskDashboard 
-                    riskCounts={dashboardData.riskCounts}
-                    flaggedClauses={dashboardData.flaggedClauses}
-                    artifacts={dashboardData.artifacts}
-                  />
+                  <>
+                    <div className="mb-6">
+                      <Button
+                        onClick={() => {
+                          // Download all artifacts
+                          dashboardData.artifacts.forEach((artifact) => {
+                            const link = document.createElement('a');
+                            link.href = artifact.url;
+                            
+                            // Add appropriate file extensions based on type
+                            let filename = artifact.name;
+                            if (!filename.includes('.')) {
+                              const extension = artifact.type === 'ics' ? '.ics' : 
+                                             artifact.type === 'email' ? '.json' : 
+                                             artifact.type === 'rider' ? '.json' : '.pdf';
+                              filename = filename.toLowerCase().replace(/\s+/g, '_') + extension;
+                            }
+                            
+                            link.download = filename;
+                            link.click();
+                          });
+                        }}
+                        className="px-6 py-3 font-semibold bg-gradient-primary hover:opacity-90 shadow-medium hover:shadow-large transition-all duration-300"
+                      >
+                        📥 Download All Files
+                      </Button>
+                    </div>
+                    <RiskDashboard 
+                      riskCounts={dashboardData.riskCounts}
+                      flaggedClauses={dashboardData.flaggedClauses}
+                      artifacts={dashboardData.artifacts}
+                    />
+                  </>
                 ) : (
                   <Card className="p-12 shadow-large bg-gradient-hero border-0">
                     <div className="text-center">
