@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
 import { Separator } from '@/components/ui/separator';
+import EmailModel from '@/components/EmailModel';
 
 
 
@@ -52,6 +53,10 @@ const Index = () => {
     artifacts: Artifact[];
   } | null>(null);
 
+  const [showEmailModel, setShowEmailModel] = useState(false);
+  const [userName, setUserName] = useState("");
+  const [userEmail, setUserEmail] = useState("");
+
   const { toast } = useToast();
 
   const handleFileConvert = async (file: File) => {
@@ -59,21 +64,25 @@ const Index = () => {
       setIsProcessing(true);
       setConvertedMarkdown(null);
       setSelectedFile(file);
+
       const formData = new FormData();
       formData.append("file", file);
-      const convertRes = await fetch("/convert", {
-        method: "POST",
-        body: formData,
-      });
-      
+
+      const convertRes = await fetch("/convert", {method: "POST", body: formData,});
       if (!convertRes.ok) throw new Error(`Conversion failed: ${convertRes.status}`);
-      const markdown = await convertRes.text();   
+
+      const markdown = await convertRes.text(); 
+
       setConvertedMarkdown(markdown)
+
       toast({
         title: "File converted",
         description: "Markdown version is ready. Click Start Analysis to continue.",
       });
+
       setIsProcessing(false);
+      setShowEmailModel(true);
+
       return markdown;            
     } catch (err) {
       console.error(err);
@@ -83,6 +92,14 @@ const Index = () => {
       });
       return null;
     }
+  };
+
+  const handleEmailSubmit = () => {
+    if (!userName || !userEmail) {
+      toast({ title: "Error", description: "Please enter both name and email" });
+      return;
+    }
+    setShowEmailModel(false);
   };
 
   const AnalyzeProcessing = async () => {
@@ -120,7 +137,10 @@ const Index = () => {
       const analyzePromise = fetch("/analyze", {
         method: "POST",
         headers: { "Content-Type": "text/markdown" },
-        body: convertedMarkdown,
+          body: JSON.stringify({
+            name: userName,
+            email: userEmail,
+            markdown: convertedMarkdown  }),
       });
 
       // Start agent animation without awaiting yet
@@ -162,6 +182,16 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {showEmailModel && (
+        <EmailModel
+          userName={userName}
+          setUserName={setUserName}
+          userEmail={userEmail}
+          setUserEmail={setUserEmail}
+          onSubmit={handleEmailSubmit}
+          onClose={() => setShowEmailModel(false)}
+        />
+      )}
       {/* Header */}
       <div className="border-b border-border bg-gradient-hero relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-primary/5"></div>

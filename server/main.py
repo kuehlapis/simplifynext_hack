@@ -6,11 +6,11 @@ from server.agents.intake_agent import IntakeAgent
 from server.agents.analyser_agent import AnalyserAgent
 from server.agents.packager import PackagerAgent
 from server.agents.packager_v2 import PackagerV2Agent
+from server.service.email_service import EmailService
 import json
-from typing import List, Dict, Any, Optional
+from typing import List, Dict, Any
 from pathlib import Path
 from starlette.responses import FileResponse, RedirectResponse
-import os
 
 app = FastAPI()
 intake_agent = IntakeAgent()
@@ -18,6 +18,7 @@ analyser_agent = AnalyserAgent()
 planner_agent = PlannerAgent()
 packager_agent = PackagerAgent()
 packager_v2_agent = PackagerV2Agent()
+EmailServiceMain = EmailService()
 
 app.add_middleware(
     CORSMiddleware,
@@ -29,12 +30,13 @@ app.add_middleware(
 
 
 app.include_router(ocr_router)
-BASE_DIR       = Path(__file__).resolve().parent        # server/
-OUTPUT_DIR     = BASE_DIR / "agents" / "outputs"
-DOWNLOAD_DIR   = OUTPUT_DIR
-ARTIFACTS_DIR  = OUTPUT_DIR / "artifacts"
+BASE_DIR = Path(__file__).resolve().parent  # server/
+OUTPUT_DIR = BASE_DIR / "agents" / "outputs"
+DOWNLOAD_DIR = OUTPUT_DIR
+ARTIFACTS_DIR = OUTPUT_DIR / "artifacts"
 DASHBOARD_PATH = OUTPUT_DIR / "dashboard.json"
 ARTIFACTS_DIR = OUTPUT_DIR / "artifacts"
+
 
 @app.get("/")
 async def read_root():
@@ -48,7 +50,16 @@ async def start_analyse(request: Request):
     """
 
     try:
-        document = (await request.body()).decode("utf-8")
+        # document = (await request.body()).decode("utf-8")
+        data = await request.json()  # Parse JSON
+        name = data.get("name")
+        email = data.get("email")
+        document = data.get("markdown")
+
+        if not all([name, email, document]):
+            raise HTTPException(
+                status_code=400, detail="Missing name, email, or document"
+            )
         intake_output = intake_agent.normalization(document)
         analysis_result = analyser_agent.analyze(intake_output)
         planner_output = planner_agent.generate_email_with_gemini()
@@ -60,6 +71,8 @@ async def start_analyse(request: Request):
             planner_email_output=planner_output,
             ics_file_path=ics_output,
         )
+
+        EmailServiceMain.send_invite(email, planner_output, name)
 
         return dashboard_data
     except Exception as e:
@@ -166,11 +179,12 @@ def _resolve_local(url: str) -> Path:
         return p
     url = url.replace("\\", "/")  # normalize
     if url.startswith("server/"):
-        return BASE_DIR.parent / url          # repo-root/server/...
+        return BASE_DIR.parent / url  # repo-root/server/...
     if url.startswith("agents/"):
-        return BASE_DIR / url                 # server/agents/...
+        return BASE_DIR / url  # server/agents/...
     # last resort: filename-only in artifacts
     return ARTIFACTS_DIR / p.name
+
 
 @app.get("/download/{artifact_id}")
 def download_artifact(artifact_id: str):
@@ -209,12 +223,11 @@ def download_file_by_name(filename: str):
 
         media_type = _infer_media_type(file_path)
         return FileResponse(
-            path=str(file_path),
-            media_type=media_type,
-            filename=file_path.name
+            path=str(file_path), media_type=media_type, filename=file_path.name
         )
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to download file: {e}")
+
 
 @app.get("/downloads")
 def list_download_files():
@@ -232,7 +245,8 @@ def list_download_files():
                 "modified": file_path.stat().st_mtime,
                 "type": file_path.suffix.lstrip(".") if file_path.suffix else "unknown",
             }
-            for file_path in DOWNLOAD_DIR.glob("*") if file_path.is_file()
+            for file_path in DOWNLOAD_DIR.glob("*")
+            if file_path.is_file()
         ]
 
         return {"files": files, "total": len(files)}
@@ -251,31 +265,13 @@ def get_frontend_package():
         if not frontend_package_path.exists():
             raise HTTPException(
                 status_code=404,
-                detail="Frontend package not found. Run the packager first."
+                detail="Frontend package not found. Run the packager first.",
             )
 
         with open(frontend_package_path, "r", encoding="utf-8") as f:
             return json.load(f)
 
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Failed to read frontend package: {e}")
-
-
-@app.get("/frontend-package")
-def get_frontend_package():
-    """
-    Get the comprehensive frontend package data.
-    """
-    try:
-        frontend_package_path = DOWNLOAD_DIR / "frontend_package.json"
-        if not frontend_package_path.exists():
-            raise HTTPException(
-                status_code=404,
-                detail="Frontend package not found. Run the packager first."
-            )
-
-        with open(frontend_package_path, "r", encoding="utf-8") as f:
-            return json.load(f)
-
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Failed to read frontend package: {e}")
+        raise HTTPException(
+            status_code=500, detail=f"Failed to read frontend package: {e}"
+        )

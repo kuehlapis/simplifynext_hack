@@ -1,16 +1,16 @@
 {
   "riskCounts": {
-    "high": 16,
-    "medium": 7,
-    "ok": 0
+    "high": 14,
+    "medium": 10,
+    "ok": 5
   },
   "flaggedClauses": [
     {
       "id": "1",
-      "category": "Unfair Clauses",
+      "category": "Your Rights",
       "risk": "HIGH",
       "title": "The Tenant shall pay rent in the amount of SGD 500",
-      "description": "Landlord reserves the right to increase rent by any amount at any time without prior notice.",
+      "description": "Landlord can increase rent by any amount at any time without prior notice.",
       "anchor": "clause-1"
     },
     {
@@ -18,7 +18,7 @@
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "A security deposit of SGD 2000.00 shall be paid, w",
-      "description": "Security deposit will not be refunded under any circumstances.",
+      "description": "Security deposit is higher than 2 months' rent and is non-refundable.",
       "anchor": "clause-2"
     },
     {
@@ -26,39 +26,23 @@
       "category": "Your Rights",
       "risk": "HIGH",
       "title": "Tenant agrees to allow the Landlord unrestricted a",
-      "description": "Tenant agrees to allow the Landlord unrestricted access to the premises at all hours.",
+      "description": "Landlord has unrestricted access to the premises at all hours.",
       "anchor": "clause-3"
-    },
-    {
-      "id": "4",
-      "category": "Unfair Clauses",
-      "risk": "MEDIUM",
-      "title": "Utilities shall be borne entirely by the Tenant, i",
-      "description": "Utilities shall be borne entirely by the Tenant, including electricity, water, gas, air, an theoretical concepts such as 'hope' and 'dreams'.",
-      "anchor": "clause-4"
     },
     {
       "id": "5",
       "category": "Unfair Clauses",
-      "risk": "HIGH",
+      "risk": "MEDIUM",
       "title": "The Tenant is responsible for all repairs, includi",
-      "description": "The Tenant is responsible for all repairs, including structural damage, natural disasters, and any cosmic phenomena affecting the unit.",
+      "description": "Tenant's liability for minor repairs should be capped (e.g., $150 per item).",
       "anchor": "clause-5"
-    },
-    {
-      "id": "6",
-      "category": "Unfair Clauses",
-      "risk": "HIGH",
-      "title": "Subletting is prohibited unless the Landlord perso",
-      "description": "Subletting is prohibited unless the Landlord personally profits from it.",
-      "anchor": "clause-6"
     },
     {
       "id": "7",
       "category": "Unfair Clauses",
-      "risk": "HIGH",
+      "risk": "MEDIUM",
       "title": "Pets are not allowed, except for those owned by th",
-      "description": "Pets are not allowed, except for those owned by the Landlord. Tenant is required to feed, walk, and groom said pets.",
+      "description": "No-guest policies are restrictive but not illegal; should be reasonable.",
       "anchor": "clause-7"
     },
     {
@@ -66,7 +50,7 @@
       "category": "Your Rights",
       "risk": "HIGH",
       "title": "The Tenant waives all legal rights, including the ",
-      "description": "The Tenant waives all legal rights, including the right to complain, negotiate, or seek fairness. All disputes shall be resolved exclusively by the Landlord's personal opinion.",
+      "description": "Tenant waives all legal rights.",
       "anchor": "clause-8"
     },
     {
@@ -74,7 +58,7 @@
       "category": "Your Rights",
       "risk": "HIGH",
       "title": "The Agreement shall last for 99 years or until the",
-      "description": "The Agreement shall last for 99 years or until the Tenant's spirit is broken, whichever comes first.",
+      "description": "HDB minimum tenancy is 6 months; private is usually 3 months or more.",
       "anchor": "clause-9"
     },
     {
@@ -82,7 +66,7 @@
       "category": "Your Rights",
       "risk": "HIGH",
       "title": "Governing Law: This Agreement shall be governed by",
-      "description": "Governing Law: This Agreement shall be governed by the Laws of Singapore, as well as the arbitrary mood swings of the Landlord.",
+      "description": "Governing law is subject to the arbitrary mood swings of the Landlord.",
       "anchor": "clause-10"
     },
     {
@@ -90,7 +74,7 @@
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "Late payment of rent shall incur a penalty equal t",
-      "description": "Late payment of rent shall incur a penalty equal to the GDP of a small nation, payable immediately.",
+      "description": "Late payment penalty is excessive.",
       "anchor": "clause-11"
     },
     {
@@ -98,15 +82,15 @@
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "Tenant must perform weekly entertainment (karaoke,",
-      "description": "Tenant must perform weekly entertainment (karaoke, interpretive dance, or comedy routines) for the Landlord without compensation.",
+      "description": "Tenant is required to perform weekly entertainment for the Landlord without compensation.",
       "anchor": "clause-12"
     },
     {
       "id": "13",
-      "category": "Unfair Clauses",
-      "risk": "MEDIUM",
+      "category": "Your Rights",
+      "risk": "HIGH",
       "title": "Any noise complaints made by the Tenant will be co",
-      "description": "Clauses that are subjective may be unfair; should specify quiet hours or decibel limits.",
+      "description": "Any noise complaints made by the Tenant will be considered a violation of this Agreement and grounds for eviction.",
       "anchor": "clause-13"
     },
     {
@@ -114,7 +98,7 @@
       "category": "Your Rights",
       "risk": "HIGH",
       "title": "The Landlord reserves the right to use Tenant's ro",
-      "description": "Landlord must give reasonable notice (e.g., 24 hours) before entering premises.",
+      "description": "The Landlord reserves the right to use Tenant's room for storage of personal items, livestock, or experimental technology.",
       "anchor": "clause-14"
     },
     {
@@ -122,7 +106,7 @@
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "Tenant shall provide free labor for all landlord's",
-      "description": "Cleaning requirements should be reasonable and not excessive.",
+      "description": "Tenant shall provide free labor for all landlord's projects.",
       "anchor": "clause-15"
     },
     {
@@ -130,15 +114,15 @@
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "The Tenant must ask permission before breathing lo",
-      "description": "Noise restrictions should be reasonable and measurable.",
+      "description": "The Tenant must ask permission before breathing loudly within the unit.",
       "anchor": "clause-16"
     },
     {
       "id": "17",
       "category": "Unfair Clauses",
-      "risk": "MEDIUM",
+      "risk": "HIGH",
       "title": "Any guest visiting the Tenant must pay an entrance",
-      "description": "No-guest policies are restrictive but not illegal; should be reasonable.",
+      "description": "Any guest visiting the Tenant must pay an entrance fee to the Landlord.",
       "anchor": "clause-17"
     },
     {
@@ -146,7 +130,7 @@
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "Tenant must maintain the apartment temperature str",
-      "description": "Aircon usage restrictions should be reasonable (e.g., night hours).",
+      "description": "Tenant must maintain the apartment temperature strictly within Landlord's comfort range, regardless of Tenant's survival needs.",
       "anchor": "clause-18"
     },
     {
@@ -154,7 +138,7 @@
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "If the Tenant leaves behind any belongings, they a",
-      "description": "Cleaning requirements should be reasonable and not excessive.",
+      "description": "If the Tenant leaves behind any belongings, they automatically become property of the Landlord.",
       "anchor": "clause-19"
     },
     {
@@ -162,15 +146,15 @@
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "Tenant must display unwavering gratitude towards t",
-      "description": "Noise restrictions should be reasonable and measurable.",
+      "description": "Tenant must display unwavering gratitude towards the Landlord at all times.",
       "anchor": "clause-20"
     },
     {
       "id": "21",
       "category": "Unfair Clauses",
-      "risk": "HIGH",
+      "risk": "MEDIUM",
       "title": "Renovations or improvements carried out by Tenant ",
-      "description": "Cleaning requirements should be reasonable and not excessive.",
+      "description": "Renovations or improvements carried out by Tenant become permanent gifts to the Landlord.",
       "anchor": "clause-21"
     },
     {
@@ -178,15 +162,15 @@
       "category": "Your Rights",
       "risk": "HIGH",
       "title": "The Tenant may not question the fairness of any cl",
-      "description": "Dispute resolution among housemates should be fair and involve landlord if needed.",
+      "description": "The Tenant may not question the fairness of any clause in this Agreement.",
       "anchor": "clause-22"
     },
     {
       "id": "23",
-      "category": "Your Rights",
-      "risk": "HIGH",
+      "category": "Unfair Clauses",
+      "risk": "MEDIUM",
       "title": "Tenant shall not look directly at the Landlord's p",
-      "description": "Landlord must give reasonable notice (e.g., 24 hours) before entering premises.",
+      "description": "Noise restrictions should be reasonable and measurable.",
       "anchor": "clause-23"
     },
     {
@@ -194,7 +178,7 @@
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "The Tenant agrees to pay additional 'Goodwill Rent",
-      "description": "Rent due date should be clearly stated and reasonable.",
+      "description": "The Tenant agrees to pay additional 'Goodwill Rent' whenever the Landlord feels underappreciated.",
       "anchor": "clause-24"
     },
     {
@@ -202,13 +186,13 @@
       "category": "Unfair Clauses",
       "risk": "HIGH",
       "title": "The Landlord is entitled to 50% of all Tenant's lo",
-      "description": "Cleaning requirements should be reasonable and not excessive.",
+      "description": "The Landlord is entitled to 50% of all Tenant's lottery winnings, inheritances, or found coins on the street.",
       "anchor": "clause-25"
     },
     {
       "id": "26",
       "category": "Unfair Clauses",
-      "risk": "HIGH",
+      "risk": "MEDIUM",
       "title": "Tenant must surrender all control of kitchen appli",
       "description": "Washing machine use should be reasonable and not overly restrictive.",
       "anchor": "clause-26"
@@ -216,7 +200,7 @@
     {
       "id": "27",
       "category": "Your Rights",
-      "risk": "MEDIUM",
+      "risk": "HIGH",
       "title": "Any attempt by the Tenant to move out requires a s",
       "description": "Notice period for termination should be reasonable (e.g., 1-2 months).",
       "anchor": "clause-27"
@@ -242,7 +226,7 @@
       "category": "Your Rights",
       "risk": "HIGH",
       "title": "Final Clause: The Landlord reserves the right to a",
-      "description": "Renewal option should be fair and not one-sided.",
+      "description": "The Landlord reserves the right to add, remove, or modify any clause in this Agreement at any time without Tenant's knowledge or consent.",
       "anchor": "clause-30"
     }
   ],
@@ -251,19 +235,13 @@
       "id": "calendar",
       "name": "Meeting Schedule",
       "type": "ics",
-      "url": "/download/planner_event.ics"
+      "url": "/download-file/planner_event.ics"
     },
     {
       "id": "email",
       "name": "Legal Recommendations Email",
       "type": "email",
-      "url": "/download/planner-agent.json"
-    },
-    {
-      "id": "pdf",
-      "name": "Annotated Agreement",
-      "type": "pdf",
-      "url": "/download/annotated-agreement"
+      "url": "/download-file/tenant_email_20250905.html"
     }
   ]
 }

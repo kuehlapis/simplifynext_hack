@@ -8,11 +8,15 @@ load_dotenv()
 
 class Config:
     GEMINI_API_KEY: SecretStr = SecretStr(os.getenv("GEMINI_API_KEY", ""))
+    GMAIL_ACC: SecretStr = SecretStr(os.getenv("GMAIL_ACC", ""))
+    GMAIL_PW: SecretStr = SecretStr(os.getenv("GMAIL_PW", ""))
 
     @classmethod
     def validate_config(cls) -> None:
         required_secrets = {
             "GEMINI_API_KEY": cls.GEMINI_API_KEY.get_secret_value(),
+            "GMAIL_ACC": cls.GMAIL_ACC.get_secret_value(),
+            "GMAIL_PW": cls.GMAIL_PW.get_secret_value(),
         }
 
         missing_secrets = [
@@ -30,6 +34,14 @@ class Config:
     @classmethod
     def get_gemini_api(cls) -> str:
         return cls.GEMINI_API_KEY.get_secret_value()
+
+    @classmethod
+    def get_gmail_pw(cls) -> str:
+        return cls.GMAIL_PW.get_secret_value()
+
+    @classmethod
+    def get_gmail_acc(cls) -> str:
+        return cls.GMAIL_ACC.get_secret_value()
 
 
 @lru_cache(maxsize=1)
