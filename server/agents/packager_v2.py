@@ -54,8 +54,8 @@ class PackagerV2Agent(BaseAgent):
 
     def __init__(self):
         super().__init__()
-        self.output_dir = Path("server/agents/outputs")
-        self.output_dir.mkdir(parents=True, exist_ok=True)
+        BASE_DIR = Path(__file__).resolve().parent   # points to server/
+        self.output_dir = BASE_DIR / "outputs"
         self.output_file = self.output_dir / "dashboard_data.json"
 
     def package_results(
@@ -157,6 +157,7 @@ class PackagerV2Agent(BaseAgent):
 
             html_filename = f"tenant_email_{datetime.now().strftime('%Y%m%d')}.html"
             (self.output_dir / html_filename).write_text(html_email, encoding="utf-8")
+            print("generated html file")
 
             artifacts.append(Artifact(
                 id="email",
@@ -173,7 +174,7 @@ class PackagerV2Agent(BaseAgent):
         # Save to file for persistence
         with open(self.output_file, "w", encoding="utf-8") as f:
             json.dump(dashboard_data.model_dump(), f, ensure_ascii=False, indent=2)
-
+            print(f"dumped at {Path(self.output_file)}")
         return dashboard_data
 
     def _map_category(self, category: str) -> str:
