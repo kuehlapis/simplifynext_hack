@@ -4,6 +4,9 @@ from server.agents.base_agent import BaseAgent
 from pydantic import BaseModel, Field
 import json
 from pathlib import Path
+from html import escape
+from datetime import datetime
+
 
 
 class RiskCounts(BaseModel):
@@ -106,73 +109,61 @@ class PackagerV2Agent(BaseAgent):
         artifacts = []
 
         # Add ICS file artifact if provided or exists
+        # --- inside package_results ---
+
+        # ICS artifact → serve by filename
         if ics_file_path and Path(ics_file_path).exists():
             ics_path = Path(ics_file_path)
-            artifacts.append(
-                Artifact(
-                    id="calendar",
-                    name="Meeting Schedule",
-                    type="ics",
-                    url=f"/download/{ics_path.name}",
-                )
-            )
+            artifacts.append(Artifact(
+                id="calendar", name="Meeting Schedule", type="ics",
+                url=f"/download-file/{ics_path.name}"     # ← change
+            ))
         else:
-            # Fall back to default location
             ics_path = self.output_dir / "planner_event.ics"
             if ics_path.exists():
-                artifacts.append(
-                    Artifact(
-                        id="calendar",
-                        name="Meeting Schedule",
-                        type="ics",
-                        url=f"/download/{ics_path.name}",
-                    )
-                )
+                artifacts.append(Artifact(
+                    id="calendar", name="Meeting Schedule", type="ics",
+                    url=f"/download-file/{ics_path.name}" # ← change
+                ))
 
-        # Add email draft artifact if exists or provided
+        # Email artifact (save JSON + create HTML in server/agents/outputs)
         if planner_email_output:
-            # If email output is directly provided, we'll save it first
-            with open(
-                self.output_dir / "planner-agent.json", "w", encoding="utf-8"
-            ) as f:
-                if isinstance(planner_email_output, dict):
-                    json.dump(planner_email_output, f, ensure_ascii=False, indent=2)
-                else:
-                    # Handle if it's a Pydantic model with dict() method
-                    json.dump(
-                        planner_email_output.dict(), f, ensure_ascii=False, indent=2
-                    )
+            # normalize to dict BEFORE using .get()
+            obj = (planner_email_output.dict()
+                if hasattr(planner_email_output, "dict") else
+                planner_email_output)
 
-            artifacts.append(
-                Artifact(
-                    id="email",
-                    name="Legal Recommendations Email",
-                    type="email",
-                    url="/download/planner-agent.json",
-                )
+            # save raw planner JSON (kept)
+            (self.output_dir / "planner-agent.json").write_text(
+                json.dumps(obj, ensure_ascii=False, indent=2), encoding="utf-8"
             )
-        else:
-            # Fall back to checking if the file exists
-            email_path = self.output_dir / "planner-agent.json"
-            if email_path.exists():
-                artifacts.append(
-                    Artifact(
-                        id="email",
-                        name="Legal Recommendations Email",
-                        type="email",
-                        url=f"/download/{email_path.name}",
-                    )
-                )
 
-        # Keep other artifacts as needed - could be generated in the future
-        artifacts.append(
-            Artifact(
-                id="pdf",
-                name="Annotated Agreement",
-                type="pdf",
-                url="/download/annotated-agreement",
-            )
-        )
+            subject = (obj.get("subject") or "Legal Recommendations")
+            body_text = (obj.get("body") or "")
+            recommendations = (obj.get("recommendations") or [])
+
+            body_html = "<br/>".join(body_text.split("\n"))
+            recs_html = "".join(f"<li>{r}</li>" for r in dict.fromkeys(recommendations))
+            html_email = f"""<!DOCTYPE html>
+        <html>
+        <head><meta charset="UTF-8"><title>{subject}</title></head>
+        <body style="font-family:Arial,sans-serif;line-height:1.6;color:#333;">
+        <h2>{subject}</h2>
+        <div>{body_html}</div>
+        {'<h3>Recommendations</h3><ul>'+recs_html+'</ul>' if recommendations else ''}
+        <p>Best regards,<br/>Your Name</p>
+        </body>
+        </html>"""
+
+            html_filename = f"tenant_email_{datetime.now().strftime('%Y%m%d')}.html"
+            (self.output_dir / html_filename).write_text(html_email, encoding="utf-8")
+
+            artifacts.append(Artifact(
+                id="email",
+                name="Legal Recommendations Email",
+                type="email",
+                url=f"/download-file/{html_filename}"  # ← serve from outputs via /download-file
+            ))
 
         # Create the complete dashboard data
         dashboard_data = DashboardData(
