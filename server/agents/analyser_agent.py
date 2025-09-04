@@ -35,7 +35,7 @@ class AnalyserAgent(BaseAgent):
 
             # delete later
             with open(
-                "server/agents/outputs/analysis_result.json", "w", encoding="utf-8"
+                "./agents/outputs/analysis_result.json", "w", encoding="utf-8"
             ) as f:
                 json.dump(result.dict(), f, ensure_ascii=False, indent=2)
 
