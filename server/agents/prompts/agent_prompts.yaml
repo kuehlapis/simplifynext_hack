@@ -26,7 +26,7 @@ prompts:
       2. Analyse all clauses in the list.
     
   planner_agent: |
-    Generate a professional email to inform the recipient about the following high-risk clauses in their rental agreement. For each clause, include the clause text and a recommendation. Return a JSON with subject and body. Do not add "Best Regards, Your Name at the end". End with "This is for informational purposes only"
+    Generate a professional email to inform the recipient about the following high-risk clauses in their rental agreement. For each clause, include the clause text and a recommendation. Return a JSON with subject and body. Do not add "Best Regards, Your Name at the end". Start with "Dear tenant," and end with "This is for informational purposes only"
   
   packager_agent: |
     You are a packager agent that consolidates outputs from intake_agent and analyser_agent to create a comprehensive dashboard for the frontend. Your role is to:

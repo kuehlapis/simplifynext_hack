@@ -63,7 +63,6 @@ class PackagerV2Agent(BaseAgent):
         analysis_result: Dict[str, Any],
         planner_email_output=None,
         ics_file_path=None,
-        name=None,
     ) -> DashboardData:
         """
         Transform analysis results into the format expected by the frontend.
@@ -150,7 +149,6 @@ class PackagerV2Agent(BaseAgent):
         <body style="font-family:Arial,sans-serif;line-height:1.6;color:#333;">
         <h2>{subject}</h2>
         <div>{body_html}</div>
-        <p>Best regards,<br/>{name}</p>
         </body>
         </html>"""
 
