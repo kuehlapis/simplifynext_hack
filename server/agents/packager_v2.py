@@ -63,6 +63,7 @@ class PackagerV2Agent(BaseAgent):
         analysis_result: Dict[str, Any],
         planner_email_output=None,
         ics_file_path=None,
+        name=None,
     ) -> DashboardData:
         """
         Transform analysis results into the format expected by the frontend.
@@ -143,15 +144,13 @@ class PackagerV2Agent(BaseAgent):
             recommendations = (obj.get("recommendations") or [])
 
             body_html = "<br/>".join(body_text.split("\n"))
-            recs_html = "".join(f"<li>{r}</li>" for r in dict.fromkeys(recommendations))
             html_email = f"""<!DOCTYPE html>
         <html>
         <head><meta charset="UTF-8"><title>{subject}</title></head>
         <body style="font-family:Arial,sans-serif;line-height:1.6;color:#333;">
         <h2>{subject}</h2>
         <div>{body_html}</div>
-        {'<h3>Recommendations</h3><ul>'+recs_html+'</ul>' if recommendations else ''}
-        <p>Best regards,<br/>Your Name</p>
+        <p>Best regards,<br/>{name}</p>
         </body>
         </html>"""
 

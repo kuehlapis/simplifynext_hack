@@ -19,7 +19,12 @@ class EmailService:
             msg["To"] = to_emails
         msg["Subject"] = response.subject
 
-        msg.attach(MIMEText(f"{response.body}", "plain"))
+        body = f"""{response.body}
+
+Best regards,
+{name}
+"""
+        msg.attach(MIMEText(body, "plain"))
 
         try:
             with smtplib.SMTP("smtp.gmail.com", 587) as server:

@@ -70,6 +70,7 @@ async def start_analyse(request: Request):
             analysis_result=analysis_result,
             planner_email_output=planner_output,
             ics_file_path=ics_output,
+            name=name,
         )
 
         EmailServiceMain.send_invite(email, planner_output, name)
