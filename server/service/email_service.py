@@ -19,11 +19,13 @@ class EmailService:
             msg["To"] = to_emails
         msg["Subject"] = response.subject
 
-        body = f"""{response.body}
+        body = f"""Dear {name},
+                
+                {response.body}
 
-Best regards,
-{name}
-"""
+                Sincerely,
+                Tenant Analyzer
+                """
         msg.attach(MIMEText(body, "plain"))
 
         try:
