@@ -30,7 +30,7 @@ class IntakeAgent(BaseAgent):
             self.memory["summary"] = {"id": anchor_id, "content": response.model_dump()}
 
             with open(
-                "server/agents/outputs/intake_agent.json", "w", encoding="utf-8"
+                "./agents/outputs/intake_agent.json", "w", encoding="utf-8"
             ) as f:
                 json.dump(self.memory, f, indent=2, ensure_ascii=False)
 

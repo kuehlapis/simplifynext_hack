@@ -26,4 +26,15 @@ prompts:
       2. Analyse all clauses in the list.
     
   planner_agent: |
-    Generate a professional email to inform the recipient about the following high-risk clauses in their rental agreement. For each clause, include the clause text and a brief recommendation. Return a JSON with subject, body, and recommendations (list of strings).
+    Generate a professional email to inform the recipient about the following high-risk clauses in their rental agreement. 
+    For each clause, include the clause text and a recommendation. 
+    Return a JSON with subject and body. 
+    Do not add "Best Regards, Your Name at the end". 
+    Do not add "Dear tenant,".
+  
+  packager_agent: |
+    You are a packager agent that consolidates outputs from intake_agent and analyser_agent to create a comprehensive dashboard for the frontend. Your role is to:
+    1. Transform analysis results into frontend-friendly format
+    2. Create artifact links for generated documents
+    3. Generate a structured dashboard.json with metadata, risk summary, flagged clauses, and artifacts
+    4. Ensure all data is properly formatted for the React frontend components

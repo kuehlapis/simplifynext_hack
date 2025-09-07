@@ -1,0 +1,55 @@
+{
+  "generated_at": "2025-08-28T10:59:32.647441",
+  "total_files": 8,
+  "files": [
+    {
+      "filename": "dashboard.json",
+      "size_bytes": 16624,
+      "modified": "2025-08-28T10:59:32.633248",
+      "type": "json"
+    },
+    {
+      "filename": "download_index.json",
+      "size_bytes": 1279,
+      "modified": "2025-08-28T10:59:11.698695",
+      "type": "json"
+    },
+    {
+      "filename": "negotiation_rider_20250827.json",
+      "size_bytes": 6703,
+      "modified": "2025-08-28T10:52:03.938672",
+      "type": "json"
+    },
+    {
+      "filename": "negotiation_rider_20250828.json",
+      "size_bytes": 6703,
+      "modified": "2025-08-28T10:59:32.467187",
+      "type": "json"
+    },
+    {
+      "filename": "planner-agent.json",
+      "size_bytes": 1335,
+      "modified": "2025-08-26T09:51:47.485694",
+      "type": "json"
+    },
+    {
+      "filename": "planner_event.ics",
+      "size_bytes": 178,
+      "modified": "2025-08-26T09:51:47.485694",
+      "type": "ics"
+    },
+    {
+      "filename": "tenant_email_20250827.json",
+      "size_bytes": 2059,
+      "modified": "2025-08-27T15:18:32.484870",
+      "type": "json"
+    },
+    {
+      "filename": "tenant_email_20250828.json",
+      "size_bytes": 2059,
+      "modified": "2025-08-28T10:59:32.465649",
+      "type": "json"
+    }
+  ],
+  "description": "Index of all generated files available for download"
+}

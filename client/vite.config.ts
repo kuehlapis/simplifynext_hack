@@ -7,6 +7,32 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    proxy: {
+      '/download': {
+        target: 'http://localhost:8000',
+        changeOrigin: true,
+      },
+      '/download-file': {
+        target: 'http://localhost:8000',
+        changeOrigin: true,
+      },
+      '/artifacts': {
+        target: 'http://localhost:8000',
+        changeOrigin: true,
+      },
+      '/analyze': {
+        target: 'http://localhost:8000',
+        changeOrigin: true,
+      },
+      '/dashboard': {
+        target: 'http://localhost:8000',
+        changeOrigin: true,
+      },
+      '/convert':{
+        target: 'http://localhost:8000',
+        changeOrigin: true,
+      },
+    },
   },
   plugins: [
     react()

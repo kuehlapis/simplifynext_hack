@@ -1,0 +1,247 @@
+{
+  "riskCounts": {
+    "high": 12,
+    "medium": 11,
+    "ok": 6
+  },
+  "flaggedClauses": [
+    {
+      "id": "1",
+      "category": "Unfair Clauses",
+      "risk": "HIGH",
+      "title": "The Tenant shall pay rent in the amount of SGD 500",
+      "description": "Landlord can increase rent by any amount at any time without prior notice.",
+      "anchor": "clause-1"
+    },
+    {
+      "id": "2",
+      "category": "Unfair Clauses",
+      "risk": "HIGH",
+      "title": "A security deposit of SGD 2000.00 shall be paid, w",
+      "description": "Security deposit is not refundable under any circumstances, including if the tenant never moves in. Security deposit exceeds 2 months' rent.",
+      "anchor": "clause-2"
+    },
+    {
+      "id": "3",
+      "category": "Your Rights",
+      "risk": "HIGH",
+      "title": "Tenant agrees to allow the Landlord unrestricted a",
+      "description": "Landlord has unrestricted access to the premises at all hours.",
+      "anchor": "clause-3"
+    },
+    {
+      "id": "5",
+      "category": "Unfair Clauses",
+      "risk": "MEDIUM",
+      "title": "The Tenant is responsible for all repairs, includi",
+      "description": "Tenant's liability for minor repairs should be capped.",
+      "anchor": "clause-5"
+    },
+    {
+      "id": "7",
+      "category": "Unfair Clauses",
+      "risk": "MEDIUM",
+      "title": "Pets are not allowed, except for those owned by th",
+      "description": "No-guest policies are restrictive but not illegal; should be reasonable.",
+      "anchor": "clause-7"
+    },
+    {
+      "id": "8",
+      "category": "Your Rights",
+      "risk": "HIGH",
+      "title": "The Tenant waives all legal rights, including the ",
+      "description": "Tenant waives all legal rights.",
+      "anchor": "clause-8"
+    },
+    {
+      "id": "9",
+      "category": "Your Rights",
+      "risk": "HIGH",
+      "title": "The Agreement shall last for 99 years or until the",
+      "description": "HDB minimum tenancy is 6 months; private is usually 3 months or more.",
+      "anchor": "clause-9"
+    },
+    {
+      "id": "10",
+      "category": "Your Rights",
+      "risk": "HIGH",
+      "title": "Governing Law: This Agreement shall be governed by",
+      "description": "Governing law includes the arbitrary mood swings of the Landlord.",
+      "anchor": "clause-10"
+    },
+    {
+      "id": "11",
+      "category": "Unfair Clauses",
+      "risk": "HIGH",
+      "title": "Late payment of rent shall incur a penalty equal t",
+      "description": "Late payment of rent incurs a penalty equal to the GDP of a small nation.",
+      "anchor": "clause-11"
+    },
+    {
+      "id": "12",
+      "category": "Unfair Clauses",
+      "risk": "HIGH",
+      "title": "Tenant must perform weekly entertainment (karaoke,",
+      "description": "Tenant must perform weekly entertainment for the Landlord without compensation.",
+      "anchor": "clause-12"
+    },
+    {
+      "id": "13",
+      "category": "Unfair Clauses",
+      "risk": "MEDIUM",
+      "title": "Any noise complaints made by the Tenant will be co",
+      "description": "Noise restrictions should be reasonable and measurable.",
+      "anchor": "clause-13"
+    },
+    {
+      "id": "14",
+      "category": "Your Rights",
+      "risk": "HIGH",
+      "title": "The Landlord reserves the right to use Tenant's ro",
+      "description": "Landlord can use Tenant's room for storage.",
+      "anchor": "clause-14"
+    },
+    {
+      "id": "15",
+      "category": "Unfair Clauses",
+      "risk": "HIGH",
+      "title": "Tenant shall provide free labor for all landlord's",
+      "description": "Tenant shall provide free labor for all landlord's projects.",
+      "anchor": "clause-15"
+    },
+    {
+      "id": "16",
+      "category": "Your Rights",
+      "risk": "HIGH",
+      "title": "The Tenant must ask permission before breathing lo",
+      "description": "The Tenant must ask permission before breathing loudly within the unit.",
+      "anchor": "clause-16"
+    },
+    {
+      "id": "17",
+      "category": "Unfair Clauses",
+      "risk": "MEDIUM",
+      "title": "Any guest visiting the Tenant must pay an entrance",
+      "description": "No-guest policies are restrictive but not illegal; should be reasonable.",
+      "anchor": "clause-17"
+    },
+    {
+      "id": "18",
+      "category": "Your Rights",
+      "risk": "HIGH",
+      "title": "Tenant must maintain the apartment temperature str",
+      "description": "Tenant must maintain the apartment temperature strictly within Landlord's comfort range.",
+      "anchor": "clause-18"
+    },
+    {
+      "id": "19",
+      "category": "Unfair Clauses",
+      "risk": "MEDIUM",
+      "title": "If the Tenant leaves behind any belongings, they a",
+      "description": "Cleaning requirements should be reasonable and not excessive.",
+      "anchor": "clause-19"
+    },
+    {
+      "id": "20",
+      "category": "Your Rights",
+      "risk": "HIGH",
+      "title": "Tenant must display unwavering gratitude towards t",
+      "description": "Tenant must display unwavering gratitude towards the Landlord at all times.",
+      "anchor": "clause-20"
+    },
+    {
+      "id": "21",
+      "category": "Your Rights",
+      "risk": "MEDIUM",
+      "title": "Renovations or improvements carried out by Tenant ",
+      "description": "Renewal option should be fair and not one-sided.",
+      "anchor": "clause-21"
+    },
+    {
+      "id": "22",
+      "category": "Your Rights",
+      "risk": "HIGH",
+      "title": "The Tenant may not question the fairness of any cl",
+      "description": "The Tenant may not question the fairness of any clause in this Agreement.",
+      "anchor": "clause-22"
+    },
+    {
+      "id": "23",
+      "category": "Your Rights",
+      "risk": "MEDIUM",
+      "title": "Tenant shall not look directly at the Landlord's p",
+      "description": "Noise restrictions should be reasonable and measurable.",
+      "anchor": "clause-23"
+    },
+    {
+      "id": "24",
+      "category": "Unfair Clauses",
+      "risk": "MEDIUM",
+      "title": "The Tenant agrees to pay additional 'Goodwill Rent",
+      "description": "Rent due date should be clearly stated and reasonable.",
+      "anchor": "clause-24"
+    },
+    {
+      "id": "25",
+      "category": "Unfair Clauses",
+      "risk": "HIGH",
+      "title": "The Landlord is entitled to 50% of all Tenant's lo",
+      "description": "Landlord is entitled to 50% of all Tenant's lottery winnings, inheritances, or found coins on the street.",
+      "anchor": "clause-25"
+    },
+    {
+      "id": "26",
+      "category": "Unfair Clauses",
+      "risk": "MEDIUM",
+      "title": "Tenant must surrender all control of kitchen appli",
+      "description": "Washing machine use should be reasonable and not overly restrictive.",
+      "anchor": "clause-26"
+    },
+    {
+      "id": "27",
+      "category": "Your Rights",
+      "risk": "HIGH",
+      "title": "Any attempt by the Tenant to move out requires a s",
+      "description": "Notice period for termination should be reasonable (e.g., 1-2 months).",
+      "anchor": "clause-27"
+    },
+    {
+      "id": "28",
+      "category": "Unfair Clauses",
+      "risk": "MEDIUM",
+      "title": "The Tenant must water the Landlord's plants and ap",
+      "description": "Cleaning requirements should be reasonable and not excessive.",
+      "anchor": "clause-28"
+    },
+    {
+      "id": "29",
+      "category": "Unfair Clauses",
+      "risk": "MEDIUM",
+      "title": "Tenant is responsible for all noise created by nei",
+      "description": "Noise restrictions should be reasonable and measurable.",
+      "anchor": "clause-29"
+    },
+    {
+      "id": "30",
+      "category": "Your Rights",
+      "risk": "HIGH",
+      "title": "Final Clause: The Landlord reserves the right to a",
+      "description": "Landlord reserves the right to add, remove, or modify any clause in this Agreement at any time without Tenant's knowledge or consent.",
+      "anchor": "clause-30"
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "calendar",
+      "name": "Meeting Schedule",
+      "type": "ics",
+      "url": "/download-file/planner_event.ics"
+    },
+    {
+      "id": "email",
+      "name": "Legal Recommendations Email",
+      "type": "email",
+      "url": "/download-file/tenant_email_20250906.html"
+    }
+  ]
+}

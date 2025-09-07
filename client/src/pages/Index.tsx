@@ -6,8 +6,12 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
 import { Separator } from '@/components/ui/separator';
+import EmailModel from '@/components/EmailModel';
+
+
 
 const Index = () => {
+  const [convertedMarkdown, setConvertedMarkdown] = useState<string | null>(null);
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [isProcessing, setIsProcessing] = useState(false);
   const [agents, setAgents] = useState<Agent[]>([
@@ -42,108 +46,135 @@ const Index = () => {
       status: 'pending'
     }
   ]);
+
   const [dashboardData, setDashboardData] = useState<{
     riskCounts: RiskCounts;
     flaggedClauses: FlaggedClause[];
     artifacts: Artifact[];
   } | null>(null);
 
+  const [showEmailModel, setShowEmailModel] = useState(false);
+  const [userName, setUserName] = useState("");
+  const [userEmail, setUserEmail] = useState("");
+
   const { toast } = useToast();
 
-  const simulateProcessing = async () => {
-    setIsProcessing(true);
-    
-    // Simulate agent processing with delays
-    for (let i = 0; i < agents.length; i++) {
-      setAgents(prev => prev.map((agent, index) => 
-        index === i ? { ...agent, status: 'processing', progress: 0 } : agent
-      ));
+  const handleFileConvert = async (file: File) => {
+    try {
+      setIsProcessing(true);
+      setConvertedMarkdown(null);
+      setSelectedFile(file);
 
-      // Simulate processing progress
-      for (let progress = 0; progress <= 100; progress += 20) {
-        await new Promise(resolve => setTimeout(resolve, 200));
-        setAgents(prev => prev.map((agent, index) => 
-          index === i ? { ...agent, progress } : agent
-        ));
-      }
+      const formData = new FormData();
+      formData.append("file", file);
 
-      setAgents(prev => prev.map((agent, index) => 
-        index === i ? { ...agent, status: 'completed', progress: 100 } : agent
-      ));
+      const convertRes = await fetch("/convert", {method: "POST", body: formData,});
+      if (!convertRes.ok) throw new Error(`Conversion failed: ${convertRes.status}`);
+
+      const markdown = await convertRes.text(); 
+
+      setConvertedMarkdown(markdown)
+
+      toast({
+        title: "File converted",
+        description: "Markdown version is ready. Click Start Analysis to continue.",
+      });
+
+      setIsProcessing(false);
+      setShowEmailModel(true);
+
+      return markdown;            
+    } catch (err) {
+      console.error(err);
+      toast({
+        title: "Error",
+        description: "File conversion failed. See console for details.",
+      });
+      return null;
     }
+  };
 
-    // Generate mock dashboard data
-    const mockData = {
-      riskCounts: {
-        high: 3,
-        medium: 5,
-        ok: 12
-      },
-      flaggedClauses: [
-        {
-          id: '1',
-          category: 'Unfair Clauses' as const,
-          risk: 'HIGH' as const,
-          title: 'Excessive Security Deposit',
-          description: 'Security deposit exceeds 2 months rent, which may be unenforceable',
-          anchor: 'clause-7.2'
-        },
-        {
-          id: '2',
-          category: 'Your Rights' as const,
-          risk: 'HIGH' as const,
-          title: 'Waived Maintenance Rights',
-          description: 'Tenant waives right to request timely repairs and maintenance',
-          anchor: 'clause-12.1'
-        },
-        {
-          id: '3',
-          category: 'Stamp Duty' as const,
-          risk: 'MEDIUM' as const,
-          title: 'Unclear Stamp Duty Allocation',
-          description: 'Agreement does not clearly specify who bears stamp duty costs',
-          anchor: 'clause-15.3'
+  const handleEmailSubmit = () => {
+    if (!userName || !userEmail) {
+      toast({ title: "Error", description: "Please enter both name and email" });
+      return;
+    }
+    setShowEmailModel(false);
+  };
+
+  const AnalyzeProcessing = async () => {
+    if (!convertedMarkdown) return;
+
+    setIsProcessing(true);
+
+    const simulateAgents = async () => {
+        for (let i = 0; i < agents.length; i++) {
+          setAgents(prev =>
+            prev.map((agent, index) =>
+              index === i ? { ...agent, status: "processing", progress: 0 } : agent
+            )
+          );
+
+          for (let progress = 0; progress <= 100; progress += 15) {
+            await new Promise(resolve => setTimeout(resolve, 600));
+            setAgents(prev =>
+              prev.map((agent, index) =>
+                index === i ? { ...agent, progress } : agent
+              )
+            );
+          }
+
+          setAgents(prev =>
+            prev.map((agent, index) =>
+              index === i ? { ...agent, status: "completed", progress: 100 } : agent
+            )
+          );
         }
-      ],
-      artifacts: [
-        {
-          id: '1',
-          name: 'Task Schedule',
-          type: 'ics' as const,
-          url: '#'
-        },
-        {
-          id: '2',
-          name: 'Summary Email Draft',
-          type: 'email' as const,
-          url: '#'
-        },
-        {
-          id: '3',
-          name: 'Amendment Rider',
-          type: 'rider' as const,
-          url: '#'
-        },
-        {
-          id: '4',
-          name: 'Annotated Agreement',
-          type: 'pdf' as const,
-          url: '#'
-        }
-      ]
     };
 
-    setDashboardData(mockData);
-    setIsProcessing(false);
-    
-    toast({
-      title: "Processing Complete",
-      description: "Your tenant agreement has been analyzed successfully.",
-    });
+    try {
+      // Start both fetch and agent animation concurrently
+      const analyzePromise = fetch("/analyze", {
+        method: "POST",
+        headers: { "Content-Type": "text/markdown" },
+          body: JSON.stringify({
+            name: userName,
+            email: userEmail,
+            markdown: convertedMarkdown  }),
+      });
+
+      // Start agent animation without awaiting yet
+      const simulationPromise = simulateAgents();
+
+      // Wait for backend response
+      const analyzeRes = await analyzePromise;
+      if (!analyzeRes.ok) throw new Error(`Analysis failed: ${analyzeRes.status}`);
+      const analysisResult = await analyzeRes.json();
+
+      // Wait for agent simulation to finish (if it hasn’t already)
+      await simulationPromise;
+
+      setDashboardData(analysisResult);
+
+      toast({
+        title: "Processing Complete",
+        description: "Your tenant agreement has been analyzed successfully.",
+      });
+
+    } catch (err) {
+      console.error(err);
+      toast({
+        title: "Error",
+        description: "Analysis failed. See console for details.",
+      });
+    } finally {
+      setIsProcessing(false);
+    }
   };
 
   const resetProcess = () => {
     setSelectedFile(null);
+    setConvertedMarkdown(null)
     setIsProcessing(false);
     setAgents(prev => prev.map(agent => ({ ...agent, status: 'pending', progress: undefined })));
     setDashboardData(null);
@@ -151,6 +182,16 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {showEmailModel && (
+        <EmailModel
+          userName={userName}
+          setUserName={setUserName}
+          userEmail={userEmail}
+          setUserEmail={setUserEmail}
+          onSubmit={handleEmailSubmit}
+          onClose={() => setShowEmailModel(false)}
+        />
+      )}
       {/* Header */}
       <div className="border-b border-border bg-gradient-hero relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-primary/5"></div>
@@ -178,11 +219,21 @@ const Index = () => {
       </div>
 
       <div className="container mx-auto px-4 py-8">
-        {!selectedFile ? (
-          /* Upload Section */
-          <div className="max-w-2xl mx-auto">
-            <FileUpload onFileSelect={setSelectedFile} isProcessing={isProcessing} />
-          </div>
+          {!selectedFile ? (
+            /* Upload Section */
+            <div className="max-w-2xl mx-auto">
+              <FileUpload onFileSelect={handleFileConvert} isProcessing={isProcessing} />
+            </div>
+          ) : !convertedMarkdown ? (
+            <Card className="p-12 shadow-large bg-gradient-hero border-0 text-center">
+              <div className="space-y-4">
+                <div className="w-16 h-16 mx-auto bg-gradient-primary rounded-full flex items-center justify-center animate-glow">
+                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-foreground"></div>
+                </div>
+                <p className="text-lg font-medium text-foreground">Processing your file...</p>
+                <p className="text-muted-foreground">Please wait while we process your document</p>
+              </div>
+            </Card>
         ) : (
           /* Processing & Results */
           <div className="space-y-8">
@@ -201,7 +252,7 @@ const Index = () => {
                 </div>
                 <div className="space-x-3">
                   {!isProcessing && !dashboardData && (
-                    <Button onClick={simulateProcessing} className="px-8 py-3 text-lg font-semibold bg-gradient-primary hover:opacity-90 shadow-medium hover:shadow-large transition-all duration-300">
+                    <Button onClick={AnalyzeProcessing} className="px-8 py-3 text-lg font-semibold bg-gradient-primary hover:opacity-90 shadow-medium hover:shadow-large transition-all duration-300">
                       Start Analysis
                     </Button>
                   )}
